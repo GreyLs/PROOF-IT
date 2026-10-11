@@ -1,0 +1,57 @@
+{
+  "measured_at": "2026-10-11T15:07:15+0300",
+  "method": "paced closed-loop, 30 distinct authenticated sessions, 30 seconds, at most 5 requests/sec/session (offered ceiling 150 req/sec), synchronized start; local Rust gateway + actual PostgreSQL + CPU CAT catalog; no LLM/OCR requests; preserves real shared-IP perimeter limits",
+  "offered_ceiling_rps": 150,
+  "concurrent_sessions": 30,
+  "duration_budget_seconds": 30,
+  "requests": 4039,
+  "errors": 0,
+  "error_rate": 0.0,
+  "elapsed_seconds": 31.0661,
+  "throughput_rps": 130.01,
+  "median_ms": 7.015,
+  "p95_ms": 395.926,
+  "p99_ms": 674.969,
+  "min_ms": 1.579,
+  "max_ms": 1393.156,
+  "llm_calls": 0,
+  "capacity_extrapolated": false,
+  "hardware": {
+    "system": "Windows-10-10.0.19045-SP0",
+    "cpu": "Intel64 Family 6 Model 158 Stepping 9, GenuineIntel",
+    "logical_cpus": 8,
+    "ram_gib": 31.9
+  },
+  "by_endpoint": {
+    "/candidates": {
+      "requests": 461,
+      "p95_ms": 101.898,
+      "median_ms": 56.245,
+      "errors": 0
+    },
+    "/dashboard": {
+      "requests": 1028,
+      "p95_ms": 638.746,
+      "median_ms": 211.771,
+      "errors": 0
+    },
+    "/intelligence/assessment/catalog": {
+      "requests": 998,
+      "p95_ms": 12.154,
+      "median_ms": 5.661,
+      "errors": 0
+    },
+    "/notifications": {
+      "requests": 1001,
+      "p95_ms": 7.35,
+      "median_ms": 2.898,
+      "errors": 0
+    },
+    "/vacancies": {
+      "requests": 551,
+      "p95_ms": 28.149,
+      "median_ms": 7.459,
+      "errors": 0
+    }
+  }
+}

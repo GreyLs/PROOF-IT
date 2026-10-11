@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "candidates": 4040,
+  "vacancies": 494,
+  "specializations": 25,
+  "private_candidates": 56,
+  "gold_pairs": 1995760,
+  "label_distribution": {
+    "2": 15418,
+    "1": 82897,
+    "0": 1872820,
+    "3": 24625
+  },
+  "top5_rows": 2470,
+  "method": "Read-only source audit: unique source IDs, empty contact fields, synthetic markers, salary bounds, all gold pair foreign keys and gains, top-5 references. Gold is not supplied to runtime APIs.",
+  "sha256": {
+    "applications.csv": "5097d47397af341df5f309b7ebb257955ff3787bf52dc66a6d719e9fad8055b5",
+    "assessment_attempts.csv": "b7e245e046a95299f88d83f0467ca73fd9cd348514bc07c11cedd460e51d3230",
+    "assessment_blueprints.csv": "2f68a4dee629da3505aaabb57a0baa728feb1b16f3d3446b00528650148c43a9",
+    "candidates.csv": "3dbcd85f33961a8323cbf04bd3b4a8f8512d8e441def4ba16f18e5a7ed2a5252",
+    "coverage_by_specialization.csv": "83335646c1d6d6f80f5369374204253c8811f59a2c792fa8853f13e5ddd8f1d8",
+    "dialogue_cases.csv": "cd9999ed8a4156003aea2e68314fd458c93e345fb615e644268093e3ad16ecb3",
+    "employers.csv": "0f96dfd41a6ac6a641ea723ce7ad09318127c9853b33136bba062c0f1c1554f8",
+    "expected_top5.csv": "ac483f5831e8f7d92ca8948d1da88284bf3d2d7b428c1c3e2e98f65025688b4d",
+    "fsp_achievements.csv": "f323cf8c861ccbcabbc1c10bc0a8b58ef694d7656fbf1b289234dc51a3d92ad0",
+    "interview_rubrics.json": "8a7d95ca4171b8b052e700ad4fb2e5c019804889eeddd192110a0e1676a88320",
+    "invitations.csv": "1db3446d29bd272dd95d2fc5cb319ff27b54d2c5742a4225695142712d947237",
+    "micro_tasks.csv": "a542e4b2700ed3d3adbb49326cebc5e3c7c9542ad29f5a279b7bd2c092b6e35d",
+    "question_bank.json": "51da286f14f3288f75e57ce34d1c5b6b4d6a16883233a37dd790af64157259ed",
+    "relevance_labels.csv": "456b4683b7806d683874f1247d68da513e2d369be787ec1f492b7f06a8454a8c",
+    "relevance_labels.csv.gz": "6d4ec16779569a668b64a28619fb73b9c9d688632ea3df09768164c8a8fcae56",
+    "salary_calibration.csv": "15fe7369978ce4bfa83f079854e41490eff7d80bfb1cadac0e8002a0fa1dd47b",
+    "taxonomy.json": "3de047f50cfe5a1863264ca8b982bef4de3958ad85faf08c7b9c3e9c01df911d",
+    "vacancies.csv": "ef17b4434e9f9aff3b826de8837401f01835d9f43d397bea9fa2a30b18a60cff"
+  }
+}

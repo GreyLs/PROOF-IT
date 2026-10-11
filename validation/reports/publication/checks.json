@@ -1,0 +1,45 @@
+{
+  "generated_at": "2026-10-11T16:57:55.219990+03:00",
+  "scope": "Isolated publication snapshot; existing live HTTP and browser reports preserved separately",
+  "cpu": {
+    "passed": true,
+    "tests": 417,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "protocol": "cpu-tests.xml"
+  },
+  "rust": {
+    "passed": true,
+    "command": "cargo test --locked",
+    "tests_passed": 18,
+    "ignored": 1,
+    "ignored_scope": "Real local language model acceptance test"
+  },
+  "web": {
+    "passed": true,
+    "commands": [
+      "npm ci",
+      "npm run build"
+    ],
+    "typecheck": true,
+    "modules_transformed": 1778,
+    "main_js_bytes": 2241760,
+    "main_js_gzip_bytes": 567550,
+    "warning": "Large JavaScript chunk; route-based splitting remains a performance improvement"
+  },
+  "node": {
+    "passed": true,
+    "command": "node --test tests/locale-quality.mjs tests/horizon-targets.mjs tests/decision-ui.mjs",
+    "tests_passed": 13,
+    "failed": 0
+  },
+  "not_reexecuted": [
+    "live HTTP scenarios",
+    "browser end-to-end scenarios",
+    "OCR",
+    "real language model inference",
+    "external provider checks",
+    "production deployment"
+  ]
+}

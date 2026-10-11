@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites><testsuite name="node locale-quality" tests="5" failures="0" errors="0" skipped="0"><testcase name="exact versioned assets admitted" time="0.002297" classname="test" file="C:\Users\Arkadiy\PycharmProjects\ark-expert-site\proofit\tests\locale-quality.mjs" />
+	<testcase name="catalog changed after review rejected" time="0.000539" classname="test" file="C:\Users\Arkadiy\PycharmProjects\ark-expert-site\proofit\tests\locale-quality.mjs" />
+	<testcase name="source changed after review rejected" time="0.000243" classname="test" file="C:\Users\Arkadiy\PycharmProjects\ark-expert-site\proofit\tests\locale-quality.mjs" />
+	<testcase name="empty copy rejected even with recomputed digest" time="0.000260" classname="test" file="C:\Users\Arkadiy\PycharmProjects\ark-expert-site\proofit\tests\locale-quality.mjs" />
+	<testcase name="unreviewed draft remains disabled" time="0.000217" classname="test" file="C:\Users\Arkadiy\PycharmProjects\ark-expert-site\proofit\tests\locale-quality.mjs" />
+	
+	
+	
+	
+	
+	
+	
+	
+</testsuite></testsuites>

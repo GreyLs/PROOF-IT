@@ -1,0 +1,33 @@
+{
+  "measured_at": "2026-10-10T21:59:03+0300",
+  "checks": [
+    {
+      "command": [
+        "cargo",
+        "build",
+        "--release",
+        "--locked"
+      ],
+      "exit_code": 0,
+      "seconds": 0.976
+    },
+    {
+      "command": [
+        "C:\\Users\\Arkadiy\\PycharmProjects\\ark-expert-site\\proofit\\.tools\\node-v24.21.0-win-x64\\node.exe",
+        "C:\\Users\\Arkadiy\\PycharmProjects\\ark-expert-site\\proofit\\.tools\\node-v24.21.0-win-x64\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "build"
+      ],
+      "exit_code": 0,
+      "seconds": 12.711
+    }
+  ],
+  "passed": true,
+  "sha256": {
+    "target/release/fsp-trajectory.exe": "12abd06e659433ead97c7c61a0b7604fd498c1ded870b62ed554730ef85a4d13",
+    "web/dist/assets/index-1b9hfhuj.css": "c8e703a879f35ed36245a67e607b44a922a279cdbe29bd532e43cb50234e0d89",
+    "web/dist/assets/index-CGJDOLn1.js": "57fb14c5b21c564af8c421a9c2ce4814088468bfdf8a068e0fcef8b7372d3945",
+    "ml_time_forecasting/artifacts/candidate_job_search.cbm": "e567ad02123e81b2b8f1024b4b29eb03f79462a3256335af61ce3c44e3ee85d3",
+    "ml_time_forecasting/artifacts/vacancy_fill.cbm": "582eea4868231687566dd3d2051f625ef40cdfecae6e5256f6ca8c0080361cce"
+  }
+}

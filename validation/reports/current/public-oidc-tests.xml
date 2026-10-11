@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="13.350" timestamp="2026-10-10T13:51:00.418589+03:00" hostname="DESKTOP-I8O7O2L"><testcase classname="tests.test_professional_http" name="test_oidc_signed_flow_and_callback_replay" time="12.004" /></testsuite></testsuites>

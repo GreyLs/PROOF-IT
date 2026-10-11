@@ -1,0 +1,261 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "state": "pending",
+      "language": "ru",
+      "width": 390,
+      "expected_badge": "Ожидает подтверждения",
+      "overflow": false
+    },
+    {
+      "state": "pending",
+      "language": "ru",
+      "width": 1440,
+      "expected_badge": "Ожидает подтверждения",
+      "overflow": false
+    },
+    {
+      "state": "pending",
+      "language": "en",
+      "width": 390,
+      "expected_badge": "Awaiting verification",
+      "overflow": false
+    },
+    {
+      "state": "pending",
+      "language": "en",
+      "width": 1440,
+      "expected_badge": "Awaiting verification",
+      "overflow": false
+    },
+    {
+      "state": "pending",
+      "language": "kk",
+      "width": 390,
+      "expected_badge": "Тыңдау үшін күтіліп жатыр",
+      "overflow": false
+    },
+    {
+      "state": "pending",
+      "language": "kk",
+      "width": 1440,
+      "expected_badge": "Тыңдау үшін күтіліп жатыр",
+      "overflow": false
+    },
+    {
+      "state": "pending",
+      "language": "uz",
+      "width": 390,
+      "expected_badge": "Tasdiqni kutmoqda",
+      "overflow": false
+    },
+    {
+      "state": "pending",
+      "language": "uz",
+      "width": 1440,
+      "expected_badge": "Tasdiqni kutmoqda",
+      "overflow": false
+    },
+    {
+      "state": "pending",
+      "language": "az",
+      "width": 390,
+      "expected_badge": "Təsdiqi gözləyir",
+      "overflow": false
+    },
+    {
+      "state": "pending",
+      "language": "az",
+      "width": 1440,
+      "expected_badge": "Təsdiqi gözləyir",
+      "overflow": false
+    },
+    {
+      "state": "pending",
+      "language": "be",
+      "width": 390,
+      "expected_badge": "Чакае пацверджання",
+      "overflow": false
+    },
+    {
+      "state": "pending",
+      "language": "be",
+      "width": 1440,
+      "expected_badge": "Чакае пацверджання",
+      "overflow": false
+    },
+    {
+      "state": "valid",
+      "language": "ru",
+      "width": 390,
+      "expected_badge": "Опубликовано",
+      "overflow": false
+    },
+    {
+      "state": "valid",
+      "language": "ru",
+      "width": 1440,
+      "expected_badge": "Опубликовано",
+      "overflow": false
+    },
+    {
+      "state": "valid",
+      "language": "en",
+      "width": 390,
+      "expected_badge": "Published",
+      "overflow": false
+    },
+    {
+      "state": "valid",
+      "language": "en",
+      "width": 1440,
+      "expected_badge": "Published",
+      "overflow": false
+    },
+    {
+      "state": "valid",
+      "language": "kk",
+      "width": 390,
+      "expected_badge": "Жарнамаланған",
+      "overflow": false
+    },
+    {
+      "state": "valid",
+      "language": "kk",
+      "width": 1440,
+      "expected_badge": "Жарнамаланған",
+      "overflow": false
+    },
+    {
+      "state": "valid",
+      "language": "uz",
+      "width": 390,
+      "expected_badge": "E’lon qilindi",
+      "overflow": false
+    },
+    {
+      "state": "valid",
+      "language": "uz",
+      "width": 1440,
+      "expected_badge": "E’lon qilindi",
+      "overflow": false
+    },
+    {
+      "state": "valid",
+      "language": "az",
+      "width": 390,
+      "expected_badge": "Dərc edilib",
+      "overflow": false
+    },
+    {
+      "state": "valid",
+      "language": "az",
+      "width": 1440,
+      "expected_badge": "Dərc edilib",
+      "overflow": false
+    },
+    {
+      "state": "valid",
+      "language": "be",
+      "width": 390,
+      "expected_badge": "Апублікавана",
+      "overflow": false
+    },
+    {
+      "state": "valid",
+      "language": "be",
+      "width": 1440,
+      "expected_badge": "Апублікавана",
+      "overflow": false
+    },
+    {
+      "state": "revoked",
+      "language": "ru",
+      "width": 390,
+      "expected_badge": "Ожидает подтверждения",
+      "overflow": false
+    },
+    {
+      "state": "revoked",
+      "language": "ru",
+      "width": 1440,
+      "expected_badge": "Ожидает подтверждения",
+      "overflow": false
+    },
+    {
+      "state": "revoked",
+      "language": "en",
+      "width": 390,
+      "expected_badge": "Awaiting verification",
+      "overflow": false
+    },
+    {
+      "state": "revoked",
+      "language": "en",
+      "width": 1440,
+      "expected_badge": "Awaiting verification",
+      "overflow": false
+    },
+    {
+      "state": "revoked",
+      "language": "kk",
+      "width": 390,
+      "expected_badge": "Тыңдау үшін күтіліп жатыр",
+      "overflow": false
+    },
+    {
+      "state": "revoked",
+      "language": "kk",
+      "width": 1440,
+      "expected_badge": "Тыңдау үшін күтіліп жатыр",
+      "overflow": false
+    },
+    {
+      "state": "revoked",
+      "language": "uz",
+      "width": 390,
+      "expected_badge": "Tasdiqni kutmoqda",
+      "overflow": false
+    },
+    {
+      "state": "revoked",
+      "language": "uz",
+      "width": 1440,
+      "expected_badge": "Tasdiqni kutmoqda",
+      "overflow": false
+    },
+    {
+      "state": "revoked",
+      "language": "az",
+      "width": 390,
+      "expected_badge": "Təsdiqi gözləyir",
+      "overflow": false
+    },
+    {
+      "state": "revoked",
+      "language": "az",
+      "width": 1440,
+      "expected_badge": "Təsdiqi gözləyir",
+      "overflow": false
+    },
+    {
+      "state": "revoked",
+      "language": "be",
+      "width": 390,
+      "expected_badge": "Чакае пацверджання",
+      "overflow": false
+    },
+    {
+      "state": "revoked",
+      "language": "be",
+      "width": 1440,
+      "expected_badge": "Чакае пацверджання",
+      "overflow": false
+    }
+  ],
+  "browser_errors": [],
+  "llm_calls": 0,
+  "generated_at": "2026-10-11T13:53:39+0300",
+  "scope": "Persisted discovery readiness and translated status badge; not a new human translation audit"
+}

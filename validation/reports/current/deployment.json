@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "lint_exit_code": 0,
+  "render_exit_code": 0,
+  "resources": 36,
+  "deployments": 9,
+  "autoscalers": 9,
+  "capacity_test_run": false,
+  "cluster_deployment_run": false,
+  "schema_validation": "Helm lint + YAML + configuration invariants; no API-server admission"
+}

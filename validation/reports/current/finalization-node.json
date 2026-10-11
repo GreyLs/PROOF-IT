@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "generated_at": "2026-10-10T21:58:49+0300",
+  "tests": 5,
+  "failures": 0,
+  "scope": "build-time source/catalog SHA binding and fail-closed locale readiness",
+  "llm_calls": 0
+}

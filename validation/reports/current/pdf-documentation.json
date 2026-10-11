@@ -1,0 +1,108 @@
+{
+  "passed": true,
+  "documents": [
+    {
+      "file": "docs/00_Engineering_Dossier.pdf",
+      "pages": 85,
+      "characters": 230199,
+      "external_links": 137,
+      "sha256": "f7d8b822d70d6c9c8fd4251ea2547a2055af2c3fcf1895f6d282078a96846d97"
+    },
+    {
+      "file": "docs/01_Architecture.pdf",
+      "pages": 11,
+      "characters": 17242,
+      "external_links": 1,
+      "sha256": "b69345658d9a315fadea641dbffa392cfd6756093ac6636d5e03fc0591e8b58e"
+    },
+    {
+      "file": "docs/02_Methods.pdf",
+      "pages": 10,
+      "characters": 28441,
+      "external_links": 10,
+      "sha256": "a719931b2b7f67d3de350cfa67bab4d202e0765b0963fe4ce5967b48a4a22015"
+    },
+    {
+      "file": "docs/03_Digital_Twins.pdf",
+      "pages": 6,
+      "characters": 11705,
+      "external_links": 4,
+      "sha256": "4e078c34d0d6d052824081ea0e01ae3c8b8818f26dfcd82dd766c06ced99b6df"
+    },
+    {
+      "file": "docs/04_Evidence_Graph.pdf",
+      "pages": 5,
+      "characters": 8527,
+      "external_links": 4,
+      "sha256": "86dd74825322fb1eff8829725a3beaf07d75acc1f76c00d7ca8b3681a3a70c98"
+    },
+    {
+      "file": "docs/05_Threat_Model.pdf",
+      "pages": 7,
+      "characters": 15049,
+      "external_links": 1,
+      "sha256": "9a2a37d6ad86bf600886fbf9167de49a70a5ec63146bb02ff18bdf3ef7b70b1e"
+    },
+    {
+      "file": "docs/06_Security_and_Privacy.pdf",
+      "pages": 6,
+      "characters": 12527,
+      "external_links": 2,
+      "sha256": "cfa0d1e9e0c75e1b88b714486564f69fc005220130c907ace57de03c2d93de50"
+    },
+    {
+      "file": "docs/07_Validation.pdf",
+      "pages": 13,
+      "characters": 29567,
+      "external_links": 3,
+      "sha256": "184418eff32d13d9fe23f08fb8cc71a738c783ec8847a9ba949d0eb1ace62951"
+    },
+    {
+      "file": "docs/08_Operations_and_API.pdf",
+      "pages": 6,
+      "characters": 12097,
+      "external_links": 2,
+      "sha256": "17b8ced498cfcaab067fe953726de2cc3a462681c1cf6d2a34331f08fcaeae80"
+    },
+    {
+      "file": "docs/09_Global_Research.pdf",
+      "pages": 9,
+      "characters": 22195,
+      "external_links": 91,
+      "sha256": "1316a0d8fbfa369eddf3e292079d0b870d8ba589a04070d93f1f59ddf142620b"
+    },
+    {
+      "file": "docs/10_Data_Methodology.pdf",
+      "pages": 5,
+      "characters": 9127,
+      "external_links": 0,
+      "sha256": "f4114f3cf07ffa12177780284ef6df71268e4c30cf8979e87c0428fa2ee8db49"
+    },
+    {
+      "file": "docs/11_Interface_and_Demo.pdf",
+      "pages": 6,
+      "characters": 13049,
+      "external_links": 2,
+      "sha256": "796fb1f613afff2e73daf2ac43831406124473eaa8f04bf90eb3ca4829852da5"
+    },
+    {
+      "file": "docs/12_Contribution_and_Decision_Science.pdf",
+      "pages": 10,
+      "characters": 23271,
+      "external_links": 17,
+      "sha256": "5550d6ceba3b0c07581fc9d89c9edf28d0969b448c1c6269b850954c92db5fed"
+    },
+    {
+      "file": "docs/13_Observability_and_Monitoring.pdf",
+      "pages": 7,
+      "characters": 13231,
+      "external_links": 3,
+      "sha256": "562be2fad88c43913b0f11405578ccb535c54fcb71a1b3f28a471282721a9858"
+    }
+  ],
+  "all_pdf": true,
+  "searchable": true,
+  "forbidden_editorial_content_absent": true,
+  "source_fingerprint": "b0afd9ae15dbef322f30f438e25872f595b8ab07e13885f25586767fda40a59d",
+  "generated_at": "2026-10-11T15:10:55+0300"
+}

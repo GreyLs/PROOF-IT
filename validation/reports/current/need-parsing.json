@@ -1,0 +1,10 @@
+{
+  "cases": 100,
+  "role_correct": 100,
+  "salary_correct": 100,
+  "role_accuracy": 1.0,
+  "salary_accuracy": 1.0,
+  "scope": "Explicit taxonomy labels and four salary notation families; deterministic parser",
+  "measured_at": "2026-10-10T12:41:25+0300",
+  "llm_calls": 0
+}

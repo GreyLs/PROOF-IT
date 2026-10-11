@@ -1,0 +1,64 @@
+{
+  "passed": true,
+  "generated_at": "2026-10-10T21:53:51+0300",
+  "seed": 3917,
+  "llm_calls": 0,
+  "real_human_pilot": false,
+  "proper_score_oracle_cases": 2000,
+  "brier_oracle_absolute_error": 0.0,
+  "log_loss_oracle_absolute_error": 0.0,
+  "auc_ties_pairwise_oracle_cases": 9991,
+  "auc_ties_oracle_absolute_error": 5.551115123125783e-17,
+  "future_label_leakage_controls": 120,
+  "future_label_leakage_rejections": 120,
+  "cohort_report_cpu": {
+    "records": 120,
+    "measured_runs": 40,
+    "warmup_runs": 5,
+    "p50_ms": 2.1568499942077324,
+    "p95_ms": 2.665439996053464,
+    "max_ms": 3.059899987420067
+  },
+  "paired_equivalence_positive_control": true,
+  "shifted_form_negative_control_rejected": true,
+  "macro_paired_loss_oracle_absolute_error": 2.7755575615628914e-17,
+  "static_catalogs": {
+    "uz": {
+      "keys": 1544,
+      "source": 1544,
+      "structural_errors": 0,
+      "critical_ready": true
+    },
+    "az": {
+      "keys": 1544,
+      "source": 1544,
+      "structural_errors": 0,
+      "critical_ready": true
+    },
+    "be": {
+      "keys": 1544,
+      "source": 1544,
+      "structural_errors": 0,
+      "critical_ready": true
+    },
+    "en": {
+      "keys": 1544,
+      "source": 1544,
+      "structural_errors": 0,
+      "critical_ready": true
+    },
+    "kk": {
+      "keys": 1544,
+      "source": 1544,
+      "structural_errors": 0,
+      "critical_ready": true
+    }
+  },
+  "source_sha256": {
+    "intelligence/prospective.py": "2997bbc133a91da1352262d9d6a1e6f8f0e2dcfe4a32357e070178b3221276fe",
+    "intelligence/economic_sources.py": "229fc8fe3b8d771d69268cc4ccac9266a5d03c7e1f2486a54083ef6197247225",
+    "intelligence/professional.py": "cb7441c4bbf76597b3e3f530d892d6a61de149907143694bc0e45e6a3d0b9c1c",
+    "intelligence/experiments.py": "2768efdbba512788728b51336266e6e0cdc48f111372933810c5ea0d7e88eb51"
+  },
+  "scope": "controlled independent scalar/pairwise numeric oracles and warm local CPU timing; no network, no load extrapolation, no hiring accuracy claim"
+}

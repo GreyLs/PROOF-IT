@@ -1,0 +1,18 @@
+{
+  "copy_transformations": 120,
+  "detected": 120,
+  "sensitivity": 1.0,
+  "sensitivity_wilson95": [
+    0.9689797289440706,
+    1
+  ],
+  "independent_same_task_implementations": 3,
+  "structural_false_alerts": 0,
+  "minimum_copy_containment": 1.0,
+  "padding_functions_up_to": 39,
+  "automatic_penalties": 0,
+  "method": "token normalization, k=5, window=4, template subtraction, containment threshold 0.85; independent human review",
+  "scope": "Controlled structural transformations and three independently authored implementations; not an open-world plagiarism accuracy estimate",
+  "measured_at": "2026-10-10T12:41:25+0300",
+  "llm_calls": 0
+}

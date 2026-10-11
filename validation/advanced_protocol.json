@@ -1,0 +1,28 @@
+{
+  "version": "advanced-assurance-1.0.0",
+  "seed": 2026101007,
+  "scope": "controlled CPU properties, independent numeric oracles, bounded live ledger concurrency, executable targeted mutation controls",
+  "real_human_pilot": false,
+  "llm_calls": 0,
+  "graph_cases": 400,
+  "allocation_markets": 500,
+  "equivalence_trials_per_shift": 400,
+  "equivalence_shifts": [0.0, 0.2, -0.2, 0.4],
+  "equivalence_group_size": 240,
+  "equivalence_response_sd": 0.4,
+  "equivalence_margin": 0.2,
+  "equivalence_alpha": 0.05,
+  "response_profiles_per_class": 1000,
+  "posterior_simulations": 2000,
+  "acceptance": {
+    "graph_permutation_max_absolute_error": 1e-12,
+    "gnn_gradient_max_absolute_error": 2e-8,
+    "assignment_max_objective_error": 2e-6,
+    "numerical_score_max_absolute_error": 1e-12,
+    "boundary_false_equivalence_rate_max": 0.10,
+    "separated_form_acceptances": 0,
+    "automatic_sanctions": 0,
+    "hard_constraint_violations": 0
+  },
+  "interpretation": "Acceptance thresholds specify algorithmic contracts, not production capacity, demographic fairness or observed hiring effectiveness. Seed and cases are fixed before the run; all measured outcomes are retained."
+}

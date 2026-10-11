@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "measured_at": "2026-10-10T18:04:05+0300",
+  "seed": 20261010,
+  "llm_calls": 0,
+  "metrics": {
+    "allocation_sample": 10000,
+    "variant_a_share": 0.5047,
+    "posterior_interval_trials": 5000,
+    "posterior_interval_coverage": 0.9068,
+    "frechet_bound_violations": 0,
+    "permutation_graphs": 100,
+    "permutation_nodes": 2000,
+    "permutation_max_score_difference": 1.6653345369377348e-16,
+    "end_to_end_gnn_p95_ms": 1.0881600159336813,
+    "controlled_tost": {
+      "version": "parallel-forms-1.0.0",
+      "method": "Welch-TOST + role blocks + planned alpha spending",
+      "sample_a": 1000,
+      "sample_b": 1000,
+      "mean_difference": -0.04680246628922309,
+      "confidence_interval": [
+        -0.11610471752377094,
+        0.022499784945324758
+      ],
+      "equivalence_margin": 0.2,
+      "tost_p": 6.901366371221698e-09,
+      "effective_alpha": 0.005,
+      "equivalent": true,
+      "anchor_shift": -0.010065700209056984,
+      "anchor_equivalent": true,
+      "statistical_gate_passed": true,
+      "production_activation_allowed": false,
+      "activation_requires": [
+        "independent role cohort",
+        "expert review",
+        "versioned publication"
+      ],
+      "generalizes_to_other_roles": false
+    },
+    "shifted_control_rejected": true
+  },
+  "scope": {
+    "posterior_interval_coverage": "Beta(1,1) + Binomial n=120, 5,000 predeclared simulated truths; not hiring outcome calibration",
+    "gnn_permutation": "100 independently generated controlled graphs, weights fixed; score invariance under node reorder",
+    "parallel_forms": "controlled numerical TOST samples; not human role-form equivalence approval"
+  },
+  "elapsed_seconds": 5.158346399985021,
+  "real_hiring_labels": 0
+}

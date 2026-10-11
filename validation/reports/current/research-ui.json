@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "generated_at": "2026-10-10T18:34:36+0300",
+  "checks": [
+    {
+      "role": "candidate",
+      "width": 390,
+      "layout": true,
+      "cabinet_guard": true
+    },
+    {
+      "role": "employer",
+      "width": 390,
+      "layout": true,
+      "cabinet_guard": true
+    },
+    {
+      "role": "candidate",
+      "width": 1440,
+      "layout": true,
+      "cabinet_guard": true
+    },
+    {
+      "role": "employer",
+      "width": 1440,
+      "layout": true,
+      "cabinet_guard": true
+    }
+  ],
+  "browser_errors": [],
+  "scope": "real Rust UI with isolated synthetic artifact fixture; public GitHub transport measured separately",
+  "llm_calls": 0
+}

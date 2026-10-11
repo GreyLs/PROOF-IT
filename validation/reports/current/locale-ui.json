@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "generated_at": "2026-10-10T21:42:44+0300",
+  "ready_languages": [
+    "ru",
+    "en",
+    "kk",
+    "uz",
+    "az",
+    "be"
+  ],
+  "disabled_drafts": [],
+  "checks": [
+    {
+      "language": "ru",
+      "persisted": true,
+      "critical_login_copy": true,
+      "input_unchanged": true
+    },
+    {
+      "language": "en",
+      "persisted": true,
+      "critical_login_copy": true,
+      "input_unchanged": true
+    },
+    {
+      "language": "kk",
+      "persisted": true,
+      "critical_login_copy": true,
+      "input_unchanged": true
+    },
+    {
+      "language": "uz",
+      "persisted": true,
+      "critical_login_copy": true,
+      "input_unchanged": true
+    },
+    {
+      "language": "az",
+      "persisted": true,
+      "critical_login_copy": true,
+      "input_unchanged": true
+    },
+    {
+      "language": "be",
+      "persisted": true,
+      "critical_login_copy": true,
+      "input_unchanged": true
+    }
+  ],
+  "browser_errors": [],
+  "scope": "static UI catalog structure + selected auth strings + browser switching/persistence, not independent full semantic review",
+  "independent_human_review": false
+}

@@ -1,0 +1,17 @@
+{
+  "measured_at": "2026-10-11T14:59:33+0300",
+  "command": "cargo test --locked",
+  "exit_code": 0,
+  "elapsed_seconds": 13.807,
+  "rust": {
+    "passed": 18,
+    "failed": 0,
+    "ignored": 1
+  },
+  "openapi": {
+    "valid": true,
+    "paths": 144,
+    "operations": 169
+  },
+  "passed": true
+}

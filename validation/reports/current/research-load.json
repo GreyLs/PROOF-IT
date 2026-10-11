@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "measured_at": "2026-10-10T18:10:50+0300",
+  "scope": "8 disposable authenticated sessions; real local gateway + DB + numerical engine; paced ceiling40req/s; warm-up; 10 seconds; no external API, OCR, Docker jobs or LLM",
+  "concurrent_sessions": 8,
+  "duration_seconds": 10.09293029998662,
+  "requests": 400,
+  "errors": 0,
+  "throughput_rps": 39.63170140989979,
+  "p95_ms": 33.21360002155416,
+  "p99_ms": 46.42600001534447,
+  "llm_calls": 0,
+  "capacity_extrapolated": false
+}

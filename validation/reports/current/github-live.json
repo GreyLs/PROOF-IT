@@ -1,0 +1,95 @@
+{
+  "passed": true,
+  "measured_at": "2026-10-10T17:53:10+0300",
+  "scope": "Actual read-only GitHub REST; no identity binding or human authorship verdict claimed",
+  "repository": "psf/requests",
+  "commits": 30,
+  "prs": 30,
+  "repository_discussions_status": "token_required",
+  "pr_url": "https://github.com/psf/requests/pull/519",
+  "artifact_digest": "566921e76eed0457530bd72eb792f1bdc5be7e7e3a92df6b7d8e6fee0fe49147",
+  "head_sha": "13060f89c73fc91232cbd5eef88fa37b7b80eb75",
+  "files": 1,
+  "pr_commits": 1,
+  "discussion_items": 1,
+  "questions": 4,
+  "coverage": {
+    "files_received": 1,
+    "files_total": 1,
+    "commits_received": 1,
+    "commits_total": 1,
+    "files_complete": true,
+    "discussions_complete": true,
+    "repository_discussions": "GraphQL authorization required; PR discussion retrieved via REST"
+  },
+  "rate_limits": [
+    {
+      "x-ratelimit-limit": "60",
+      "x-ratelimit-remaining": "57",
+      "x-ratelimit-reset": "1791646743",
+      "retry-after": null
+    },
+    {
+      "x-ratelimit-limit": "60",
+      "x-ratelimit-remaining": "56",
+      "x-ratelimit-reset": "1791646743",
+      "retry-after": null
+    },
+    {
+      "x-ratelimit-limit": "60",
+      "x-ratelimit-remaining": "55",
+      "x-ratelimit-reset": "1791646743",
+      "retry-after": null
+    },
+    {
+      "x-ratelimit-limit": "60",
+      "x-ratelimit-remaining": "54",
+      "x-ratelimit-reset": "1791646743",
+      "retry-after": null
+    },
+    {
+      "x-ratelimit-limit": "60",
+      "x-ratelimit-remaining": "53",
+      "x-ratelimit-reset": "1791646743",
+      "retry-after": null
+    },
+    {
+      "x-ratelimit-limit": "60",
+      "x-ratelimit-remaining": "52",
+      "x-ratelimit-reset": "1791646743",
+      "retry-after": null
+    },
+    {
+      "x-ratelimit-limit": "60",
+      "x-ratelimit-remaining": "51",
+      "x-ratelimit-reset": "1791646743",
+      "retry-after": null
+    },
+    {
+      "x-ratelimit-limit": "60",
+      "x-ratelimit-remaining": "50",
+      "x-ratelimit-reset": "1791646743",
+      "retry-after": null
+    },
+    {
+      "x-ratelimit-limit": "60",
+      "x-ratelimit-remaining": "49",
+      "x-ratelimit-reset": "1791646743",
+      "retry-after": null
+    },
+    {
+      "x-ratelimit-limit": "60",
+      "x-ratelimit-remaining": "48",
+      "x-ratelimit-reset": "1791646743",
+      "retry-after": null
+    },
+    {
+      "x-ratelimit-limit": "60",
+      "x-ratelimit-remaining": "47",
+      "x-ratelimit-reset": "1791646743",
+      "retry-after": null
+    }
+  ],
+  "code_executed": false,
+  "llm_calls": 0
+}

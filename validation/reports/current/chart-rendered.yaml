@@ -1,0 +1,578 @@
+---
+# Source: proofit-horizon/templates/gateway.yaml
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: {name: proofit-intelligence-isolation}
+spec:
+  podSelector: {matchLabels: {app: proofit-intelligence-engine}}
+  policyTypes: [Ingress, Egress]
+  ingress:
+    - from: [{podSelector: {matchLabels: {app: proofit-intelligence}}}]
+      ports: [{port: 8092, protocol: TCP}]
+  egress:
+    - to: [{podSelector: {matchLabels: {app: proofit-redis}}}]
+      ports: [{port: 6379, protocol: TCP}]
+    - to: [{namespaceSelector: {matchLabels: {kubernetes.io/metadata.name: kube-system}}}]
+      ports: [{port: 53, protocol: UDP}, {port: 53, protocol: TCP}]
+---
+# Source: proofit-horizon/templates/gateway.yaml
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: {name: proofit-domain-ingress}
+spec:
+  podSelector: {matchLabels: {tier: api}}
+  policyTypes: [Ingress]
+  ingress:
+    - from: [{podSelector: {matchLabels: {app: proofit-gateway}}}]
+      ports: [{port: 8080, protocol: TCP}]
+---
+# Source: proofit-horizon/templates/services.yaml
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata: {name: proofit-identity}
+spec: {minAvailable: 1, selector: {matchLabels: {app: proofit-identity}}}
+---
+# Source: proofit-horizon/templates/services.yaml
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata: {name: proofit-talent}
+spec: {minAvailable: 1, selector: {matchLabels: {app: proofit-talent}}}
+---
+# Source: proofit-horizon/templates/services.yaml
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata: {name: proofit-recruitment}
+spec: {minAvailable: 1, selector: {matchLabels: {app: proofit-recruitment}}}
+---
+# Source: proofit-horizon/templates/services.yaml
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata: {name: proofit-documents}
+spec: {minAvailable: 1, selector: {matchLabels: {app: proofit-documents}}}
+---
+# Source: proofit-horizon/templates/services.yaml
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata: {name: proofit-integrations}
+spec: {minAvailable: 1, selector: {matchLabels: {app: proofit-integrations}}}
+---
+# Source: proofit-horizon/templates/services.yaml
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata: {name: proofit-platform}
+spec: {minAvailable: 1, selector: {matchLabels: {app: proofit-platform}}}
+---
+# Source: proofit-horizon/templates/services.yaml
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata: {name: proofit-intelligence}
+spec: {minAvailable: 1, selector: {matchLabels: {app: proofit-intelligence}}}
+---
+# Source: proofit-horizon/templates/gateway.yaml
+apiVersion: v1
+kind: Service
+metadata: {name: proofit-gateway}
+spec: {selector: {app: proofit-gateway}, ports: [{port: 80, targetPort: 8080}]}
+---
+# Source: proofit-horizon/templates/services.yaml
+apiVersion: v1
+kind: Service
+metadata: {name: proofit-identity}
+spec:
+  selector: {app: proofit-identity}
+  ports: [{port: 8080, targetPort: 8080}]
+---
+# Source: proofit-horizon/templates/services.yaml
+apiVersion: v1
+kind: Service
+metadata: {name: proofit-talent}
+spec:
+  selector: {app: proofit-talent}
+  ports: [{port: 8080, targetPort: 8080}]
+---
+# Source: proofit-horizon/templates/services.yaml
+apiVersion: v1
+kind: Service
+metadata: {name: proofit-recruitment}
+spec:
+  selector: {app: proofit-recruitment}
+  ports: [{port: 8080, targetPort: 8080}]
+---
+# Source: proofit-horizon/templates/services.yaml
+apiVersion: v1
+kind: Service
+metadata: {name: proofit-documents}
+spec:
+  selector: {app: proofit-documents}
+  ports: [{port: 8080, targetPort: 8080}]
+---
+# Source: proofit-horizon/templates/services.yaml
+apiVersion: v1
+kind: Service
+metadata: {name: proofit-integrations}
+spec:
+  selector: {app: proofit-integrations}
+  ports: [{port: 8080, targetPort: 8080}]
+---
+# Source: proofit-horizon/templates/services.yaml
+apiVersion: v1
+kind: Service
+metadata: {name: proofit-platform}
+spec:
+  selector: {app: proofit-platform}
+  ports: [{port: 8080, targetPort: 8080}]
+---
+# Source: proofit-horizon/templates/services.yaml
+apiVersion: v1
+kind: Service
+metadata: {name: proofit-intelligence}
+spec:
+  selector: {app: proofit-intelligence}
+  ports: [{port: 8080, targetPort: 8080}]
+---
+# Source: proofit-horizon/templates/services.yaml
+apiVersion: v1
+kind: Service
+metadata: {name: proofit-intelligence-engine}
+spec: {selector: {app: proofit-intelligence-engine}, ports: [{port: 8092, targetPort: 8092}]}
+---
+# Source: proofit-horizon/templates/gateway.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: proofit-gateway}
+spec:
+  replicas: 2
+  selector: {matchLabels: {app: proofit-gateway}}
+  template:
+    metadata: {labels: {app: proofit-gateway, tier: edge}}
+    spec:
+      securityContext: {runAsNonRoot: true, runAsUser: 10001}
+      containers:
+        - name: gateway
+          image: "registry.example.org/proofit/api:1.0.0"
+          env:
+            - {name: FSP_SERVICE, value: gateway}
+            - {name: BIND_ADDR, value: "0.0.0.0:8080"}
+            - {name: FSP_IDENTITY_URL, value: "http://proofit-identity:8080"}
+            - {name: FSP_TALENT_URL, value: "http://proofit-talent:8080"}
+            - {name: FSP_RECRUITMENT_URL, value: "http://proofit-recruitment:8080"}
+            - {name: FSP_DOCUMENTS_URL, value: "http://proofit-documents:8080"}
+            - {name: FSP_INTEGRATIONS_URL, value: "http://proofit-integrations:8080"}
+            - {name: FSP_PLATFORM_URL, value: "http://proofit-platform:8080"}
+            - {name: FSP_INTELLIGENCE_URL, value: "http://proofit-intelligence:8080"}
+          ports: [{containerPort: 8080}]
+          resources: {requests: {cpu: 250m, memory: 128Mi}, limits: {cpu: "2", memory: 512Mi}}
+          readinessProbe: {httpGet: {path: /, port: 8080}, periodSeconds: 5}
+          livenessProbe: {httpGet: {path: /, port: 8080}, periodSeconds: 20}
+          securityContext: {allowPrivilegeEscalation: false, capabilities: {drop: [ALL]}}
+---
+# Source: proofit-horizon/templates/services.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: proofit-identity
+spec:
+  replicas: 2
+  selector: {matchLabels: {app: proofit-identity}}
+  template:
+    metadata: {labels: {app: proofit-identity, tier: api}}
+    spec:
+      terminationGracePeriodSeconds: 360
+      securityContext: {runAsNonRoot: true, runAsUser: 10001, fsGroup: 10001}
+      containers:
+        - name: api
+          image: "registry.example.org/proofit/api:1.0.0"
+          envFrom: [{secretRef: {name: proofit-runtime}}]
+          env:
+            - {name: FSP_SERVICE, value: "identity"}
+            - {name: BIND_ADDR, value: "0.0.0.0:8080"}
+            - {name: BASE_URL, value: "https://proofit.example.org"}
+            - {name: FSP_ENV, value: "production"}
+            - {name: FSP_DEMO_MODE, value: "false"}
+            - {name: TRUSTED_PROXY_IPS, value: "10.42.0.0/16"}
+            - {name: DATABASE_MAX_CONNECTIONS, value: "4"}
+            - {name: INTELLIGENCE_URL, value: "http://proofit-intelligence-engine:8092"}
+            - {name: FSP_FORECAST_URL, value: "http://proofit-forecast:8090"}
+            - {name: WORKBENCH_URL, value: "http://proofit-workbench:8091"}
+            - {name: OLLAMA_URL, value: "http://proofit-qwen:11434"}
+            - {name: STORAGE_DIR, value: "/app/runtime/storage"}
+          ports: [{containerPort: 8080}]
+          resources: {requests: {cpu: 250m, memory: 128Mi}, limits: {cpu: "2", memory: 512Mi}}
+          readinessProbe: {httpGet: {path: /api/health, port: 8080}, periodSeconds: 5}
+          livenessProbe: {httpGet: {path: /api/health/live, port: 8080}, periodSeconds: 20}
+          securityContext: {allowPrivilegeEscalation: false, capabilities: {drop: [ALL]}}
+          volumeMounts: [{name: documents, mountPath: /app/runtime/storage}]
+      volumes: [{name: documents, persistentVolumeClaim: {claimName: proofit-documents-rwx}}]
+---
+# Source: proofit-horizon/templates/services.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: proofit-talent
+spec:
+  replicas: 2
+  selector: {matchLabels: {app: proofit-talent}}
+  template:
+    metadata: {labels: {app: proofit-talent, tier: api}}
+    spec:
+      terminationGracePeriodSeconds: 360
+      securityContext: {runAsNonRoot: true, runAsUser: 10001, fsGroup: 10001}
+      containers:
+        - name: api
+          image: "registry.example.org/proofit/api:1.0.0"
+          envFrom: [{secretRef: {name: proofit-runtime}}]
+          env:
+            - {name: FSP_SERVICE, value: "talent"}
+            - {name: BIND_ADDR, value: "0.0.0.0:8080"}
+            - {name: BASE_URL, value: "https://proofit.example.org"}
+            - {name: FSP_ENV, value: "production"}
+            - {name: FSP_DEMO_MODE, value: "false"}
+            - {name: TRUSTED_PROXY_IPS, value: "10.42.0.0/16"}
+            - {name: DATABASE_MAX_CONNECTIONS, value: "4"}
+            - {name: INTELLIGENCE_URL, value: "http://proofit-intelligence-engine:8092"}
+            - {name: FSP_FORECAST_URL, value: "http://proofit-forecast:8090"}
+            - {name: WORKBENCH_URL, value: "http://proofit-workbench:8091"}
+            - {name: OLLAMA_URL, value: "http://proofit-qwen:11434"}
+            - {name: STORAGE_DIR, value: "/app/runtime/storage"}
+          ports: [{containerPort: 8080}]
+          resources: {requests: {cpu: 250m, memory: 128Mi}, limits: {cpu: "2", memory: 512Mi}}
+          readinessProbe: {httpGet: {path: /api/health, port: 8080}, periodSeconds: 5}
+          livenessProbe: {httpGet: {path: /api/health/live, port: 8080}, periodSeconds: 20}
+          securityContext: {allowPrivilegeEscalation: false, capabilities: {drop: [ALL]}}
+          volumeMounts: [{name: documents, mountPath: /app/runtime/storage}]
+      volumes: [{name: documents, persistentVolumeClaim: {claimName: proofit-documents-rwx}}]
+---
+# Source: proofit-horizon/templates/services.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: proofit-recruitment
+spec:
+  replicas: 2
+  selector: {matchLabels: {app: proofit-recruitment}}
+  template:
+    metadata: {labels: {app: proofit-recruitment, tier: api}}
+    spec:
+      terminationGracePeriodSeconds: 360
+      securityContext: {runAsNonRoot: true, runAsUser: 10001, fsGroup: 10001}
+      containers:
+        - name: api
+          image: "registry.example.org/proofit/api:1.0.0"
+          envFrom: [{secretRef: {name: proofit-runtime}}]
+          env:
+            - {name: FSP_SERVICE, value: "recruitment"}
+            - {name: BIND_ADDR, value: "0.0.0.0:8080"}
+            - {name: BASE_URL, value: "https://proofit.example.org"}
+            - {name: FSP_ENV, value: "production"}
+            - {name: FSP_DEMO_MODE, value: "false"}
+            - {name: TRUSTED_PROXY_IPS, value: "10.42.0.0/16"}
+            - {name: DATABASE_MAX_CONNECTIONS, value: "4"}
+            - {name: INTELLIGENCE_URL, value: "http://proofit-intelligence-engine:8092"}
+            - {name: FSP_FORECAST_URL, value: "http://proofit-forecast:8090"}
+            - {name: WORKBENCH_URL, value: "http://proofit-workbench:8091"}
+            - {name: OLLAMA_URL, value: "http://proofit-qwen:11434"}
+            - {name: STORAGE_DIR, value: "/app/runtime/storage"}
+          ports: [{containerPort: 8080}]
+          resources: {requests: {cpu: 250m, memory: 128Mi}, limits: {cpu: "2", memory: 512Mi}}
+          readinessProbe: {httpGet: {path: /api/health, port: 8080}, periodSeconds: 5}
+          livenessProbe: {httpGet: {path: /api/health/live, port: 8080}, periodSeconds: 20}
+          securityContext: {allowPrivilegeEscalation: false, capabilities: {drop: [ALL]}}
+          volumeMounts: [{name: documents, mountPath: /app/runtime/storage}]
+      volumes: [{name: documents, persistentVolumeClaim: {claimName: proofit-documents-rwx}}]
+---
+# Source: proofit-horizon/templates/services.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: proofit-documents
+spec:
+  replicas: 2
+  selector: {matchLabels: {app: proofit-documents}}
+  template:
+    metadata: {labels: {app: proofit-documents, tier: api}}
+    spec:
+      terminationGracePeriodSeconds: 360
+      securityContext: {runAsNonRoot: true, runAsUser: 10001, fsGroup: 10001}
+      containers:
+        - name: api
+          image: "registry.example.org/proofit/api:1.0.0"
+          envFrom: [{secretRef: {name: proofit-runtime}}]
+          env:
+            - {name: FSP_SERVICE, value: "documents"}
+            - {name: BIND_ADDR, value: "0.0.0.0:8080"}
+            - {name: BASE_URL, value: "https://proofit.example.org"}
+            - {name: FSP_ENV, value: "production"}
+            - {name: FSP_DEMO_MODE, value: "false"}
+            - {name: TRUSTED_PROXY_IPS, value: "10.42.0.0/16"}
+            - {name: DATABASE_MAX_CONNECTIONS, value: "4"}
+            - {name: INTELLIGENCE_URL, value: "http://proofit-intelligence-engine:8092"}
+            - {name: FSP_FORECAST_URL, value: "http://proofit-forecast:8090"}
+            - {name: WORKBENCH_URL, value: "http://proofit-workbench:8091"}
+            - {name: OLLAMA_URL, value: "http://proofit-qwen:11434"}
+            - {name: STORAGE_DIR, value: "/app/runtime/storage"}
+          ports: [{containerPort: 8080}]
+          resources: {requests: {cpu: 250m, memory: 128Mi}, limits: {cpu: "2", memory: 512Mi}}
+          readinessProbe: {httpGet: {path: /api/health, port: 8080}, periodSeconds: 5}
+          livenessProbe: {httpGet: {path: /api/health/live, port: 8080}, periodSeconds: 20}
+          securityContext: {allowPrivilegeEscalation: false, capabilities: {drop: [ALL]}}
+          volumeMounts: [{name: documents, mountPath: /app/runtime/storage}]
+      volumes: [{name: documents, persistentVolumeClaim: {claimName: proofit-documents-rwx}}]
+---
+# Source: proofit-horizon/templates/services.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: proofit-integrations
+spec:
+  replicas: 2
+  selector: {matchLabels: {app: proofit-integrations}}
+  template:
+    metadata: {labels: {app: proofit-integrations, tier: api}}
+    spec:
+      terminationGracePeriodSeconds: 360
+      securityContext: {runAsNonRoot: true, runAsUser: 10001, fsGroup: 10001}
+      containers:
+        - name: api
+          image: "registry.example.org/proofit/api:1.0.0"
+          envFrom: [{secretRef: {name: proofit-runtime}}]
+          env:
+            - {name: FSP_SERVICE, value: "integrations"}
+            - {name: BIND_ADDR, value: "0.0.0.0:8080"}
+            - {name: BASE_URL, value: "https://proofit.example.org"}
+            - {name: FSP_ENV, value: "production"}
+            - {name: FSP_DEMO_MODE, value: "false"}
+            - {name: TRUSTED_PROXY_IPS, value: "10.42.0.0/16"}
+            - {name: DATABASE_MAX_CONNECTIONS, value: "4"}
+            - {name: INTELLIGENCE_URL, value: "http://proofit-intelligence-engine:8092"}
+            - {name: FSP_FORECAST_URL, value: "http://proofit-forecast:8090"}
+            - {name: WORKBENCH_URL, value: "http://proofit-workbench:8091"}
+            - {name: OLLAMA_URL, value: "http://proofit-qwen:11434"}
+            - {name: STORAGE_DIR, value: "/app/runtime/storage"}
+          ports: [{containerPort: 8080}]
+          resources: {requests: {cpu: 250m, memory: 128Mi}, limits: {cpu: "2", memory: 512Mi}}
+          readinessProbe: {httpGet: {path: /api/health, port: 8080}, periodSeconds: 5}
+          livenessProbe: {httpGet: {path: /api/health/live, port: 8080}, periodSeconds: 20}
+          securityContext: {allowPrivilegeEscalation: false, capabilities: {drop: [ALL]}}
+          volumeMounts: [{name: documents, mountPath: /app/runtime/storage}]
+      volumes: [{name: documents, persistentVolumeClaim: {claimName: proofit-documents-rwx}}]
+---
+# Source: proofit-horizon/templates/services.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: proofit-platform
+spec:
+  replicas: 2
+  selector: {matchLabels: {app: proofit-platform}}
+  template:
+    metadata: {labels: {app: proofit-platform, tier: api}}
+    spec:
+      terminationGracePeriodSeconds: 360
+      securityContext: {runAsNonRoot: true, runAsUser: 10001, fsGroup: 10001}
+      containers:
+        - name: api
+          image: "registry.example.org/proofit/api:1.0.0"
+          envFrom: [{secretRef: {name: proofit-runtime}}]
+          env:
+            - {name: FSP_SERVICE, value: "platform"}
+            - {name: BIND_ADDR, value: "0.0.0.0:8080"}
+            - {name: BASE_URL, value: "https://proofit.example.org"}
+            - {name: FSP_ENV, value: "production"}
+            - {name: FSP_DEMO_MODE, value: "false"}
+            - {name: TRUSTED_PROXY_IPS, value: "10.42.0.0/16"}
+            - {name: DATABASE_MAX_CONNECTIONS, value: "4"}
+            - {name: INTELLIGENCE_URL, value: "http://proofit-intelligence-engine:8092"}
+            - {name: FSP_FORECAST_URL, value: "http://proofit-forecast:8090"}
+            - {name: WORKBENCH_URL, value: "http://proofit-workbench:8091"}
+            - {name: OLLAMA_URL, value: "http://proofit-qwen:11434"}
+            - {name: STORAGE_DIR, value: "/app/runtime/storage"}
+          ports: [{containerPort: 8080}]
+          resources: {requests: {cpu: 250m, memory: 128Mi}, limits: {cpu: "2", memory: 512Mi}}
+          readinessProbe: {httpGet: {path: /api/health, port: 8080}, periodSeconds: 5}
+          livenessProbe: {httpGet: {path: /api/health/live, port: 8080}, periodSeconds: 20}
+          securityContext: {allowPrivilegeEscalation: false, capabilities: {drop: [ALL]}}
+          volumeMounts: [{name: documents, mountPath: /app/runtime/storage}]
+      volumes: [{name: documents, persistentVolumeClaim: {claimName: proofit-documents-rwx}}]
+---
+# Source: proofit-horizon/templates/services.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: proofit-intelligence
+spec:
+  replicas: 2
+  selector: {matchLabels: {app: proofit-intelligence}}
+  template:
+    metadata: {labels: {app: proofit-intelligence, tier: api}}
+    spec:
+      terminationGracePeriodSeconds: 360
+      securityContext: {runAsNonRoot: true, runAsUser: 10001, fsGroup: 10001}
+      containers:
+        - name: api
+          image: "registry.example.org/proofit/api:1.0.0"
+          envFrom: [{secretRef: {name: proofit-runtime}}]
+          env:
+            - {name: FSP_SERVICE, value: "intelligence"}
+            - {name: BIND_ADDR, value: "0.0.0.0:8080"}
+            - {name: BASE_URL, value: "https://proofit.example.org"}
+            - {name: FSP_ENV, value: "production"}
+            - {name: FSP_DEMO_MODE, value: "false"}
+            - {name: TRUSTED_PROXY_IPS, value: "10.42.0.0/16"}
+            - {name: DATABASE_MAX_CONNECTIONS, value: "4"}
+            - {name: INTELLIGENCE_URL, value: "http://proofit-intelligence-engine:8092"}
+            - {name: FSP_FORECAST_URL, value: "http://proofit-forecast:8090"}
+            - {name: WORKBENCH_URL, value: "http://proofit-workbench:8091"}
+            - {name: OLLAMA_URL, value: "http://proofit-qwen:11434"}
+            - {name: STORAGE_DIR, value: "/app/runtime/storage"}
+          ports: [{containerPort: 8080}]
+          resources: {requests: {cpu: 250m, memory: 128Mi}, limits: {cpu: "2", memory: 512Mi}}
+          readinessProbe: {httpGet: {path: /api/health, port: 8080}, periodSeconds: 5}
+          livenessProbe: {httpGet: {path: /api/health/live, port: 8080}, periodSeconds: 20}
+          securityContext: {allowPrivilegeEscalation: false, capabilities: {drop: [ALL]}}
+          volumeMounts: [{name: documents, mountPath: /app/runtime/storage}]
+      volumes: [{name: documents, persistentVolumeClaim: {claimName: proofit-documents-rwx}}]
+---
+# Source: proofit-horizon/templates/services.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: proofit-intelligence-engine}
+spec:
+  replicas: 2
+  selector: {matchLabels: {app: proofit-intelligence-engine}}
+  template:
+    metadata: {labels: {app: proofit-intelligence-engine, tier: compute}}
+    spec:
+      securityContext: {runAsNonRoot: true, runAsUser: 10005}
+      containers:
+        - name: intelligence
+          image: "registry.example.org/proofit/intelligence:1.0.0"
+          env:
+            - {name: INTELLIGENCE_TOKEN, valueFrom: {secretKeyRef: {name: proofit-runtime, key: INTELLIGENCE_TOKEN}}}
+            - {name: REDIS_URL, value: "redis://proofit-redis:6379/0"}
+            - {name: INTELLIGENCE_SLOTS, value: "2"}
+            - {name: FSP_OIDC_ISSUER, valueFrom: {secretKeyRef: {name: proofit-runtime, key: FSP_OIDC_ISSUER, optional: true}}}
+            - {name: FSP_OIDC_CLIENT_ID, valueFrom: {secretKeyRef: {name: proofit-runtime, key: FSP_OIDC_CLIENT_ID, optional: true}}}
+            - {name: FSP_OIDC_CLIENT_SECRET, valueFrom: {secretKeyRef: {name: proofit-runtime, key: FSP_OIDC_CLIENT_SECRET, optional: true}}}
+          ports: [{containerPort: 8092}]
+          resources: {requests: {cpu: 250m, memory: 256Mi}, limits: {cpu: "2", memory: 1Gi}}
+          readinessProbe: {httpGet: {path: /health, port: 8092}, periodSeconds: 5}
+          livenessProbe: {httpGet: {path: /health, port: 8092}, periodSeconds: 20}
+          securityContext: {readOnlyRootFilesystem: true, allowPrivilegeEscalation: false, capabilities: {drop: [ALL]}}
+---
+# Source: proofit-horizon/templates/gateway.yaml
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: {name: proofit-gateway}
+spec:
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: proofit-gateway}
+  minReplicas: 2
+  maxReplicas: 64
+  metrics: [{type: Resource, resource: {name: cpu, target: {type: Utilization, averageUtilization: 65}}}]
+---
+# Source: proofit-horizon/templates/services.yaml
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: {name: proofit-identity}
+spec:
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: proofit-identity}
+  minReplicas: 2
+  maxReplicas: 64
+  metrics:
+    - type: Resource
+      resource: {name: cpu, target: {type: Utilization, averageUtilization: 65}}
+  behavior:
+    scaleDown: {stabilizationWindowSeconds: 300}
+---
+# Source: proofit-horizon/templates/services.yaml
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: {name: proofit-talent}
+spec:
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: proofit-talent}
+  minReplicas: 2
+  maxReplicas: 64
+  metrics:
+    - type: Resource
+      resource: {name: cpu, target: {type: Utilization, averageUtilization: 65}}
+  behavior:
+    scaleDown: {stabilizationWindowSeconds: 300}
+---
+# Source: proofit-horizon/templates/services.yaml
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: {name: proofit-recruitment}
+spec:
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: proofit-recruitment}
+  minReplicas: 2
+  maxReplicas: 64
+  metrics:
+    - type: Resource
+      resource: {name: cpu, target: {type: Utilization, averageUtilization: 65}}
+  behavior:
+    scaleDown: {stabilizationWindowSeconds: 300}
+---
+# Source: proofit-horizon/templates/services.yaml
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: {name: proofit-documents}
+spec:
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: proofit-documents}
+  minReplicas: 2
+  maxReplicas: 64
+  metrics:
+    - type: Resource
+      resource: {name: cpu, target: {type: Utilization, averageUtilization: 65}}
+  behavior:
+    scaleDown: {stabilizationWindowSeconds: 300}
+---
+# Source: proofit-horizon/templates/services.yaml
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: {name: proofit-integrations}
+spec:
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: proofit-integrations}
+  minReplicas: 2
+  maxReplicas: 64
+  metrics:
+    - type: Resource
+      resource: {name: cpu, target: {type: Utilization, averageUtilization: 65}}
+  behavior:
+    scaleDown: {stabilizationWindowSeconds: 300}
+---
+# Source: proofit-horizon/templates/services.yaml
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: {name: proofit-platform}
+spec:
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: proofit-platform}
+  minReplicas: 2
+  maxReplicas: 64
+  metrics:
+    - type: Resource
+      resource: {name: cpu, target: {type: Utilization, averageUtilization: 65}}
+  behavior:
+    scaleDown: {stabilizationWindowSeconds: 300}
+---
+# Source: proofit-horizon/templates/services.yaml
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: {name: proofit-intelligence}
+spec:
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: proofit-intelligence}
+  minReplicas: 2
+  maxReplicas: 64
+  metrics:
+    - type: Resource
+      resource: {name: cpu, target: {type: Utilization, averageUtilization: 65}}
+  behavior:
+    scaleDown: {stabilizationWindowSeconds: 300}
+---
+# Source: proofit-horizon/templates/services.yaml
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: {name: proofit-intelligence-engine}
+spec:
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: proofit-intelligence-engine}
+  minReplicas: 2
+  maxReplicas: 32
+  metrics: [{type: Resource, resource: {name: cpu, target: {type: Utilization, averageUtilization: 65}}}]

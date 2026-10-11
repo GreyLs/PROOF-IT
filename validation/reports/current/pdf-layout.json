@@ -1,0 +1,107 @@
+{
+  "passed": true,
+  "generated_at": "2026-10-11T15:12:01+0300",
+  "source_fingerprint": "b0afd9ae15dbef322f30f438e25872f595b8ab07e13885f25586767fda40a59d",
+  "documents": [
+    {
+      "document": "docs/00_Engineering_Dossier.pdf",
+      "pages": 85,
+      "text_spans": 4344,
+      "https_links": 137,
+      "hash_verified": true
+    },
+    {
+      "document": "docs/01_Architecture.pdf",
+      "pages": 11,
+      "text_spans": 359,
+      "https_links": 1,
+      "hash_verified": true
+    },
+    {
+      "document": "docs/02_Methods.pdf",
+      "pages": 10,
+      "text_spans": 463,
+      "https_links": 10,
+      "hash_verified": true
+    },
+    {
+      "document": "docs/03_Digital_Twins.pdf",
+      "pages": 6,
+      "text_spans": 200,
+      "https_links": 4,
+      "hash_verified": true
+    },
+    {
+      "document": "docs/04_Evidence_Graph.pdf",
+      "pages": 5,
+      "text_spans": 166,
+      "https_links": 4,
+      "hash_verified": true
+    },
+    {
+      "document": "docs/05_Threat_Model.pdf",
+      "pages": 7,
+      "text_spans": 388,
+      "https_links": 1,
+      "hash_verified": true
+    },
+    {
+      "document": "docs/06_Security_and_Privacy.pdf",
+      "pages": 6,
+      "text_spans": 203,
+      "https_links": 2,
+      "hash_verified": true
+    },
+    {
+      "document": "docs/07_Validation.pdf",
+      "pages": 13,
+      "text_spans": 625,
+      "https_links": 3,
+      "hash_verified": true
+    },
+    {
+      "document": "docs/08_Operations_and_API.pdf",
+      "pages": 6,
+      "text_spans": 222,
+      "https_links": 2,
+      "hash_verified": true
+    },
+    {
+      "document": "docs/09_Global_Research.pdf",
+      "pages": 9,
+      "text_spans": 567,
+      "https_links": 91,
+      "hash_verified": true
+    },
+    {
+      "document": "docs/10_Data_Methodology.pdf",
+      "pages": 5,
+      "text_spans": 215,
+      "https_links": 0,
+      "hash_verified": true
+    },
+    {
+      "document": "docs/11_Interface_and_Demo.pdf",
+      "pages": 6,
+      "text_spans": 236,
+      "https_links": 2,
+      "hash_verified": true
+    },
+    {
+      "document": "docs/12_Contribution_and_Decision_Science.pdf",
+      "pages": 10,
+      "text_spans": 445,
+      "https_links": 17,
+      "hash_verified": true
+    },
+    {
+      "document": "docs/13_Observability_and_Monitoring.pdf",
+      "pages": 7,
+      "text_spans": 274,
+      "https_links": 3,
+      "hash_verified": true
+    }
+  ],
+  "out_of_page_text": [],
+  "scope": "PDF page geometry, searchable text, HTTPS link format and exact generated-file digests; not a new empirical model validation"
+}

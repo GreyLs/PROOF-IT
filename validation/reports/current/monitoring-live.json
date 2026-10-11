@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "measured_at": "2026-10-11T10:51:32+0300",
+  "checks": [
+    "exporter_no_token_401",
+    "exporter_wrong_token_401",
+    "authenticated_exporter_200",
+    "valid_prometheus_exposition",
+    "no_secret_values_or_personal_labels",
+    "prometheus_targets_up",
+    "nine_live_domain_probes",
+    "fresh_collection",
+    "database_live",
+    "provisioned_grafana_dashboard",
+    "all_sixteen_promql_queries_valid",
+    "both_collector_series_visible",
+    "alertmanager_ready",
+    "monitor_role_no_business_select",
+    "monitor_role_read_only",
+    "grafana_browser_dashboard_visible"
+  ],
+  "health_services": 9,
+  "dashboard_panels": 16,
+  "metric_families": 28,
+  "metric_samples": 170,
+  "collection_duration_seconds": 0.46166889999994964,
+  "llm_calls": 0,
+  "scope": "operational stack and access control; no hiring-effectiveness or load claim"
+}

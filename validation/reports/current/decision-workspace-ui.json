@@ -1,0 +1,121 @@
+{
+  "passed": true,
+  "generated_at": "2026-10-10T22:22:28+0300",
+  "checks": [
+    {
+      "role": "candidate",
+      "width": 1440,
+      "height": 900,
+      "sidebar_groups": 7,
+      "sidebar_no_scroll": true,
+      "scoped_tabs": true,
+      "explained_workspace": true,
+      "page_overflow": false
+    },
+    {
+      "role": "candidate",
+      "language": "en",
+      "width": 1280,
+      "height": 600,
+      "translated_new_heading": true,
+      "sidebar_no_scroll": true
+    },
+    {
+      "role": "candidate",
+      "language": "kk",
+      "width": 1280,
+      "height": 600,
+      "translated_new_heading": true,
+      "sidebar_no_scroll": true
+    },
+    {
+      "role": "employer",
+      "width": 1440,
+      "height": 900,
+      "sidebar_groups": 7,
+      "sidebar_no_scroll": true,
+      "scoped_tabs": true,
+      "explained_workspace": true,
+      "page_overflow": false
+    },
+    {
+      "role": "employer",
+      "language": "en",
+      "width": 1280,
+      "height": 600,
+      "translated_new_heading": true,
+      "sidebar_no_scroll": true
+    },
+    {
+      "role": "employer",
+      "language": "kk",
+      "width": 1280,
+      "height": 600,
+      "translated_new_heading": true,
+      "sidebar_no_scroll": true
+    },
+    {
+      "role": "candidate",
+      "width": 1280,
+      "height": 768,
+      "sidebar_groups": 7,
+      "sidebar_no_scroll": true,
+      "scoped_tabs": true,
+      "explained_workspace": true,
+      "page_overflow": false
+    },
+    {
+      "role": "employer",
+      "width": 1280,
+      "height": 768,
+      "sidebar_groups": 7,
+      "sidebar_no_scroll": true,
+      "scoped_tabs": true,
+      "explained_workspace": true,
+      "page_overflow": false
+    },
+    {
+      "role": "candidate",
+      "width": 1024,
+      "height": 600,
+      "sidebar_groups": 7,
+      "sidebar_no_scroll": true,
+      "scoped_tabs": true,
+      "explained_workspace": true,
+      "page_overflow": false
+    },
+    {
+      "role": "employer",
+      "width": 1024,
+      "height": 600,
+      "sidebar_groups": 7,
+      "sidebar_no_scroll": true,
+      "scoped_tabs": true,
+      "explained_workspace": true,
+      "page_overflow": false
+    },
+    {
+      "role": "candidate",
+      "width": 390,
+      "height": 844,
+      "sidebar_groups": 7,
+      "sidebar_no_scroll": true,
+      "scoped_tabs": true,
+      "explained_workspace": true,
+      "page_overflow": false
+    },
+    {
+      "role": "employer",
+      "width": 390,
+      "height": 844,
+      "sidebar_groups": 7,
+      "sidebar_no_scroll": true,
+      "scoped_tabs": true,
+      "explained_workspace": true,
+      "page_overflow": false
+    }
+  ],
+  "browser_errors": [],
+  "llm_calls": 0,
+  "scope": "auth fixtures + real scenario jobs, graph provenance, hide/restore/public filtering, saved employer context and responsive navigation; no load or general ranking rerun"
+}

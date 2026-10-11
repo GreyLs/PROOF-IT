@@ -1,0 +1,161 @@
+{
+  "measured_at": "2026-10-11T15:06:22+0300",
+  "concurrency": 1,
+  "capacity_test_run": false,
+  "method": "15 sequential requests per authenticated endpoint after one explicitly reported first request; no parallel session load, no peak throughput claim. Module tests are direct local CPU calls, not HTTP or GPU latency.",
+  "hardware": {
+    "system": "Windows-10-10.0.19045-SP0",
+    "cpu": "Intel64 Family 6 Model 158 Stepping 9, GenuineIntel",
+    "logical_cpus": 8,
+    "ram_gib": 31.9
+  },
+  "by_endpoint": {
+    "search": {
+      "samples": 15,
+      "min_ms": 33.3999,
+      "median_ms": 37.1631,
+      "p95_ms": 61.177,
+      "p99_ms": 61.177,
+      "max_ms": 61.177,
+      "first_request_ms": 63.4241
+    },
+    "vacancies": {
+      "samples": 15,
+      "min_ms": 4.4015,
+      "median_ms": 4.6465,
+      "p95_ms": 7.2555,
+      "p99_ms": 7.2555,
+      "max_ms": 7.2555,
+      "first_request_ms": 6.1366
+    },
+    "employer_dashboard": {
+      "samples": 15,
+      "min_ms": 144.0726,
+      "median_ms": 162.6525,
+      "p95_ms": 202.4351,
+      "p99_ms": 202.4351,
+      "max_ms": 202.4351,
+      "first_request_ms": 165.0061
+    },
+    "candidate_dashboard": {
+      "samples": 15,
+      "min_ms": 1.5665,
+      "median_ms": 2.0931,
+      "p95_ms": 2.6176,
+      "p99_ms": 2.6176,
+      "max_ms": 2.6176,
+      "first_request_ms": 5.1109
+    },
+    "notifications": {
+      "samples": 15,
+      "min_ms": 1.7323,
+      "median_ms": 2.0753,
+      "p95_ms": 2.5711,
+      "p99_ms": 2.5711,
+      "max_ms": 2.5711,
+      "first_request_ms": 2.488
+    },
+    "recommendations": {
+      "samples": 15,
+      "min_ms": 11.8246,
+      "median_ms": 12.4998,
+      "p95_ms": 13.3188,
+      "p99_ms": 13.3188,
+      "max_ms": 13.3188,
+      "first_request_ms": 24.0446
+    },
+    "market": {
+      "samples": 15,
+      "min_ms": 3.437,
+      "median_ms": 4.0158,
+      "p95_ms": 7.2854,
+      "p99_ms": 7.2854,
+      "max_ms": 7.2854,
+      "first_request_ms": 6.6261
+    },
+    "vacancy_forecast": {
+      "samples": 15,
+      "min_ms": 40.2518,
+      "median_ms": 41.7889,
+      "p95_ms": 48.0567,
+      "p99_ms": 48.0567,
+      "max_ms": 48.0567,
+      "first_request_ms": 46.1428
+    },
+    "job_search_forecast": {
+      "samples": 15,
+      "min_ms": 4.2021,
+      "median_ms": 4.7746,
+      "p95_ms": 14.4177,
+      "p99_ms": 14.4177,
+      "max_ms": 14.4177,
+      "first_request_ms": 7.9916
+    },
+    "professional_catalog": {
+      "samples": 15,
+      "min_ms": 3.5746,
+      "median_ms": 3.8431,
+      "p95_ms": 25.9844,
+      "p99_ms": 25.9844,
+      "max_ms": 25.9844,
+      "first_request_ms": 5.7335
+    }
+  },
+  "modules": {
+    "cat_eap_start": {
+      "samples": 100,
+      "min_ms": 0.0404,
+      "median_ms": 0.0409,
+      "p95_ms": 0.042,
+      "p99_ms": 0.0436,
+      "max_ms": 0.0467
+    },
+    "cat_eap_completed": {
+      "samples": 100,
+      "min_ms": 0.4406,
+      "median_ms": 0.4638,
+      "p95_ms": 0.6623,
+      "p99_ms": 0.9238,
+      "max_ms": 1.5999
+    },
+    "cat_next_item_start": {
+      "samples": 100,
+      "min_ms": 0.2035,
+      "median_ms": 0.2195,
+      "p95_ms": 0.4913,
+      "p99_ms": 0.6504,
+      "max_ms": 0.764
+    },
+    "need_parse": {
+      "samples": 100,
+      "min_ms": 1.7837,
+      "median_ms": 1.9943,
+      "p95_ms": 2.6243,
+      "p99_ms": 4.113,
+      "max_ms": 4.1489
+    },
+    "structural_fingerprint": {
+      "samples": 100,
+      "min_ms": 0.0505,
+      "median_ms": 0.0511,
+      "p95_ms": 0.0796,
+      "p99_ms": 0.1129,
+      "max_ms": 0.1213
+    }
+  },
+  "requests": 150,
+  "errors": 0,
+  "samples": 150,
+  "min_ms": 1.5665,
+  "median_ms": 4.9312,
+  "p95_ms": 162.6525,
+  "p99_ms": 191.3895,
+  "max_ms": 202.4351,
+  "module_contracts": {
+    "cat_eap_start_answers": 0,
+    "cat_eap_completed_answers": 32,
+    "cat_next_item_start_answers": 0,
+    "fingerprint": "four source lines; small function, not a 20 KB worst-case"
+  },
+  "passed": true
+}

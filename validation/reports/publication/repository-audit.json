@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "files_scanned": 569,
+  "pdfs_scanned": 19,
+  "publication_identity_policy_passed": true,
+  "private_ingress_absent": true,
+  "known_runtime_secrets_absent": true,
+  "relative_document_links_valid": true,
+  "candidate_rows": 4040,
+  "api_paths": 144,
+  "api_operations": 169,
+  "issues": {
+    "identity_policy": [],
+    "ingress": [],
+    "secrets": [],
+    "document_links": []
+  }
+}

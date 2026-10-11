@@ -1,0 +1,24 @@
+{
+  "fingerprint": "3c91c0e6fe2275e51663ad6585def81859a07170c5ac8fd79eb09e08a1b292a4",
+  "files": {
+    "deploy/monitoring/alertmanager.yml": "31c4c4c068ef6ba0801a43a13276e0da03169fe8db3b6f21e12532f518d66f4d",
+    "deploy/monitoring/compose.yml": "a3c4c43799d94df5c4fe242d60016de8f33ef6e2cf6a4182dbeb522b32caf20e",
+    "deploy/monitoring/grafana/dashboards/proofit.json": "a7fa7ec7cdd9ecff9d2080a42135e44ec4316f6e52a052769d2fc91ed0d6408b",
+    "deploy/monitoring/grafana/provisioning/dashboards/proofit.yml": "ce3740ce431e4235c077e69222a8a7134b033d03c4f7d7f704cdc921ad6dca02",
+    "deploy/monitoring/grafana/provisioning/datasources/proofit.yml": "55fe11cf67af77b90b49642173c88fb753b37786a8d2e81aecab9252945b2f96",
+    "deploy/monitoring/monitor-role.sql": "1f579fc4ea83322dc57861e79d0783141fd26a902fdab5c695ec303c10e2c954",
+    "deploy/monitoring/prometheus.yml": "08fe17a620396270a53ed6377379c8d25b20c82e3b4b35dda98baf4a923bc255",
+    "deploy/monitoring/rules.test.yml": "1946ab9382aec57b69ab06912b2c91f74826281ec44b39e7a55e4d157b80cd5b",
+    "deploy/monitoring/rules.yml": "93aa8654d86f3286a69459671af2187d40604024a27b72dcb08479d7481a5e33",
+    "scripts/monitoring_exporter.py": "1b216ea0259489c03f45b3bed02a6585d0bef1cddfb4f9ba690ba6f27518fa6e",
+    "scripts/prepare_monitoring.py": "3df484535416a3c3e30d93545de7d2bddd77b4487b151c600bed18a5c11c4b98",
+    "scripts/start_monitoring.py": "ed6e4bb96bca46dc9b21ad649ce123d808c6a1d2beaeadc0fd5f51ee224347a5",
+    "scripts/stop_monitoring.py": "4b86f17cdfead1b4091ac4a8cf44907570b4b9497a315ede31c9a9d0c5a13402",
+    "scripts/check_monitoring_live.py": "e4a6b56df7f687be0825db47c28fc8ffc0793e717a6f7ffe004822da8af63671",
+    "scripts/build_monitoring_documentation.py": "e39502a44c8dcc86f69ea5ee0cd6083308e7ba27f9625e878799cc70325ff316",
+    "tests/test_monitoring.py": "3224484a27e2a6757e45778fb80ac9234c8d95f8767ed83f0decc75619caeaee",
+    "requirements.monitoring.txt": "de242d56edc7c3ce6bfcad2dc59aad92cde207ebcbba0a05af3b71ddd23e31b6",
+    "scripts/private_runtime.py": "0c6d0c364858cd862448829557e006160f0da4acf426c468e49059615b674717"
+  },
+  "pdf_sha256": "562be2fad88c43913b0f11405578ccb535c54fcb71a1b3f28a471282721a9858"
+}

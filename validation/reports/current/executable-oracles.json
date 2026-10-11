@@ -1,0 +1,23 @@
+{
+  "python_cases": 240,
+  "sql_cases": 240,
+  "typescript_cases": 240,
+  "role_forms": 2700,
+  "typescript_passed": 240,
+  "oracles": [
+    "Python execution in pytest",
+    "SQLite query execution in pytest",
+    "Node.js 24 real execution"
+  ],
+  "roles": [
+    "python",
+    "sql",
+    "typescript",
+    "quality",
+    "operations",
+    "leadership"
+  ],
+  "llm_generated_answer_keys": false,
+  "measured_at": "2026-10-10T12:41:25+0300",
+  "llm_calls": 0
+}

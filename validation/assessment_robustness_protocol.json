@@ -1,0 +1,18 @@
+{
+  "version": "assessment-robustness-1.0.0",
+  "seed": 20261011,
+  "paired_cases_per_scenario": 180,
+  "roles": ["backend_python", "frontend_development", "qa_engineering", "devops", "data_analytics"],
+  "scenarios": [
+    {"id": "authored_process", "difficulty_shift": 0.0, "discrimination_log_sd": 0.0},
+    {"id": "parameter_mismatch", "difficulty_shift": 0.35, "discrimination_log_sd": 0.2}
+  ],
+  "theta_range": [-2.7, 2.7],
+  "confidence_threshold": 0.85,
+  "grade_boundaries": [-0.5, 1.0],
+  "separate_response_rng_per_attempt": true,
+  "independent_parameter_forms": true,
+  "metrics": ["accuracy", "repeat_agreement", "quadratic_weighted_kappa", "theta_rmse", "repeat_theta_rmse", "high_confidence_accuracy", "high_confidence_coverage", "boundary_distance_slices"],
+  "scope": "Prespecified controlled paired simulation, including item-parameter mismatch; not independent human calibration or production form activation.",
+  "acceptance": {"finite_results": true, "all_cases_reported": true, "automatic_grade_updates": 0}
+}

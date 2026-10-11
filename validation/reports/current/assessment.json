@@ -1,0 +1,26 @@
+{
+  "simulated_trajectories": 360,
+  "scope": "Monte Carlo under authored 3PL response process; not human psychometric calibration",
+  "seed": 20261010,
+  "theta_correlation": 0.9656721911432024,
+  "theta_rmse": 0.4172413615450203,
+  "exact_grade_accuracy": 0.8944444444444445,
+  "within_one_grade": 1.0,
+  "certainty_threshold": 0.85,
+  "certain_cases": 237,
+  "certain_accuracy": 0.9620253164556962,
+  "certain_accuracy_wilson95": [
+    0.9294161519382211,
+    0.9798951962674045
+  ],
+  "coverage": 0.6583333333333333,
+  "mean_questions": 28.877777777777776,
+  "range_questions": [
+    24,
+    32
+  ],
+  "elapsed_seconds": 36.20674660001532,
+  "independent_human_labels": 0,
+  "measured_at": "2026-10-10T12:42:01+0300",
+  "llm_calls": 0
+}

@@ -1,0 +1,26 @@
+{
+  "seed": 20261009,
+  "rows_per_task": 3000,
+  "method": "Independent generator holdout; frozen model, no retuning on this holdout",
+  "tasks": {
+    "vacancy_fill": {
+      "r2": 0.932733,
+      "rmse_days": 1.5416,
+      "mae_days": 0.9017,
+      "counterfactual_cases": 100,
+      "mean_reduction_days": 1.01,
+      "target_achieved_cases": 50,
+      "worsening_cases": 0
+    },
+    "candidate_job_search": {
+      "r2": 0.990549,
+      "rmse_days": 1.1067,
+      "mae_days": 0.8551,
+      "counterfactual_cases": 100,
+      "mean_reduction_days": 7.86,
+      "target_achieved_cases": 98,
+      "worsening_cases": 0
+    }
+  },
+  "passed": true
+}

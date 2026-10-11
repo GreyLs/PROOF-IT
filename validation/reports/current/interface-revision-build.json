@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "generated_at": "2026-10-11T15:02:41+0300",
+  "scope": "authenticated interface, public contribution and numerical research revision; individual benchmark dates and scopes preserved",
+  "baseline_source_fingerprint": "04517551509733d8484240de82073eb2eac242fe2f3520eff4d48a8a2edca821",
+  "sha256": {
+    "target/release/fsp-trajectory.exe": "3f97bd9e3d77a20d199ce4f92eed15a055896f4577e0f443e45b9e91aa60a803",
+    "web/dist/index.html": "db8203ad40608095d8c49d8e787a76d51b3513c847720e721aac7acf6bb5660d",
+    "web/dist/assets/index-1b9hfhuj.css": "c8e703a879f35ed36245a67e607b44a922a279cdbe29bd532e43cb50234e0d89",
+    "web/dist/assets/index-D_9xMgAq.js": "9a32a3abf520b4124ee85436ea8eff26151b22896995c033832440cb1135c812",
+    "web/public/media/auth-network.mp4": "b628aa3b316abe39f140cc426bf5190dabbea512fe5c9c9a3118c7d682bcb04d"
+  },
+  "openapi": {
+    "validated": true,
+    "paths": 144,
+    "operations": 169
+  }
+}

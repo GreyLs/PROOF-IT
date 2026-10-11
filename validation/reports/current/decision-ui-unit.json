@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "generated_at": "2026-10-10T21:01:33+0300",
+  "node_passed": 5,
+  "node_failed": 0,
+  "python_suites": [
+    {
+      "file": "decision-ui-cpu.xml",
+      "tests": 301,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "file": "graph-explanation.xml",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0
+    }
+  ],
+  "llm_calls": 0,
+  "scope": "affected numerical methods + full requirement/inventory projection + scoped navigation and exact artifact edges; existing tests not summed twice"
+}

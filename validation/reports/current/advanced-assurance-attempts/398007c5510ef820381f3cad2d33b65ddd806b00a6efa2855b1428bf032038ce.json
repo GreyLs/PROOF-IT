@@ -1,0 +1,294 @@
+{
+  "passed": true,
+  "measured_at": "2026-10-10T22:49:14+0300",
+  "protocol": {
+    "version": "advanced-assurance-1.0.0",
+    "seed": 2026101007,
+    "scope": "controlled CPU properties, independent numeric oracles, bounded live ledger concurrency, executable targeted mutation controls",
+    "real_human_pilot": false,
+    "llm_calls": 0,
+    "graph_cases": 400,
+    "allocation_markets": 500,
+    "equivalence_trials_per_shift": 400,
+    "equivalence_shifts": [
+      0.0,
+      0.2,
+      -0.2,
+      0.4
+    ],
+    "equivalence_group_size": 240,
+    "equivalence_response_sd": 0.4,
+    "equivalence_margin": 0.2,
+    "equivalence_alpha": 0.05,
+    "response_profiles_per_class": 1000,
+    "posterior_simulations": 2000,
+    "acceptance": {
+      "graph_permutation_max_absolute_error": 1e-12,
+      "gnn_gradient_max_absolute_error": 2e-08,
+      "assignment_max_objective_error": 2e-06,
+      "numerical_score_max_absolute_error": 1e-12,
+      "boundary_false_equivalence_rate_max": 0.1,
+      "separated_form_acceptances": 0,
+      "automatic_sanctions": 0,
+      "hard_constraint_violations": 0
+    },
+    "interpretation": "Acceptance thresholds specify algorithmic contracts, not superiority over other platforms, production capacity or observed hiring effectiveness. Seed and cases are fixed before the run; all measured outcomes are retained."
+  },
+  "results": {
+    "graph_metamorphic": {
+      "graphs": 400,
+      "identity_and_sensitive_attribute_invariance": 400,
+      "permutation_max_absolute_error": 2.220446049250313e-16,
+      "input_mutations": 0,
+      "disconnected_component_invariance_cases": 400,
+      "interpretation": "structural invariance and numerical bounds, not real hiring accuracy"
+    },
+    "gradient_audit": {
+      "parameters_checked": 1105,
+      "parameter_coverage": 1.0,
+      "finite_difference_epsilon": 1e-05,
+      "max_absolute_gradient_error": 1.3416275035371683e-11,
+      "oracle": "central difference of independently summed scalar cross-entropy"
+    },
+    "assignment_oracle": {
+      "markets": 500,
+      "profiles_per_market": 8,
+      "physical_candidates_per_market": 4,
+      "vacancy_slots_per_market": 3,
+      "enumerated_assignments": 36500,
+      "nonempty_optima": 420,
+      "max_objective_error": 0.0,
+      "hard_constraint_violations": 0,
+      "duplicate_physical_assignments": 0,
+      "oracle": "exhaustive physical-person assignment, independent eligibility and utility"
+    },
+    "role_gates": {
+      "role_grade_gate_cases": 1200,
+      "roles": 5,
+      "grades": 3,
+      "false_confirmations": 0,
+      "scope": "full Boolean gate truth table and one failed mandatory practical criterion"
+    },
+    "proper_scores": {
+      "cohorts": 50,
+      "probability_outcome_pairs": 4000,
+      "auc_pairwise_comparisons": 78875,
+      "score_max_absolute_error": 8.881784197001252e-16,
+      "scores": [
+        "Brier",
+        "LogLoss",
+        "AUC with ties",
+        "ECE with boundary bins"
+      ]
+    },
+    "posterior_contracts": {
+      "analytic_posterior_and_frechet_cases": 50,
+      "censoring_changes_to_mean_or_interval": 0
+    },
+    "ab_equivalence": {
+      "settings": "independent Normal groups, SD .4, n=240, margin=.2, alpha=.05; authored response process",
+      "conditions": [
+        {
+          "true_shift": 0.0,
+          "trials": 400,
+          "equivalence_acceptances": 400,
+          "acceptance_rate": 1.0,
+          "wilson_95": [
+            0.9904877056657034,
+            0.9999999999999999
+          ]
+        },
+        {
+          "true_shift": 0.2,
+          "trials": 400,
+          "equivalence_acceptances": 20,
+          "acceptance_rate": 0.05,
+          "wilson_95": [
+            0.03259742983714726,
+            0.07596363506371961
+          ]
+        },
+        {
+          "true_shift": -0.2,
+          "trials": 400,
+          "equivalence_acceptances": 18,
+          "acceptance_rate": 0.045,
+          "wilson_95": [
+            0.028651458653886006,
+            0.07000472919032381
+          ]
+        },
+        {
+          "true_shift": 0.4,
+          "trials": 400,
+          "equivalence_acceptances": 0,
+          "acceptance_rate": 0.0,
+          "wilson_95": [
+            8.673617379884035e-19,
+            0.009512294334296508
+          ]
+        }
+      ],
+      "planned_four_looks_boundary": {
+        "trials": 400,
+        "nested_sample_sizes": [
+          120,
+          160,
+          200,
+          240
+        ],
+        "familywise_acceptances": 14,
+        "familywise_rate": 0.035,
+        "wilson_95": [
+          0.02096129419797776,
+          0.057885139532918004
+        ]
+      },
+      "not_real_role_equivalence": true,
+      "production_activations": 0
+    },
+    "response_review": {
+      "profiles_per_class": 1000,
+      "authored_clean_review_rate": 0.0,
+      "clean_review_wilson_95": [
+        2.168404344971009e-19,
+        0.0038267584855551234
+      ],
+      "rapid_constant_review_rate": 1.0,
+      "automatic_sanctions": 0,
+      "interpretation": "screening behavior on an authored timing model; not empirical cheating detection accuracy"
+    },
+    "posterior_coverage": {
+      "simulations": 2000,
+      "observation_count_per_case": 80,
+      "prior_predictive_process": "p~Uniform(0,1); successes~Binomial(80,p)",
+      "interval_level": 0.9,
+      "observed_coverage": 0.8975,
+      "coverage_wilson_95": [
+        0.883436204935987,
+        0.9100397424754167
+      ],
+      "interpretation": "prior-predictive mathematical calibration, not field forecast calibration"
+    },
+    "mutation_controls": {
+      "targeted_mutants": 13,
+      "killed": 13,
+      "survived": 0,
+      "rows": [
+        {
+          "mutation": "posterior_denominator",
+          "status": "killed",
+          "detected_by": "posterior_contracts",
+          "failure_kind": "ZeroDivisionError"
+        },
+        {
+          "mutation": "frechet_lower_bound",
+          "status": "killed",
+          "detected_by": "posterior_contracts",
+          "failure_kind": "AssertionError"
+        },
+        {
+          "mutation": "hard_constraint_and_to_or",
+          "status": "killed",
+          "detected_by": "assignment_contracts",
+          "failure_kind": "AssertionError"
+        },
+        {
+          "mutation": "physical_person_grouping_removed",
+          "status": "killed",
+          "detected_by": "assignment_contracts",
+          "failure_kind": "AssertionError"
+        },
+        {
+          "mutation": "assignment_ineligible_cost",
+          "status": "killed",
+          "detected_by": "assignment_contracts",
+          "failure_kind": "AssertionError"
+        },
+        {
+          "mutation": "role_gate_all_to_any",
+          "status": "killed",
+          "detected_by": "role_contracts",
+          "failure_kind": "AssertionError"
+        },
+        {
+          "mutation": "small_cohort_gate_removed",
+          "status": "killed",
+          "detected_by": "equivalence_safety",
+          "failure_kind": "AssertionError"
+        },
+        {
+          "mutation": "planned_alpha_budget_ignored",
+          "status": "killed",
+          "detected_by": "equivalence_safety",
+          "failure_kind": "AssertionError"
+        },
+        {
+          "mutation": "silent_role_activation",
+          "status": "killed",
+          "detected_by": "equivalence_safety",
+          "failure_kind": "AssertionError"
+        },
+        {
+          "mutation": "automatic_accusation",
+          "status": "killed",
+          "detected_by": "response_contracts",
+          "failure_kind": "AssertionError"
+        },
+        {
+          "mutation": "brier_difference_to_sum",
+          "status": "killed",
+          "detected_by": "score_contracts",
+          "failure_kind": "AssertionError"
+        },
+        {
+          "mutation": "auc_ties_removed",
+          "status": "killed",
+          "detected_by": "score_contracts",
+          "failure_kind": "AssertionError"
+        },
+        {
+          "mutation": "relation_normalization_multiplied",
+          "status": "killed",
+          "detected_by": "graph_contracts",
+          "failure_kind": "AssertionError"
+        }
+      ],
+      "scope": "13 explicitly specified semantic mutations; not exhaustive repository mutation coverage"
+    }
+  },
+  "durations_seconds": {
+    "graph_metamorphic": 1.6159538999781944,
+    "gradient_audit": 0.1524597000097856,
+    "assignment_oracle": 1.048814100009622,
+    "role_gates": 0.010595200001262128,
+    "proper_scores": 0.036671999987447634,
+    "posterior_contracts": 0.039833799994084984,
+    "ab_equivalence": 1.2866544999997132,
+    "response_review": 0.2913682000071276,
+    "posterior_coverage": 0.44706109998514876,
+    "mutation_controls": 0.19473930000094697
+  },
+  "python": "3.12.3",
+  "source_sha256": {
+    "validation/advanced_protocol.json": "e1cc8409eb1593614c6445c761cbbe0b0dc56fcfc7a93ed0952293c97d2a6b19",
+    "scripts/advanced_assurance.py": "b172900a29b7d9bbfb1884d566923a2f63f083032ddf0e6f0f03e6d9d5829880",
+    "intelligence/graph_neural.py": "4c9fe498b64b9fb1bf839096fc3426a64b5b16a8c54c9987806441188a48758a",
+    "intelligence/market_models.py": "4b5df8dbd808f14cd01fbd950e53a1c37bdc336cdd3842fd0c2a315383d0947e",
+    "intelligence/experiments.py": "2768efdbba512788728b51336266e6e0cdc48f111372933810c5ea0d7e88eb51",
+    "intelligence/twins.py": "1a9e08c7f02163f0b936cfdc6303e8d8f6b8738ac8d3a22d6ee25f31b49dbf4a",
+    "intelligence/role_matrix.py": "879d1924ff61ca7d6df7dcacc31f74fd8ca6d0bb038c835eb211e0e09d1baa40",
+    "intelligence/response_patterns.py": "93dff824e665abfd7c5f5cf5305e920c9f5a09dc42b0ff8039b8e068ed8b9a4b",
+    "intelligence/prospective.py": "2997bbc133a91da1352262d9d6a1e6f8f0e2dcfe4a32357e070178b3221276fe",
+    "intelligence/artifacts/graphsage.npz": "33a2ed89c3c35eb5085f52cbeeacde989d28c8487ac90b2c26612141e5df6cc8"
+  },
+  "reproducibility": {
+    "previous_attempt_sha256": "3e090e5cc33aaef217ddfc487383e88bc1144539be5681edea2a17e9c9653d28",
+    "same_source_comparison": true,
+    "all_deterministic_results_equal": true,
+    "timings_excluded_from_comparison": true
+  },
+  "llm_calls": 0,
+  "real_human_pilot": false,
+  "results_selectively_filtered": false
+}

@@ -1,0 +1,1312 @@
+{
+  "queries": 66,
+  "provided_gold_pairs": 32604,
+  "precision_at_5": 0.8878787878787879,
+  "ndcg_at_5": 0.9148204419319109,
+  "salary_compatible_top5": 0.8242424242424242,
+  "p95_ms": 23.05,
+  "by_role_grade": [
+    {
+      "specialization": "backend_python",
+      "grade": "junior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 37.94,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.7142857142857143,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.7,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.9814642576367044,
+        "mrr_at_10": 1.0,
+        "map_at_10": 0.961734693877551
+      }
+    },
+    {
+      "specialization": "backend_python",
+      "grade": "middle",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 16.4,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.625,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.8,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.9893494796931119,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "backend_python",
+      "grade": "senior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 0.2,
+      "latency_ms": 23.05,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.5,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "backend_java",
+      "grade": "junior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 0.6,
+      "latency_ms": 14.79,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.5,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "backend_java",
+      "grade": "middle",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 0.6,
+      "latency_ms": 16.49,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.5555555555555556,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.9,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "backend_java",
+      "grade": "senior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 0.6,
+      "latency_ms": 15.66,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.8333333333333334,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.6,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "qa_engineering",
+      "grade": "junior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 13.66,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.35714285714285715,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 1.0,
+        "recall_at_10": 0.7142857142857143,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "qa_engineering",
+      "grade": "middle",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 15.11,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.8333333333333334,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.6,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "qa_engineering",
+      "grade": "senior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 0.6,
+      "salary_compatible_top5": 0.2,
+      "latency_ms": 17.06,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 0.6,
+        "recall_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.3,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "devops",
+      "grade": "junior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 0.8,
+      "latency_ms": 14.59,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.8333333333333334,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.6,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "devops",
+      "grade": "middle",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 0.0,
+      "latency_ms": 15.96,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.5,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 1.0,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "devops",
+      "grade": "senior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 0.8,
+      "salary_compatible_top5": 0.6,
+      "latency_ms": 15.32,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 0.8,
+        "recall_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.4,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "backend_csharp",
+      "grade": "junior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 12.83,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.8333333333333334,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.6,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "backend_csharp",
+      "grade": "middle",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 16.93,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.5555555555555556,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.9,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "backend_csharp",
+      "grade": "senior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 16.01,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.5,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "backend_cpp",
+      "grade": "junior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 19.34,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.7142857142857143,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.7,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "backend_cpp",
+      "grade": "middle",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 17.02,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.45454545454545453,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 1.0,
+        "recall_at_10": 0.9090909090909091,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "backend_cpp",
+      "grade": "senior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 0.8,
+      "salary_compatible_top5": 0.8,
+      "latency_ms": 28.65,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 0.8,
+        "recall_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.4,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "system_administration",
+      "grade": "junior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 18.29,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.09259259259259259,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 1.0,
+        "recall_at_10": 0.18518518518518517,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "system_administration",
+      "grade": "middle",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 16.31,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.11904761904761904,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 1.0,
+        "recall_at_10": 0.23809523809523808,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "system_administration",
+      "grade": "senior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 24.77,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.22727272727272727,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 1.0,
+        "recall_at_10": 0.45454545454545453,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "one_c",
+      "grade": "junior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 15.34,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.25,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 1.0,
+        "recall_at_10": 0.5,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "one_c",
+      "grade": "middle",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 16.55,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.10416666666666667,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 1.0,
+        "recall_at_10": 0.20833333333333334,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "one_c",
+      "grade": "senior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 16.85,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.18518518518518517,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 1.0,
+        "recall_at_10": 0.37037037037037035,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "cybersecurity",
+      "grade": "junior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 0.4,
+      "latency_ms": 17.43,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.5555555555555556,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.9,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "cybersecurity",
+      "grade": "middle",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 0.8,
+      "latency_ms": 19.28,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.5,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 1.0,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "cybersecurity",
+      "grade": "senior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 0.0,
+      "latency_ms": 15.91,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.8333333333333334,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.6,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "data_analytics",
+      "grade": "junior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 16.05,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.5,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "data_analytics",
+      "grade": "middle",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 17.67,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.5,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 1.0,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "data_analytics",
+      "grade": "senior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 0.8,
+      "latency_ms": 21.02,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.5,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "ml_data_science",
+      "grade": "junior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 17.77,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.8333333333333334,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.6,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.9863228545080918,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "ml_data_science",
+      "grade": "middle",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 15.79,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.625,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.8,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "ml_data_science",
+      "grade": "senior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 16.64,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.8333333333333334,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.6,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.9863228545080918,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "mlops",
+      "grade": "junior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 14.35,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.8333333333333334,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.6,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "mlops",
+      "grade": "middle",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 15.05,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.625,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.8,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "mlops",
+      "grade": "senior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 16.44,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.8333333333333334,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.6,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "software_architecture",
+      "grade": "middle",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 17.84,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.4166666666666667,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 1.0,
+        "recall_at_10": 0.8333333333333334,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "software_architecture",
+      "grade": "senior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 17.54,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.625,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.8,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "data_engineering",
+      "grade": "junior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 14.53,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.8333333333333334,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.6,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "data_engineering",
+      "grade": "middle",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 0.0,
+      "latency_ms": 14.91,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.625,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.8,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "data_engineering",
+      "grade": "senior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 0.8,
+      "latency_ms": 18.59,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.8333333333333334,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.6,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "system_analysis",
+      "grade": "junior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 12.68,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.8333333333333334,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.6,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "system_analysis",
+      "grade": "middle",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 0.0,
+      "latency_ms": 16.22,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.625,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.8,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "system_analysis",
+      "grade": "senior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 0.0,
+      "latency_ms": 15.09,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.8333333333333334,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.6,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "frontend_development",
+      "grade": "junior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 12.71,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.8333333333333334,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.6,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "frontend_development",
+      "grade": "middle",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 14.38,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.625,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.8,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.9872480397841626,
+        "mrr_at_10": 1.0,
+        "map_at_10": 0.9861111111111112
+      }
+    },
+    {
+      "specialization": "frontend_development",
+      "grade": "senior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 0.0,
+      "latency_ms": 15.07,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.8333333333333334,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.6,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "mobile_development",
+      "grade": "junior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 12.2,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.8333333333333334,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.6,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "mobile_development",
+      "grade": "middle",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 14.41,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.625,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.8,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "mobile_development",
+      "grade": "senior",
+      "ndcg_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 0.2,
+      "latency_ms": 14.59,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.8333333333333334,
+        "ndcg_at_5": 1.0,
+        "precision_at_10": 0.6,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "lead_engineering",
+      "grade": "senior",
+      "ndcg_at_5": 0.9165323715184533,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 13.51,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.625,
+        "ndcg_at_5": 0.9165323715184533,
+        "precision_at_10": 0.8,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.9844741821255755,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "lead_engineering",
+      "grade": "middle",
+      "ndcg_at_5": 0.4344669478443504,
+      "precision_at_5": 0.2,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 12.93,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 0.2,
+        "recall_at_5": 0.5,
+        "ndcg_at_5": 0.4344669478443504,
+        "precision_at_10": 0.2,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.6136026433740324,
+        "mrr_at_10": 0.25,
+        "map_at_10": 0.25
+      }
+    },
+    {
+      "specialization": "lead_data",
+      "grade": "senior",
+      "ndcg_at_5": 0.9165323715184533,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 13.32,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.625,
+        "ndcg_at_5": 0.9165323715184533,
+        "precision_at_10": 0.8,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.9844741821255755,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "lead_data",
+      "grade": "middle",
+      "ndcg_at_5": 0.4344669478443504,
+      "precision_at_5": 0.2,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 13.47,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 0.2,
+        "recall_at_5": 0.5,
+        "ndcg_at_5": 0.4344669478443504,
+        "precision_at_10": 0.2,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.6136026433740324,
+        "mrr_at_10": 0.25,
+        "map_at_10": 0.25
+      }
+    },
+    {
+      "specialization": "head_platform",
+      "grade": "senior",
+      "ndcg_at_5": 0.9165323715184533,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 12.95,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.625,
+        "ndcg_at_5": 0.9165323715184533,
+        "precision_at_10": 0.8,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.9844741821255755,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "head_platform",
+      "grade": "middle",
+      "ndcg_at_5": 0.4344669478443504,
+      "precision_at_5": 0.2,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 14.45,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 0.2,
+        "recall_at_5": 0.5,
+        "ndcg_at_5": 0.4344669478443504,
+        "precision_at_10": 0.2,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.6136026433740324,
+        "mrr_at_10": 0.25,
+        "map_at_10": 0.25
+      }
+    },
+    {
+      "specialization": "head_data",
+      "grade": "senior",
+      "ndcg_at_5": 0.5858654647193313,
+      "precision_at_5": 0.8,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 13.09,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 0.8,
+        "recall_at_5": 0.5,
+        "ndcg_at_5": 0.5858654647193313,
+        "precision_at_10": 0.8,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.798671535191225,
+        "mrr_at_10": 0.5,
+        "map_at_10": 0.7713789682539682
+      }
+    },
+    {
+      "specialization": "head_data",
+      "grade": "middle",
+      "ndcg_at_5": 0.3352884672471666,
+      "precision_at_5": 0.2,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 13.14,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 0.2,
+        "recall_at_5": 0.5,
+        "ndcg_at_5": 0.3352884672471666,
+        "precision_at_10": 0.2,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.5372856980645928,
+        "mrr_at_10": 0.2,
+        "map_at_10": 0.2111111111111111
+      }
+    },
+    {
+      "specialization": "director_engineering",
+      "grade": "senior",
+      "ndcg_at_5": 0.9165323715184533,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 13.01,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.625,
+        "ndcg_at_5": 0.9165323715184533,
+        "precision_at_10": 0.8,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.9844741821255755,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "director_engineering",
+      "grade": "middle",
+      "ndcg_at_5": 0.4344669478443504,
+      "precision_at_5": 0.2,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 13.31,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 0.2,
+        "recall_at_5": 0.5,
+        "ndcg_at_5": 0.4344669478443504,
+        "precision_at_10": 0.2,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.6136026433740324,
+        "mrr_at_10": 0.25,
+        "map_at_10": 0.25
+      }
+    },
+    {
+      "specialization": "director_security",
+      "grade": "senior",
+      "ndcg_at_5": 0.9165323715184533,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 12.89,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.625,
+        "ndcg_at_5": 0.9165323715184533,
+        "precision_at_10": 0.8,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.9844741821255755,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "director_security",
+      "grade": "middle",
+      "ndcg_at_5": 0.4344669478443504,
+      "precision_at_5": 0.2,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 13.12,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 0.2,
+        "recall_at_5": 0.5,
+        "ndcg_at_5": 0.4344669478443504,
+        "precision_at_10": 0.2,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.6136026433740324,
+        "mrr_at_10": 0.25,
+        "map_at_10": 0.25
+      }
+    },
+    {
+      "specialization": "executive_cto",
+      "grade": "senior",
+      "ndcg_at_5": 0.9165323715184533,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 15.48,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.625,
+        "ndcg_at_5": 0.9165323715184533,
+        "precision_at_10": 0.8,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.9844741821255755,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "executive_cto",
+      "grade": "middle",
+      "ndcg_at_5": 0.4344669478443504,
+      "precision_at_5": 0.2,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 14.35,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 0.2,
+        "recall_at_5": 0.5,
+        "ndcg_at_5": 0.4344669478443504,
+        "precision_at_10": 0.2,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.6136026433740324,
+        "mrr_at_10": 0.25,
+        "map_at_10": 0.25
+      }
+    },
+    {
+      "specialization": "executive_ciso",
+      "grade": "senior",
+      "ndcg_at_5": 0.9165323715184533,
+      "precision_at_5": 1.0,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 15.18,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 0.625,
+        "ndcg_at_5": 0.9165323715184533,
+        "precision_at_10": 0.8,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.9844741821255755,
+        "mrr_at_10": 1.0,
+        "map_at_10": 1.0
+      }
+    },
+    {
+      "specialization": "executive_ciso",
+      "grade": "middle",
+      "ndcg_at_5": 0.4344669478443504,
+      "precision_at_5": 0.2,
+      "salary_compatible_top5": 1.0,
+      "latency_ms": 15.58,
+      "gold_pairs": 494,
+      "extended": {
+        "precision_at_5": 0.2,
+        "recall_at_5": 0.5,
+        "ndcg_at_5": 0.4344669478443504,
+        "precision_at_10": 0.2,
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.6136026433740324,
+        "mrr_at_10": 0.25,
+        "map_at_10": 0.25
+      }
+    }
+  ],
+  "method": "Supplied labels transposed; no labels given to API. Directional salary/grade preference may differ; this is measured rather than redefined.",
+  "extended": {
+    "metrics": {
+      "precision_at_5": 0.8878787878787883,
+      "recall_at_5": 0.6491443110761291,
+      "ndcg_at_5": 0.9148204419319105,
+      "precision_at_10": 0.6712121212121214,
+      "recall_at_10": 0.9305036293672657,
+      "ndcg_at_10": 0.9462606439073212,
+      "mrr_at_10": 0.9007575757575758,
+      "map_at_10": 0.9042475133992992
+    },
+    "bootstrap95": {
+      "precision_at_5": [
+        0.8212121212121214,
+        0.9454545454545455
+      ],
+      "recall_at_5": [
+        0.5962206275416504,
+        0.7014570078490535
+      ],
+      "ndcg_at_5": [
+        0.8649413866299889,
+        0.9563965558753832
+      ],
+      "precision_at_10": [
+        0.6090909090909091,
+        0.7257575757575759
+      ],
+      "recall_at_10": [
+        0.8835518332677426,
+        0.9744910550308277
+      ],
+      "ndcg_at_10": [
+        0.912674681009395,
+        0.9736740725320564
+      ],
+      "mrr_at_10": [
+        0.8347916666666666,
+        0.9545454545454546
+      ],
+      "map_at_10": [
+        0.8418191293247097,
+        0.954765939046073
+      ]
+    },
+    "bootstrap_method": "1000 query-level IID resamples, seed 20261009; macro means; does not account for shared candidate/vacancy correlations across queries"
+  }
+}

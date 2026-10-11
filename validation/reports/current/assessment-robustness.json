@@ -1,0 +1,7423 @@
+{
+  "passed": true,
+  "generated_at": "2026-10-11T13:47:15+0300",
+  "protocol": {
+    "version": "assessment-robustness-1.0.0",
+    "seed": 20261011,
+    "paired_cases_per_scenario": 180,
+    "roles": [
+      "backend_python",
+      "frontend_development",
+      "qa_engineering",
+      "devops",
+      "data_analytics"
+    ],
+    "scenarios": [
+      {
+        "id": "authored_process",
+        "difficulty_shift": 0.0,
+        "discrimination_log_sd": 0.0
+      },
+      {
+        "id": "parameter_mismatch",
+        "difficulty_shift": 0.35,
+        "discrimination_log_sd": 0.2
+      }
+    ],
+    "theta_range": [
+      -2.7,
+      2.7
+    ],
+    "confidence_threshold": 0.85,
+    "grade_boundaries": [
+      -0.5,
+      1.0
+    ],
+    "separate_response_rng_per_attempt": true,
+    "independent_parameter_forms": true,
+    "metrics": [
+      "accuracy",
+      "repeat_agreement",
+      "quadratic_weighted_kappa",
+      "theta_rmse",
+      "repeat_theta_rmse",
+      "high_confidence_accuracy",
+      "high_confidence_coverage",
+      "boundary_distance_slices"
+    ],
+    "scope": "Prespecified controlled paired simulation, including item-parameter mismatch; not independent human calibration or production form activation.",
+    "acceptance": {
+      "finite_results": true,
+      "all_cases_reported": true,
+      "automatic_grade_updates": 0
+    }
+  },
+  "protocol_sha256": "6a77c804e2b143641904a37e4d24374178a47338015dc642b6c51f79f8e642f2",
+  "paired_cases": 360,
+  "attempts": 720,
+  "automatic_grade_updates": 0,
+  "elapsed_seconds": 118.85787999999957,
+  "scenarios": [
+    {
+      "scenario": "authored_process",
+      "paired_cases": 180,
+      "attempts": 360,
+      "exact_grade_accuracy": 0.875,
+      "repeat_agreement": 0.7944444444444444,
+      "quadratic_weighted_kappa": 0.8335,
+      "theta_rmse": 0.42173646606090576,
+      "repeat_theta_rmse": 0.5214480338974877,
+      "high_confidence_attempts": 219,
+      "high_confidence_accuracy": 0.958904109589041,
+      "high_confidence_coverage": 0.6083333333333333,
+      "boundary_slices": [
+        {
+          "slice": "near_boundary",
+          "paired_cases": 50,
+          "repeat_agreement": 0.5,
+          "wilson95": [
+            0.36644286412332855,
+            0.6335571358766714
+          ]
+        },
+        {
+          "slice": "intermediate",
+          "paired_cases": 43,
+          "repeat_agreement": 0.7906976744186046,
+          "wilson95": [
+            0.6479406820576336,
+            0.8857729400218853
+          ]
+        },
+        {
+          "slice": "separated",
+          "paired_cases": 87,
+          "repeat_agreement": 0.9655172413793104,
+          "wilson95": [
+            0.903457576607831,
+            0.9882043932385831
+          ]
+        }
+      ],
+      "interval_unit": "attempt for accuracy; person-pair for repeat agreement; paired attempts are correlated",
+      "accuracy_cluster_bootstrap95": [
+        0.8388194444444445,
+        0.9083333333333333
+      ],
+      "high_confidence_accuracy_cluster_bootstrap95": [
+        0.9303395522388059,
+        0.9826142937115133
+      ],
+      "interval_method": "1000 person-cluster bootstrap replicates; both attempts remain together; fixed seed",
+      "by_role": [
+        {
+          "role": "backend_python",
+          "paired_cases": 36,
+          "exact_grade_accuracy": 0.875
+        },
+        {
+          "role": "frontend_development",
+          "paired_cases": 36,
+          "exact_grade_accuracy": 0.9166666666666666
+        },
+        {
+          "role": "qa_engineering",
+          "paired_cases": 36,
+          "exact_grade_accuracy": 0.8194444444444444
+        },
+        {
+          "role": "devops",
+          "paired_cases": 36,
+          "exact_grade_accuracy": 0.8333333333333334
+        },
+        {
+          "role": "data_analytics",
+          "paired_cases": 36,
+          "exact_grade_accuracy": 0.9305555555555556
+        }
+      ]
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "paired_cases": 180,
+      "attempts": 360,
+      "exact_grade_accuracy": 0.8027777777777778,
+      "repeat_agreement": 0.7944444444444444,
+      "quadratic_weighted_kappa": 0.8181520314547838,
+      "theta_rmse": 0.5160769260637953,
+      "repeat_theta_rmse": 0.5339513041675451,
+      "high_confidence_attempts": 221,
+      "high_confidence_accuracy": 0.918552036199095,
+      "high_confidence_coverage": 0.6138888888888889,
+      "boundary_slices": [
+        {
+          "slice": "near_boundary",
+          "paired_cases": 50,
+          "repeat_agreement": 0.66,
+          "wilson95": [
+            0.5215356854148285,
+            0.7756323036493895
+          ]
+        },
+        {
+          "slice": "intermediate",
+          "paired_cases": 43,
+          "repeat_agreement": 0.6511627906976745,
+          "wilson95": [
+            0.501715070970981,
+            0.775816012510369
+          ]
+        },
+        {
+          "slice": "separated",
+          "paired_cases": 87,
+          "repeat_agreement": 0.9425287356321839,
+          "wilson95": [
+            0.8724245521342497,
+            0.9752047278432054
+          ]
+        }
+      ],
+      "interval_unit": "attempt for accuracy; person-pair for repeat agreement; paired attempts are correlated",
+      "accuracy_cluster_bootstrap95": [
+        0.7527777777777778,
+        0.8472222222222222
+      ],
+      "high_confidence_accuracy_cluster_bootstrap95": [
+        0.8755276532137518,
+        0.9521790890269152
+      ],
+      "interval_method": "1000 person-cluster bootstrap replicates; both attempts remain together; fixed seed",
+      "by_role": [
+        {
+          "role": "backend_python",
+          "paired_cases": 36,
+          "exact_grade_accuracy": 0.7777777777777778
+        },
+        {
+          "role": "frontend_development",
+          "paired_cases": 36,
+          "exact_grade_accuracy": 0.875
+        },
+        {
+          "role": "qa_engineering",
+          "paired_cases": 36,
+          "exact_grade_accuracy": 0.6944444444444444
+        },
+        {
+          "role": "devops",
+          "paired_cases": 36,
+          "exact_grade_accuracy": 0.7777777777777778
+        },
+        {
+          "role": "data_analytics",
+          "paired_cases": 36,
+          "exact_grade_accuracy": 0.8888888888888888
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "scenario": "authored_process",
+      "person": 0,
+      "role": "backend_python",
+      "latent_theta": -0.40419712405476327,
+      "truth_grade": 1,
+      "boundary_distance": 0.09580287594523673,
+      "a": {
+        "theta": -0.5544,
+        "grade": 0,
+        "confidence": 0.51515,
+        "questions": 32
+      },
+      "b": {
+        "theta": -0.1929,
+        "grade": 1,
+        "confidence": 0.81801,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 1,
+      "role": "frontend_development",
+      "latent_theta": -2.5750836343394345,
+      "truth_grade": 0,
+      "boundary_distance": 2.0750836343394345,
+      "a": {
+        "theta": -1.9314,
+        "grade": 0,
+        "confidence": 0.99996,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.2396,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 2,
+      "role": "qa_engineering",
+      "latent_theta": -0.9687687600153856,
+      "truth_grade": 0,
+      "boundary_distance": 0.4687687600153856,
+      "a": {
+        "theta": -0.5407,
+        "grade": 0,
+        "confidence": 0.50243,
+        "questions": 31
+      },
+      "b": {
+        "theta": -0.7171,
+        "grade": 0,
+        "confidence": 0.69669,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 3,
+      "role": "devops",
+      "latent_theta": 1.2192060056343537,
+      "truth_grade": 2,
+      "boundary_distance": 0.21920600563435366,
+      "a": {
+        "theta": 1.5005,
+        "grade": 2,
+        "confidence": 0.92079,
+        "questions": 27
+      },
+      "b": {
+        "theta": 0.7398,
+        "grade": 1,
+        "confidence": 0.73829,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 4,
+      "role": "data_analytics",
+      "latent_theta": -0.3150709154490503,
+      "truth_grade": 1,
+      "boundary_distance": 0.1849290845509497,
+      "a": {
+        "theta": -0.4927,
+        "grade": 1,
+        "confidence": 0.53993,
+        "questions": 30
+      },
+      "b": {
+        "theta": 0.0715,
+        "grade": 1,
+        "confidence": 0.93526,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 5,
+      "role": "backend_python",
+      "latent_theta": -2.0186888414046167,
+      "truth_grade": 0,
+      "boundary_distance": 1.5186888414046167,
+      "a": {
+        "theta": -1.6787,
+        "grade": 0,
+        "confidence": 0.99925,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.7095,
+        "grade": 0,
+        "confidence": 0.99961,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 6,
+      "role": "frontend_development",
+      "latent_theta": 2.36180113342062,
+      "truth_grade": 2,
+      "boundary_distance": 1.3618011334206201,
+      "a": {
+        "theta": 2.0383,
+        "grade": 2,
+        "confidence": 0.99807,
+        "questions": 28
+      },
+      "b": {
+        "theta": 1.7173,
+        "grade": 2,
+        "confidence": 0.97561,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 7,
+      "role": "qa_engineering",
+      "latent_theta": 1.716301443733145,
+      "truth_grade": 2,
+      "boundary_distance": 0.716301443733145,
+      "a": {
+        "theta": 1.547,
+        "grade": 2,
+        "confidence": 0.93569,
+        "questions": 27
+      },
+      "b": {
+        "theta": 1.4928,
+        "grade": 2,
+        "confidence": 0.91799,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 8,
+      "role": "devops",
+      "latent_theta": 0.9835217984209566,
+      "truth_grade": 1,
+      "boundary_distance": 0.01647820157904345,
+      "a": {
+        "theta": 1.1049,
+        "grade": 2,
+        "confidence": 0.65525,
+        "questions": 26
+      },
+      "b": {
+        "theta": 1.1222,
+        "grade": 2,
+        "confidence": 0.67285,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 9,
+      "role": "data_analytics",
+      "latent_theta": 0.7804590378088414,
+      "truth_grade": 1,
+      "boundary_distance": 0.2195409621911586,
+      "a": {
+        "theta": 0.1977,
+        "grade": 1,
+        "confidence": 0.95411,
+        "questions": 27
+      },
+      "b": {
+        "theta": 0.7208,
+        "grade": 1,
+        "confidence": 0.75156,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 10,
+      "role": "backend_python",
+      "latent_theta": -2.3931498870017203,
+      "truth_grade": 0,
+      "boundary_distance": 1.8931498870017203,
+      "a": {
+        "theta": -1.5328,
+        "grade": 0,
+        "confidence": 0.9968,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.6838,
+        "grade": 0,
+        "confidence": 0.99948,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 11,
+      "role": "frontend_development",
+      "latent_theta": 0.9204298996711007,
+      "truth_grade": 1,
+      "boundary_distance": 0.07957010032889933,
+      "a": {
+        "theta": 0.2552,
+        "grade": 1,
+        "confidence": 0.95034,
+        "questions": 25
+      },
+      "b": {
+        "theta": 0.7695,
+        "grade": 1,
+        "confidence": 0.70933,
+        "questions": 25
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 12,
+      "role": "qa_engineering",
+      "latent_theta": 2.042237709629206,
+      "truth_grade": 2,
+      "boundary_distance": 1.0422377096292061,
+      "a": {
+        "theta": 1.8133,
+        "grade": 2,
+        "confidence": 0.98734,
+        "questions": 26
+      },
+      "b": {
+        "theta": 1.0564,
+        "grade": 2,
+        "confidence": 0.60258,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 13,
+      "role": "devops",
+      "latent_theta": 1.4671134770206118,
+      "truth_grade": 2,
+      "boundary_distance": 0.4671134770206118,
+      "a": {
+        "theta": 1.6545,
+        "grade": 2,
+        "confidence": 0.96378,
+        "questions": 24
+      },
+      "b": {
+        "theta": 1.1482,
+        "grade": 2,
+        "confidence": 0.69712,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 14,
+      "role": "data_analytics",
+      "latent_theta": -0.35542455648296256,
+      "truth_grade": 1,
+      "boundary_distance": 0.14457544351703744,
+      "a": {
+        "theta": -0.4481,
+        "grade": 1,
+        "confidence": 0.60381,
+        "questions": 31
+      },
+      "b": {
+        "theta": -0.0438,
+        "grade": 1,
+        "confidence": 0.89801,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 15,
+      "role": "backend_python",
+      "latent_theta": 1.1917795527833324,
+      "truth_grade": 2,
+      "boundary_distance": 0.19177955278333236,
+      "a": {
+        "theta": 0.7889,
+        "grade": 1,
+        "confidence": 0.68376,
+        "questions": 27
+      },
+      "b": {
+        "theta": 1.021,
+        "grade": 2,
+        "confidence": 0.55379,
+        "questions": 31
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 16,
+      "role": "frontend_development",
+      "latent_theta": 0.843950571249735,
+      "truth_grade": 1,
+      "boundary_distance": 0.15604942875026495,
+      "a": {
+        "theta": 0.2935,
+        "grade": 1,
+        "confidence": 0.95077,
+        "questions": 27
+      },
+      "b": {
+        "theta": 0.4981,
+        "grade": 1,
+        "confidence": 0.89543,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 17,
+      "role": "qa_engineering",
+      "latent_theta": 1.5461060461042724,
+      "truth_grade": 2,
+      "boundary_distance": 0.5461060461042724,
+      "a": {
+        "theta": 1.1383,
+        "grade": 2,
+        "confidence": 0.68699,
+        "questions": 26
+      },
+      "b": {
+        "theta": 1.4931,
+        "grade": 2,
+        "confidence": 0.91628,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 18,
+      "role": "devops",
+      "latent_theta": -1.2695127605307694,
+      "truth_grade": 0,
+      "boundary_distance": 0.7695127605307694,
+      "a": {
+        "theta": -0.4182,
+        "grade": 1,
+        "confidence": 0.63417,
+        "questions": 29
+      },
+      "b": {
+        "theta": -0.8508,
+        "grade": 0,
+        "confidence": 0.81087,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 19,
+      "role": "data_analytics",
+      "latent_theta": -1.5905183574217492,
+      "truth_grade": 0,
+      "boundary_distance": 1.0905183574217492,
+      "a": {
+        "theta": -1.547,
+        "grade": 0,
+        "confidence": 0.99838,
+        "questions": 32
+      },
+      "b": {
+        "theta": -0.8633,
+        "grade": 0,
+        "confidence": 0.81802,
+        "questions": 31
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 20,
+      "role": "backend_python",
+      "latent_theta": 1.161624679193174,
+      "truth_grade": 2,
+      "boundary_distance": 0.16162467919317391,
+      "a": {
+        "theta": 1.1402,
+        "grade": 2,
+        "confidence": 0.68124,
+        "questions": 28
+      },
+      "b": {
+        "theta": 1.2586,
+        "grade": 2,
+        "confidence": 0.77982,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 21,
+      "role": "frontend_development",
+      "latent_theta": 0.9474504347256412,
+      "truth_grade": 1,
+      "boundary_distance": 0.052549565274358834,
+      "a": {
+        "theta": 0.8192,
+        "grade": 1,
+        "confidence": 0.65596,
+        "questions": 27
+      },
+      "b": {
+        "theta": 1.0106,
+        "grade": 2,
+        "confidence": 0.53801,
+        "questions": 30
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 22,
+      "role": "qa_engineering",
+      "latent_theta": -1.9400069226429362,
+      "truth_grade": 0,
+      "boundary_distance": 1.4400069226429362,
+      "a": {
+        "theta": -2.1951,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.6754,
+        "grade": 0,
+        "confidence": 0.99952,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 23,
+      "role": "devops",
+      "latent_theta": 2.2946173835098334,
+      "truth_grade": 2,
+      "boundary_distance": 1.2946173835098334,
+      "a": {
+        "theta": 2.3327,
+        "grade": 2,
+        "confidence": 0.99994,
+        "questions": 32
+      },
+      "b": {
+        "theta": 2.0505,
+        "grade": 2,
+        "confidence": 0.99832,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 24,
+      "role": "data_analytics",
+      "latent_theta": -2.0655493036889143,
+      "truth_grade": 0,
+      "boundary_distance": 1.5655493036889143,
+      "a": {
+        "theta": -1.4349,
+        "grade": 0,
+        "confidence": 0.99216,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.019,
+        "grade": 0,
+        "confidence": 0.99999,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 25,
+      "role": "backend_python",
+      "latent_theta": -0.09402135944430468,
+      "truth_grade": 1,
+      "boundary_distance": 0.4059786405556953,
+      "a": {
+        "theta": -0.0458,
+        "grade": 1,
+        "confidence": 0.89539,
+        "questions": 27
+      },
+      "b": {
+        "theta": 0.0096,
+        "grade": 1,
+        "confidence": 0.91911,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 26,
+      "role": "frontend_development",
+      "latent_theta": -0.2978943449681317,
+      "truth_grade": 1,
+      "boundary_distance": 0.20210565503186828,
+      "a": {
+        "theta": -0.3329,
+        "grade": 1,
+        "confidence": 0.70352,
+        "questions": 29
+      },
+      "b": {
+        "theta": -0.874,
+        "grade": 0,
+        "confidence": 0.82329,
+        "questions": 30
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 27,
+      "role": "qa_engineering",
+      "latent_theta": 2.47399002249517,
+      "truth_grade": 2,
+      "boundary_distance": 1.4739900224951699,
+      "a": {
+        "theta": 1.9599,
+        "grade": 2,
+        "confidence": 0.99604,
+        "questions": 26
+      },
+      "b": {
+        "theta": 1.5011,
+        "grade": 2,
+        "confidence": 0.92226,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 28,
+      "role": "devops",
+      "latent_theta": 1.1267734929444724,
+      "truth_grade": 2,
+      "boundary_distance": 0.12677349294447238,
+      "a": {
+        "theta": 0.7091,
+        "grade": 1,
+        "confidence": 0.76091,
+        "questions": 31
+      },
+      "b": {
+        "theta": 1.004,
+        "grade": 2,
+        "confidence": 0.53744,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 29,
+      "role": "data_analytics",
+      "latent_theta": -0.6572604777010382,
+      "truth_grade": 0,
+      "boundary_distance": 0.15726047770103824,
+      "a": {
+        "theta": -0.6113,
+        "grade": 0,
+        "confidence": 0.59003,
+        "questions": 31
+      },
+      "b": {
+        "theta": -0.6685,
+        "grade": 0,
+        "confidence": 0.64656,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 30,
+      "role": "backend_python",
+      "latent_theta": 0.8523947711063249,
+      "truth_grade": 1,
+      "boundary_distance": 0.1476052288936751,
+      "a": {
+        "theta": 0.779,
+        "grade": 1,
+        "confidence": 0.69996,
+        "questions": 27
+      },
+      "b": {
+        "theta": 0.6017,
+        "grade": 1,
+        "confidence": 0.84671,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 31,
+      "role": "frontend_development",
+      "latent_theta": -1.7870998211323692,
+      "truth_grade": 0,
+      "boundary_distance": 1.2870998211323692,
+      "a": {
+        "theta": -1.3051,
+        "grade": 0,
+        "confidence": 0.98507,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.1901,
+        "grade": 0,
+        "confidence": 0.96585,
+        "questions": 30
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 32,
+      "role": "qa_engineering",
+      "latent_theta": 2.5317194581100013,
+      "truth_grade": 2,
+      "boundary_distance": 1.5317194581100013,
+      "a": {
+        "theta": 2.3095,
+        "grade": 2,
+        "confidence": 0.99978,
+        "questions": 32
+      },
+      "b": {
+        "theta": 2.0505,
+        "grade": 2,
+        "confidence": 0.99832,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 33,
+      "role": "devops",
+      "latent_theta": 0.547978705685471,
+      "truth_grade": 1,
+      "boundary_distance": 0.452021294314529,
+      "a": {
+        "theta": 0.5861,
+        "grade": 1,
+        "confidence": 0.84809,
+        "questions": 26
+      },
+      "b": {
+        "theta": 0.1698,
+        "grade": 1,
+        "confidence": 0.95236,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 34,
+      "role": "data_analytics",
+      "latent_theta": 0.5176992736910053,
+      "truth_grade": 1,
+      "boundary_distance": 0.4823007263089947,
+      "a": {
+        "theta": 0.5771,
+        "grade": 1,
+        "confidence": 0.86132,
+        "questions": 31
+      },
+      "b": {
+        "theta": 0.1913,
+        "grade": 1,
+        "confidence": 0.95237,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 35,
+      "role": "backend_python",
+      "latent_theta": 2.4953100929909526,
+      "truth_grade": 2,
+      "boundary_distance": 1.4953100929909526,
+      "a": {
+        "theta": 2.15,
+        "grade": 2,
+        "confidence": 0.99945,
+        "questions": 32
+      },
+      "b": {
+        "theta": 2.1294,
+        "grade": 2,
+        "confidence": 0.9996,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 36,
+      "role": "frontend_development",
+      "latent_theta": 0.412963053257013,
+      "truth_grade": 1,
+      "boundary_distance": 0.587036946742987,
+      "a": {
+        "theta": 0.7741,
+        "grade": 1,
+        "confidence": 0.70741,
+        "questions": 28
+      },
+      "b": {
+        "theta": 0.1055,
+        "grade": 1,
+        "confidence": 0.9405,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 37,
+      "role": "qa_engineering",
+      "latent_theta": 1.5051850440410863,
+      "truth_grade": 2,
+      "boundary_distance": 0.5051850440410863,
+      "a": {
+        "theta": 0.8872,
+        "grade": 1,
+        "confidence": 0.58465,
+        "questions": 28
+      },
+      "b": {
+        "theta": 1.705,
+        "grade": 2,
+        "confidence": 0.9753,
+        "questions": 25
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 38,
+      "role": "devops",
+      "latent_theta": 0.8793697635239992,
+      "truth_grade": 1,
+      "boundary_distance": 0.1206302364760008,
+      "a": {
+        "theta": 0.7417,
+        "grade": 1,
+        "confidence": 0.74276,
+        "questions": 28
+      },
+      "b": {
+        "theta": 0.5688,
+        "grade": 1,
+        "confidence": 0.85889,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 39,
+      "role": "data_analytics",
+      "latent_theta": -0.38709029811452567,
+      "truth_grade": 1,
+      "boundary_distance": 0.11290970188547433,
+      "a": {
+        "theta": -1.2708,
+        "grade": 0,
+        "confidence": 0.98075,
+        "questions": 30
+      },
+      "b": {
+        "theta": -0.2427,
+        "grade": 1,
+        "confidence": 0.78464,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 40,
+      "role": "backend_python",
+      "latent_theta": -0.12467344648653134,
+      "truth_grade": 1,
+      "boundary_distance": 0.37532655351346866,
+      "a": {
+        "theta": -0.5035,
+        "grade": 1,
+        "confidence": 0.54101,
+        "questions": 32
+      },
+      "b": {
+        "theta": -0.1108,
+        "grade": 1,
+        "confidence": 0.86805,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 41,
+      "role": "frontend_development",
+      "latent_theta": 2.0735863750282064,
+      "truth_grade": 2,
+      "boundary_distance": 1.0735863750282064,
+      "a": {
+        "theta": 1.9839,
+        "grade": 2,
+        "confidence": 0.99702,
+        "questions": 27
+      },
+      "b": {
+        "theta": 1.6545,
+        "grade": 2,
+        "confidence": 0.96378,
+        "questions": 24
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 42,
+      "role": "qa_engineering",
+      "latent_theta": 1.1009541223421309,
+      "truth_grade": 2,
+      "boundary_distance": 0.10095412234213086,
+      "a": {
+        "theta": 1.0198,
+        "grade": 2,
+        "confidence": 0.56983,
+        "questions": 27
+      },
+      "b": {
+        "theta": 0.5539,
+        "grade": 1,
+        "confidence": 0.86911,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 43,
+      "role": "devops",
+      "latent_theta": 1.7969589687278242,
+      "truth_grade": 2,
+      "boundary_distance": 0.7969589687278242,
+      "a": {
+        "theta": 1.5438,
+        "grade": 2,
+        "confidence": 0.93437,
+        "questions": 26
+      },
+      "b": {
+        "theta": 1.5232,
+        "grade": 2,
+        "confidence": 0.92951,
+        "questions": 25
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 44,
+      "role": "data_analytics",
+      "latent_theta": -1.225306292476868,
+      "truth_grade": 0,
+      "boundary_distance": 0.7253062924768681,
+      "a": {
+        "theta": -0.7985,
+        "grade": 0,
+        "confidence": 0.76575,
+        "questions": 29
+      },
+      "b": {
+        "theta": -0.7388,
+        "grade": 0,
+        "confidence": 0.71178,
+        "questions": 31
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 45,
+      "role": "backend_python",
+      "latent_theta": -2.5953552322676408,
+      "truth_grade": 0,
+      "boundary_distance": 2.0953552322676408,
+      "a": {
+        "theta": -1.7095,
+        "grade": 0,
+        "confidence": 0.99961,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.3564,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 46,
+      "role": "frontend_development",
+      "latent_theta": 1.7761553219604087,
+      "truth_grade": 2,
+      "boundary_distance": 0.7761553219604087,
+      "a": {
+        "theta": 1.4669,
+        "grade": 2,
+        "confidence": 0.9047,
+        "questions": 25
+      },
+      "b": {
+        "theta": 1.5309,
+        "grade": 2,
+        "confidence": 0.93214,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 47,
+      "role": "qa_engineering",
+      "latent_theta": 1.0102648225627195,
+      "truth_grade": 2,
+      "boundary_distance": 0.010264822562719544,
+      "a": {
+        "theta": 1.0357,
+        "grade": 2,
+        "confidence": 0.57996,
+        "questions": 27
+      },
+      "b": {
+        "theta": 0.5919,
+        "grade": 1,
+        "confidence": 0.84614,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 48,
+      "role": "devops",
+      "latent_theta": 1.586000992134375,
+      "truth_grade": 2,
+      "boundary_distance": 0.586000992134375,
+      "a": {
+        "theta": 1.7401,
+        "grade": 2,
+        "confidence": 0.97898,
+        "questions": 25
+      },
+      "b": {
+        "theta": 1.2074,
+        "grade": 2,
+        "confidence": 0.74365,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 49,
+      "role": "data_analytics",
+      "latent_theta": -2.6755094259270344,
+      "truth_grade": 0,
+      "boundary_distance": 2.1755094259270344,
+      "a": {
+        "theta": -2.4733,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.1877,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 50,
+      "role": "backend_python",
+      "latent_theta": -1.1656781057445658,
+      "truth_grade": 0,
+      "boundary_distance": 0.6656781057445658,
+      "a": {
+        "theta": -0.6601,
+        "grade": 0,
+        "confidence": 0.6335,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.6317,
+        "grade": 0,
+        "confidence": 0.99906,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 51,
+      "role": "frontend_development",
+      "latent_theta": 1.0049742785814049,
+      "truth_grade": 2,
+      "boundary_distance": 0.004974278581404867,
+      "a": {
+        "theta": 1.0986,
+        "grade": 2,
+        "confidence": 0.63822,
+        "questions": 28
+      },
+      "b": {
+        "theta": 0.2834,
+        "grade": 1,
+        "confidence": 0.94964,
+        "questions": 30
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 52,
+      "role": "qa_engineering",
+      "latent_theta": 1.3157413328995204,
+      "truth_grade": 2,
+      "boundary_distance": 0.31574133289952044,
+      "a": {
+        "theta": 1.2135,
+        "grade": 2,
+        "confidence": 0.75034,
+        "questions": 29
+      },
+      "b": {
+        "theta": 1.3538,
+        "grade": 2,
+        "confidence": 0.84986,
+        "questions": 25
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 53,
+      "role": "devops",
+      "latent_theta": 0.6637358366262132,
+      "truth_grade": 1,
+      "boundary_distance": 0.33626416337378684,
+      "a": {
+        "theta": 0.6519,
+        "grade": 1,
+        "confidence": 0.80414,
+        "questions": 28
+      },
+      "b": {
+        "theta": 0.6172,
+        "grade": 1,
+        "confidence": 0.82924,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 54,
+      "role": "data_analytics",
+      "latent_theta": 1.5693475811873165,
+      "truth_grade": 2,
+      "boundary_distance": 0.5693475811873165,
+      "a": {
+        "theta": 1.3202,
+        "grade": 2,
+        "confidence": 0.82745,
+        "questions": 25
+      },
+      "b": {
+        "theta": 1.3573,
+        "grade": 2,
+        "confidence": 0.852,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 55,
+      "role": "backend_python",
+      "latent_theta": 0.9509266552175855,
+      "truth_grade": 1,
+      "boundary_distance": 0.04907334478241454,
+      "a": {
+        "theta": 1.0791,
+        "grade": 2,
+        "confidence": 0.62808,
+        "questions": 26
+      },
+      "b": {
+        "theta": 0.7947,
+        "grade": 1,
+        "confidence": 0.67817,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 56,
+      "role": "frontend_development",
+      "latent_theta": 0.0008438131135406479,
+      "truth_grade": 1,
+      "boundary_distance": 0.5008438131135406,
+      "a": {
+        "theta": -0.132,
+        "grade": 1,
+        "confidence": 0.85543,
+        "questions": 27
+      },
+      "b": {
+        "theta": -0.0276,
+        "grade": 1,
+        "confidence": 0.90293,
+        "questions": 30
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 57,
+      "role": "qa_engineering",
+      "latent_theta": 2.022864368413467,
+      "truth_grade": 2,
+      "boundary_distance": 1.022864368413467,
+      "a": {
+        "theta": 2.3381,
+        "grade": 2,
+        "confidence": 0.99994,
+        "questions": 32
+      },
+      "b": {
+        "theta": 1.5111,
+        "grade": 2,
+        "confidence": 0.92277,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 58,
+      "role": "devops",
+      "latent_theta": -1.9851950610139855,
+      "truth_grade": 0,
+      "boundary_distance": 1.4851950610139855,
+      "a": {
+        "theta": -0.9287,
+        "grade": 0,
+        "confidence": 0.82226,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.2679,
+        "grade": 0,
+        "confidence": 0.96375,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 59,
+      "role": "data_analytics",
+      "latent_theta": -1.2292003968164933,
+      "truth_grade": 0,
+      "boundary_distance": 0.7292003968164933,
+      "a": {
+        "theta": -1.2896,
+        "grade": 0,
+        "confidence": 0.98524,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.6787,
+        "grade": 0,
+        "confidence": 0.99925,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 60,
+      "role": "backend_python",
+      "latent_theta": -1.0137134869073972,
+      "truth_grade": 0,
+      "boundary_distance": 0.5137134869073972,
+      "a": {
+        "theta": -1.2499,
+        "grade": 0,
+        "confidence": 0.97989,
+        "questions": 31
+      },
+      "b": {
+        "theta": -0.6689,
+        "grade": 0,
+        "confidence": 0.64865,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 61,
+      "role": "frontend_development",
+      "latent_theta": 2.044164199220911,
+      "truth_grade": 2,
+      "boundary_distance": 1.0441641992209112,
+      "a": {
+        "theta": 1.8168,
+        "grade": 2,
+        "confidence": 0.98997,
+        "questions": 29
+      },
+      "b": {
+        "theta": 2.0905,
+        "grade": 2,
+        "confidence": 0.99927,
+        "questions": 30
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 62,
+      "role": "qa_engineering",
+      "latent_theta": -0.5044302984303046,
+      "truth_grade": 0,
+      "boundary_distance": 0.0044302984303046244,
+      "a": {
+        "theta": -0.5525,
+        "grade": 0,
+        "confidence": 0.52834,
+        "questions": 28
+      },
+      "b": {
+        "theta": -0.441,
+        "grade": 1,
+        "confidence": 0.60928,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 63,
+      "role": "devops",
+      "latent_theta": 0.19793398785315475,
+      "truth_grade": 1,
+      "boundary_distance": 0.6979339878531547,
+      "a": {
+        "theta": 0.4042,
+        "grade": 1,
+        "confidence": 0.93148,
+        "questions": 26
+      },
+      "b": {
+        "theta": 0.4771,
+        "grade": 1,
+        "confidence": 0.90398,
+        "questions": 25
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 64,
+      "role": "data_analytics",
+      "latent_theta": -2.347111747315284,
+      "truth_grade": 0,
+      "boundary_distance": 1.8471117473152838,
+      "a": {
+        "theta": -1.1842,
+        "grade": 0,
+        "confidence": 0.96612,
+        "questions": 30
+      },
+      "b": {
+        "theta": -2.0079,
+        "grade": 0,
+        "confidence": 0.99998,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 65,
+      "role": "backend_python",
+      "latent_theta": -0.01917791545967562,
+      "truth_grade": 1,
+      "boundary_distance": 0.4808220845403244,
+      "a": {
+        "theta": 0.2671,
+        "grade": 1,
+        "confidence": 0.9511,
+        "questions": 26
+      },
+      "b": {
+        "theta": 0.0149,
+        "grade": 1,
+        "confidence": 0.91753,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 66,
+      "role": "frontend_development",
+      "latent_theta": 0.6717662709682637,
+      "truth_grade": 1,
+      "boundary_distance": 0.3282337290317363,
+      "a": {
+        "theta": 0.8314,
+        "grade": 1,
+        "confidence": 0.6512,
+        "questions": 29
+      },
+      "b": {
+        "theta": 0.7439,
+        "grade": 1,
+        "confidence": 0.72656,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 67,
+      "role": "qa_engineering",
+      "latent_theta": 1.5859126347178227,
+      "truth_grade": 2,
+      "boundary_distance": 0.5859126347178227,
+      "a": {
+        "theta": 1.3706,
+        "grade": 2,
+        "confidence": 0.86131,
+        "questions": 25
+      },
+      "b": {
+        "theta": 1.145,
+        "grade": 2,
+        "confidence": 0.6901,
+        "questions": 25
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 68,
+      "role": "devops",
+      "latent_theta": -2.182369269674422,
+      "truth_grade": 0,
+      "boundary_distance": 1.682369269674422,
+      "a": {
+        "theta": -1.8962,
+        "grade": 0,
+        "confidence": 0.99994,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.976,
+        "grade": 0,
+        "confidence": 0.99998,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 69,
+      "role": "data_analytics",
+      "latent_theta": 0.5348669578658991,
+      "truth_grade": 1,
+      "boundary_distance": 0.4651330421341009,
+      "a": {
+        "theta": 0.7006,
+        "grade": 1,
+        "confidence": 0.76838,
+        "questions": 27
+      },
+      "b": {
+        "theta": 0.7944,
+        "grade": 1,
+        "confidence": 0.68737,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 70,
+      "role": "backend_python",
+      "latent_theta": -2.6028384881386937,
+      "truth_grade": 0,
+      "boundary_distance": 2.1028384881386937,
+      "a": {
+        "theta": -1.4907,
+        "grade": 0,
+        "confidence": 0.99563,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.0531,
+        "grade": 0,
+        "confidence": 0.99999,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 71,
+      "role": "frontend_development",
+      "latent_theta": 2.383132349654769,
+      "truth_grade": 2,
+      "boundary_distance": 1.383132349654769,
+      "a": {
+        "theta": 1.8462,
+        "grade": 2,
+        "confidence": 0.9923,
+        "questions": 28
+      },
+      "b": {
+        "theta": 2.0347,
+        "grade": 2,
+        "confidence": 0.99808,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 72,
+      "role": "qa_engineering",
+      "latent_theta": 1.5486850741323037,
+      "truth_grade": 2,
+      "boundary_distance": 0.5486850741323037,
+      "a": {
+        "theta": 1.6336,
+        "grade": 2,
+        "confidence": 0.96027,
+        "questions": 26
+      },
+      "b": {
+        "theta": 0.8641,
+        "grade": 1,
+        "confidence": 0.60215,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 73,
+      "role": "devops",
+      "latent_theta": 1.4639202619895135,
+      "truth_grade": 2,
+      "boundary_distance": 0.4639202619895135,
+      "a": {
+        "theta": 0.8918,
+        "grade": 1,
+        "confidence": 0.58044,
+        "questions": 26
+      },
+      "b": {
+        "theta": 1.6749,
+        "grade": 2,
+        "confidence": 0.96854,
+        "questions": 24
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 74,
+      "role": "data_analytics",
+      "latent_theta": -1.941066340896681,
+      "truth_grade": 0,
+      "boundary_distance": 1.441066340896681,
+      "a": {
+        "theta": -1.5617,
+        "grade": 0,
+        "confidence": 0.99824,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.5886,
+        "grade": 0,
+        "confidence": 0.99866,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 75,
+      "role": "backend_python",
+      "latent_theta": -1.584667274133614,
+      "truth_grade": 0,
+      "boundary_distance": 1.084667274133614,
+      "a": {
+        "theta": -1.0707,
+        "grade": 0,
+        "confidence": 0.93,
+        "questions": 28
+      },
+      "b": {
+        "theta": -0.873,
+        "grade": 0,
+        "confidence": 0.8273,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 76,
+      "role": "frontend_development",
+      "latent_theta": -1.747664419392669,
+      "truth_grade": 0,
+      "boundary_distance": 1.247664419392669,
+      "a": {
+        "theta": -2.3616,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.3054,
+        "grade": 0,
+        "confidence": 0.98604,
+        "questions": 30
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 77,
+      "role": "qa_engineering",
+      "latent_theta": -1.722733809580196,
+      "truth_grade": 0,
+      "boundary_distance": 1.222733809580196,
+      "a": {
+        "theta": -1.1244,
+        "grade": 0,
+        "confidence": 0.94925,
+        "questions": 28
+      },
+      "b": {
+        "theta": -1.5945,
+        "grade": 0,
+        "confidence": 0.99769,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 78,
+      "role": "devops",
+      "latent_theta": -1.7159522892100576,
+      "truth_grade": 0,
+      "boundary_distance": 1.2159522892100576,
+      "a": {
+        "theta": -1.7778,
+        "grade": 0,
+        "confidence": 0.99984,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.0774,
+        "grade": 0,
+        "confidence": 0.99999,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 79,
+      "role": "data_analytics",
+      "latent_theta": -2.633336764262842,
+      "truth_grade": 0,
+      "boundary_distance": 2.133336764262842,
+      "a": {
+        "theta": -2.2863,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.8219,
+        "grade": 0,
+        "confidence": 0.99986,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 80,
+      "role": "backend_python",
+      "latent_theta": -1.3268195749893568,
+      "truth_grade": 0,
+      "boundary_distance": 0.8268195749893568,
+      "a": {
+        "theta": -0.4144,
+        "grade": 1,
+        "confidence": 0.6365,
+        "questions": 30
+      },
+      "b": {
+        "theta": -1.0581,
+        "grade": 0,
+        "confidence": 0.91455,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 81,
+      "role": "frontend_development",
+      "latent_theta": 2.5497707523123205,
+      "truth_grade": 2,
+      "boundary_distance": 1.5497707523123205,
+      "a": {
+        "theta": 2.1223,
+        "grade": 2,
+        "confidence": 0.99955,
+        "questions": 31
+      },
+      "b": {
+        "theta": 2.3767,
+        "grade": 2,
+        "confidence": 0.99992,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 82,
+      "role": "qa_engineering",
+      "latent_theta": -1.9644088230659693,
+      "truth_grade": 0,
+      "boundary_distance": 1.4644088230659693,
+      "a": {
+        "theta": -1.5043,
+        "grade": 0,
+        "confidence": 0.99726,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.709,
+        "grade": 0,
+        "confidence": 0.99957,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 83,
+      "role": "devops",
+      "latent_theta": -0.5855316589492245,
+      "truth_grade": 0,
+      "boundary_distance": 0.08553165894922454,
+      "a": {
+        "theta": -0.5511,
+        "grade": 0,
+        "confidence": 0.51372,
+        "questions": 28
+      },
+      "b": {
+        "theta": 0.2812,
+        "grade": 1,
+        "confidence": 0.9501,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 84,
+      "role": "data_analytics",
+      "latent_theta": 0.6788035132183876,
+      "truth_grade": 1,
+      "boundary_distance": 0.3211964867816124,
+      "a": {
+        "theta": 0.5657,
+        "grade": 1,
+        "confidence": 0.8621,
+        "questions": 26
+      },
+      "b": {
+        "theta": 0.7394,
+        "grade": 1,
+        "confidence": 0.72731,
+        "questions": 30
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 85,
+      "role": "backend_python",
+      "latent_theta": 1.8290422795162566,
+      "truth_grade": 2,
+      "boundary_distance": 0.8290422795162566,
+      "a": {
+        "theta": 1.1637,
+        "grade": 2,
+        "confidence": 0.69459,
+        "questions": 32
+      },
+      "b": {
+        "theta": 1.8393,
+        "grade": 2,
+        "confidence": 0.99167,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 86,
+      "role": "frontend_development",
+      "latent_theta": 0.810358721585962,
+      "truth_grade": 1,
+      "boundary_distance": 0.189641278414038,
+      "a": {
+        "theta": 0.7341,
+        "grade": 1,
+        "confidence": 0.74103,
+        "questions": 27
+      },
+      "b": {
+        "theta": 0.5189,
+        "grade": 1,
+        "confidence": 0.88911,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 87,
+      "role": "qa_engineering",
+      "latent_theta": -0.29957280668036423,
+      "truth_grade": 1,
+      "boundary_distance": 0.20042719331963577,
+      "a": {
+        "theta": -0.3891,
+        "grade": 1,
+        "confidence": 0.65596,
+        "questions": 32
+      },
+      "b": {
+        "theta": -0.9313,
+        "grade": 0,
+        "confidence": 0.8632,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 88,
+      "role": "devops",
+      "latent_theta": 1.0480539202659624,
+      "truth_grade": 2,
+      "boundary_distance": 0.048053920265962446,
+      "a": {
+        "theta": 0.8331,
+        "grade": 1,
+        "confidence": 0.64469,
+        "questions": 27
+      },
+      "b": {
+        "theta": 0.7829,
+        "grade": 1,
+        "confidence": 0.69391,
+        "questions": 25
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 89,
+      "role": "data_analytics",
+      "latent_theta": 0.5513667509223086,
+      "truth_grade": 1,
+      "boundary_distance": 0.4486332490776914,
+      "a": {
+        "theta": 0.4447,
+        "grade": 1,
+        "confidence": 0.91722,
+        "questions": 28
+      },
+      "b": {
+        "theta": 0.1622,
+        "grade": 1,
+        "confidence": 0.94945,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 90,
+      "role": "backend_python",
+      "latent_theta": 1.325397963916787,
+      "truth_grade": 2,
+      "boundary_distance": 0.325397963916787,
+      "a": {
+        "theta": 1.3308,
+        "grade": 2,
+        "confidence": 0.83254,
+        "questions": 26
+      },
+      "b": {
+        "theta": 1.255,
+        "grade": 2,
+        "confidence": 0.78457,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 91,
+      "role": "frontend_development",
+      "latent_theta": 0.8477909040681739,
+      "truth_grade": 1,
+      "boundary_distance": 0.15220909593182608,
+      "a": {
+        "theta": 0.8105,
+        "grade": 1,
+        "confidence": 0.66769,
+        "questions": 25
+      },
+      "b": {
+        "theta": 0.5022,
+        "grade": 1,
+        "confidence": 0.89213,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 92,
+      "role": "qa_engineering",
+      "latent_theta": 1.9496768479826612,
+      "truth_grade": 2,
+      "boundary_distance": 0.9496768479826612,
+      "a": {
+        "theta": 1.787,
+        "grade": 2,
+        "confidence": 0.986,
+        "questions": 26
+      },
+      "b": {
+        "theta": 1.7301,
+        "grade": 2,
+        "confidence": 0.97756,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 93,
+      "role": "devops",
+      "latent_theta": 1.5308089597400079,
+      "truth_grade": 2,
+      "boundary_distance": 0.5308089597400079,
+      "a": {
+        "theta": 1.3223,
+        "grade": 2,
+        "confidence": 0.82948,
+        "questions": 26
+      },
+      "b": {
+        "theta": 1.1222,
+        "grade": 2,
+        "confidence": 0.67285,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 94,
+      "role": "data_analytics",
+      "latent_theta": -0.7525154637537752,
+      "truth_grade": 0,
+      "boundary_distance": 0.2525154637537752,
+      "a": {
+        "theta": -0.5768,
+        "grade": 0,
+        "confidence": 0.55267,
+        "questions": 30
+      },
+      "b": {
+        "theta": -0.0799,
+        "grade": 1,
+        "confidence": 0.88269,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 95,
+      "role": "backend_python",
+      "latent_theta": -0.9648917900545706,
+      "truth_grade": 0,
+      "boundary_distance": 0.4648917900545706,
+      "a": {
+        "theta": -0.3479,
+        "grade": 1,
+        "confidence": 0.69996,
+        "questions": 29
+      },
+      "b": {
+        "theta": -1.5215,
+        "grade": 0,
+        "confidence": 0.99743,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 96,
+      "role": "frontend_development",
+      "latent_theta": -0.18478657709295065,
+      "truth_grade": 1,
+      "boundary_distance": 0.31521342290704935,
+      "a": {
+        "theta": -0.3075,
+        "grade": 1,
+        "confidence": 0.73972,
+        "questions": 30
+      },
+      "b": {
+        "theta": -0.3987,
+        "grade": 1,
+        "confidence": 0.6518,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 97,
+      "role": "qa_engineering",
+      "latent_theta": -2.2385666688214614,
+      "truth_grade": 0,
+      "boundary_distance": 1.7385666688214614,
+      "a": {
+        "theta": -2.0994,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.4921,
+        "grade": 0,
+        "confidence": 0.99724,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 98,
+      "role": "devops",
+      "latent_theta": -0.29452594653127884,
+      "truth_grade": 1,
+      "boundary_distance": 0.20547405346872116,
+      "a": {
+        "theta": -0.518,
+        "grade": 1,
+        "confidence": 0.51427,
+        "questions": 26
+      },
+      "b": {
+        "theta": -0.0137,
+        "grade": 1,
+        "confidence": 0.91261,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 99,
+      "role": "data_analytics",
+      "latent_theta": -2.3016770531737656,
+      "truth_grade": 0,
+      "boundary_distance": 1.8016770531737656,
+      "a": {
+        "theta": -1.8147,
+        "grade": 0,
+        "confidence": 0.99987,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.6395,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 100,
+      "role": "backend_python",
+      "latent_theta": 1.3838415849805141,
+      "truth_grade": 2,
+      "boundary_distance": 0.38384158498051413,
+      "a": {
+        "theta": 0.8096,
+        "grade": 1,
+        "confidence": 0.66207,
+        "questions": 26
+      },
+      "b": {
+        "theta": 1.5648,
+        "grade": 2,
+        "confidence": 0.94279,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 101,
+      "role": "frontend_development",
+      "latent_theta": -0.4227040519800638,
+      "truth_grade": 1,
+      "boundary_distance": 0.07729594801993622,
+      "a": {
+        "theta": -0.3234,
+        "grade": 1,
+        "confidence": 0.71199,
+        "questions": 30
+      },
+      "b": {
+        "theta": -0.4999,
+        "grade": 1,
+        "confidence": 0.52837,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 102,
+      "role": "qa_engineering",
+      "latent_theta": 1.8360427138254733,
+      "truth_grade": 2,
+      "boundary_distance": 0.8360427138254733,
+      "a": {
+        "theta": 1.1605,
+        "grade": 2,
+        "confidence": 0.70117,
+        "questions": 29
+      },
+      "b": {
+        "theta": 1.7401,
+        "grade": 2,
+        "confidence": 0.97898,
+        "questions": 25
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 103,
+      "role": "devops",
+      "latent_theta": 0.22731498668833927,
+      "truth_grade": 1,
+      "boundary_distance": 0.7273149866883393,
+      "a": {
+        "theta": 0.3002,
+        "grade": 1,
+        "confidence": 0.94668,
+        "questions": 25
+      },
+      "b": {
+        "theta": 0.7939,
+        "grade": 1,
+        "confidence": 0.69159,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 104,
+      "role": "data_analytics",
+      "latent_theta": 0.3447534605551241,
+      "truth_grade": 1,
+      "boundary_distance": 0.6552465394448759,
+      "a": {
+        "theta": 0.3879,
+        "grade": 1,
+        "confidence": 0.93185,
+        "questions": 26
+      },
+      "b": {
+        "theta": 0.5523,
+        "grade": 1,
+        "confidence": 0.86866,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 105,
+      "role": "backend_python",
+      "latent_theta": 0.5791904899475662,
+      "truth_grade": 1,
+      "boundary_distance": 0.42080951005243383,
+      "a": {
+        "theta": 0.7278,
+        "grade": 1,
+        "confidence": 0.74523,
+        "questions": 26
+      },
+      "b": {
+        "theta": 0.2546,
+        "grade": 1,
+        "confidence": 0.95333,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 106,
+      "role": "frontend_development",
+      "latent_theta": -1.9842145329048304,
+      "truth_grade": 0,
+      "boundary_distance": 1.4842145329048304,
+      "a": {
+        "theta": -0.8724,
+        "grade": 0,
+        "confidence": 0.8268,
+        "questions": 31
+      },
+      "b": {
+        "theta": -2.2321,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 107,
+      "role": "qa_engineering",
+      "latent_theta": 1.3221828862976848,
+      "truth_grade": 2,
+      "boundary_distance": 0.32218288629768477,
+      "a": {
+        "theta": 0.8668,
+        "grade": 1,
+        "confidence": 0.6054,
+        "questions": 28
+      },
+      "b": {
+        "theta": 0.7728,
+        "grade": 1,
+        "confidence": 0.70519,
+        "questions": 25
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 108,
+      "role": "devops",
+      "latent_theta": 2.0046470043537443,
+      "truth_grade": 2,
+      "boundary_distance": 1.0046470043537443,
+      "a": {
+        "theta": 2.6499,
+        "grade": 2,
+        "confidence": 1.0,
+        "questions": 32
+      },
+      "b": {
+        "theta": 1.7846,
+        "grade": 2,
+        "confidence": 0.98623,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 109,
+      "role": "data_analytics",
+      "latent_theta": -1.4533103164232744,
+      "truth_grade": 0,
+      "boundary_distance": 0.9533103164232744,
+      "a": {
+        "theta": -1.5886,
+        "grade": 0,
+        "confidence": 0.99866,
+        "questions": 32
+      },
+      "b": {
+        "theta": -0.979,
+        "grade": 0,
+        "confidence": 0.871,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 110,
+      "role": "backend_python",
+      "latent_theta": -0.7648282594434037,
+      "truth_grade": 0,
+      "boundary_distance": 0.2648282594434037,
+      "a": {
+        "theta": -0.8194,
+        "grade": 0,
+        "confidence": 0.78167,
+        "questions": 31
+      },
+      "b": {
+        "theta": 0.3232,
+        "grade": 1,
+        "confidence": 0.9487,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 111,
+      "role": "frontend_development",
+      "latent_theta": 0.5246808908603007,
+      "truth_grade": 1,
+      "boundary_distance": 0.4753191091396993,
+      "a": {
+        "theta": 0.3238,
+        "grade": 1,
+        "confidence": 0.94483,
+        "questions": 26
+      },
+      "b": {
+        "theta": 0.8037,
+        "grade": 1,
+        "confidence": 0.6634,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 112,
+      "role": "qa_engineering",
+      "latent_theta": 0.6714067937184458,
+      "truth_grade": 1,
+      "boundary_distance": 0.3285932062815542,
+      "a": {
+        "theta": 0.5612,
+        "grade": 1,
+        "confidence": 0.86565,
+        "questions": 26
+      },
+      "b": {
+        "theta": 0.5315,
+        "grade": 1,
+        "confidence": 0.88032,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 113,
+      "role": "devops",
+      "latent_theta": 2.101412653036112,
+      "truth_grade": 2,
+      "boundary_distance": 1.1014126530361121,
+      "a": {
+        "theta": 2.3344,
+        "grade": 2,
+        "confidence": 0.9999,
+        "questions": 32
+      },
+      "b": {
+        "theta": 1.8173,
+        "grade": 2,
+        "confidence": 0.9896,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 114,
+      "role": "data_analytics",
+      "latent_theta": -0.8897938659378524,
+      "truth_grade": 0,
+      "boundary_distance": 0.38979386593785237,
+      "a": {
+        "theta": -0.6784,
+        "grade": 0,
+        "confidence": 0.65908,
+        "questions": 28
+      },
+      "b": {
+        "theta": -0.5224,
+        "grade": 1,
+        "confidence": 0.51214,
+        "questions": 30
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 115,
+      "role": "backend_python",
+      "latent_theta": -0.7944476239706699,
+      "truth_grade": 0,
+      "boundary_distance": 0.2944476239706699,
+      "a": {
+        "theta": -0.4876,
+        "grade": 1,
+        "confidence": 0.552,
+        "questions": 28
+      },
+      "b": {
+        "theta": -0.7091,
+        "grade": 0,
+        "confidence": 0.68951,
+        "questions": 30
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 116,
+      "role": "frontend_development",
+      "latent_theta": -1.4069279548436666,
+      "truth_grade": 0,
+      "boundary_distance": 0.9069279548436666,
+      "a": {
+        "theta": -0.9882,
+        "grade": 0,
+        "confidence": 0.89326,
+        "questions": 28
+      },
+      "b": {
+        "theta": -0.2263,
+        "grade": 1,
+        "confidence": 0.79817,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 117,
+      "role": "qa_engineering",
+      "latent_theta": 1.590322964531321,
+      "truth_grade": 2,
+      "boundary_distance": 0.590322964531321,
+      "a": {
+        "theta": 0.8981,
+        "grade": 1,
+        "confidence": 0.58517,
+        "questions": 29
+      },
+      "b": {
+        "theta": 1.4996,
+        "grade": 2,
+        "confidence": 0.91824,
+        "questions": 24
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 118,
+      "role": "devops",
+      "latent_theta": -0.4178650814341496,
+      "truth_grade": 1,
+      "boundary_distance": 0.08213491856585042,
+      "a": {
+        "theta": 0.0019,
+        "grade": 1,
+        "confidence": 0.91518,
+        "questions": 26
+      },
+      "b": {
+        "theta": -0.5502,
+        "grade": 0,
+        "confidence": 0.52063,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 119,
+      "role": "data_analytics",
+      "latent_theta": 0.7253829976726673,
+      "truth_grade": 1,
+      "boundary_distance": 0.27461700232733266,
+      "a": {
+        "theta": -0.1442,
+        "grade": 1,
+        "confidence": 0.85089,
+        "questions": 28
+      },
+      "b": {
+        "theta": 0.5152,
+        "grade": 1,
+        "confidence": 0.88618,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 120,
+      "role": "backend_python",
+      "latent_theta": -1.8879663879523683,
+      "truth_grade": 0,
+      "boundary_distance": 1.3879663879523683,
+      "a": {
+        "theta": -1.4939,
+        "grade": 0,
+        "confidence": 0.99695,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.2984,
+        "grade": 0,
+        "confidence": 0.98451,
+        "questions": 31
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 121,
+      "role": "frontend_development",
+      "latent_theta": 0.9786986385665855,
+      "truth_grade": 1,
+      "boundary_distance": 0.021301361433414545,
+      "a": {
+        "theta": 0.8097,
+        "grade": 1,
+        "confidence": 0.6647,
+        "questions": 27
+      },
+      "b": {
+        "theta": 0.1025,
+        "grade": 1,
+        "confidence": 0.943,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 122,
+      "role": "qa_engineering",
+      "latent_theta": 2.4170280727371196,
+      "truth_grade": 2,
+      "boundary_distance": 1.4170280727371196,
+      "a": {
+        "theta": 1.83,
+        "grade": 2,
+        "confidence": 0.9911,
+        "questions": 29
+      },
+      "b": {
+        "theta": 1.744,
+        "grade": 2,
+        "confidence": 0.9802,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 123,
+      "role": "devops",
+      "latent_theta": -1.911840807416319,
+      "truth_grade": 0,
+      "boundary_distance": 1.411840807416319,
+      "a": {
+        "theta": -2.1902,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      },
+      "b": {
+        "theta": -0.9831,
+        "grade": 0,
+        "confidence": 0.8799,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 124,
+      "role": "data_analytics",
+      "latent_theta": -2.188664456822049,
+      "truth_grade": 0,
+      "boundary_distance": 1.6886644568220488,
+      "a": {
+        "theta": -1.918,
+        "grade": 0,
+        "confidence": 0.99996,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.5886,
+        "grade": 0,
+        "confidence": 0.99866,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 125,
+      "role": "backend_python",
+      "latent_theta": 2.3620858583715068,
+      "truth_grade": 2,
+      "boundary_distance": 1.3620858583715068,
+      "a": {
+        "theta": 1.9685,
+        "grade": 2,
+        "confidence": 0.99645,
+        "questions": 27
+      },
+      "b": {
+        "theta": 1.5971,
+        "grade": 2,
+        "confidence": 0.95203,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 126,
+      "role": "frontend_development",
+      "latent_theta": -1.7759340994599175,
+      "truth_grade": 0,
+      "boundary_distance": 1.2759340994599175,
+      "a": {
+        "theta": -2.1777,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.2351,
+        "grade": 0,
+        "confidence": 0.97709,
+        "questions": 30
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 127,
+      "role": "qa_engineering",
+      "latent_theta": -0.9529216156953195,
+      "truth_grade": 0,
+      "boundary_distance": 0.4529216156953195,
+      "a": {
+        "theta": -0.5556,
+        "grade": 0,
+        "confidence": 0.53083,
+        "questions": 31
+      },
+      "b": {
+        "theta": -1.4823,
+        "grade": 0,
+        "confidence": 0.99395,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 128,
+      "role": "devops",
+      "latent_theta": -1.8185651904115683,
+      "truth_grade": 0,
+      "boundary_distance": 1.3185651904115683,
+      "a": {
+        "theta": -1.2331,
+        "grade": 0,
+        "confidence": 0.97464,
+        "questions": 31
+      },
+      "b": {
+        "theta": -1.3144,
+        "grade": 0,
+        "confidence": 0.98534,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 129,
+      "role": "data_analytics",
+      "latent_theta": 2.6313290740601376,
+      "truth_grade": 2,
+      "boundary_distance": 1.6313290740601376,
+      "a": {
+        "theta": 2.0483,
+        "grade": 2,
+        "confidence": 0.99824,
+        "questions": 28
+      },
+      "b": {
+        "theta": 2.1505,
+        "grade": 2,
+        "confidence": 0.99959,
+        "questions": 31
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 130,
+      "role": "backend_python",
+      "latent_theta": -0.29102561795913706,
+      "truth_grade": 1,
+      "boundary_distance": 0.20897438204086294,
+      "a": {
+        "theta": 0.0501,
+        "grade": 1,
+        "confidence": 0.92994,
+        "questions": 28
+      },
+      "b": {
+        "theta": -0.5258,
+        "grade": 1,
+        "confidence": 0.50713,
+        "questions": 30
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 131,
+      "role": "frontend_development",
+      "latent_theta": 1.8623049504940177,
+      "truth_grade": 2,
+      "boundary_distance": 0.8623049504940177,
+      "a": {
+        "theta": 1.5729,
+        "grade": 2,
+        "confidence": 0.9454,
+        "questions": 27
+      },
+      "b": {
+        "theta": 2.4005,
+        "grade": 2,
+        "confidence": 0.99997,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 132,
+      "role": "qa_engineering",
+      "latent_theta": -2.203713483830407,
+      "truth_grade": 0,
+      "boundary_distance": 1.7037134838304069,
+      "a": {
+        "theta": -1.9306,
+        "grade": 0,
+        "confidence": 0.99996,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.0902,
+        "grade": 0,
+        "confidence": 0.99999,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 133,
+      "role": "devops",
+      "latent_theta": -0.4447720371805741,
+      "truth_grade": 1,
+      "boundary_distance": 0.05522796281942588,
+      "a": {
+        "theta": -0.8928,
+        "grade": 0,
+        "confidence": 0.83709,
+        "questions": 28
+      },
+      "b": {
+        "theta": 0.5219,
+        "grade": 1,
+        "confidence": 0.88759,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 134,
+      "role": "data_analytics",
+      "latent_theta": -1.1597559328245193,
+      "truth_grade": 0,
+      "boundary_distance": 0.6597559328245193,
+      "a": {
+        "theta": -0.7896,
+        "grade": 0,
+        "confidence": 0.76149,
+        "questions": 29
+      },
+      "b": {
+        "theta": -0.8342,
+        "grade": 0,
+        "confidence": 0.79626,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 135,
+      "role": "backend_python",
+      "latent_theta": -2.4167056702896033,
+      "truth_grade": 0,
+      "boundary_distance": 1.9167056702896033,
+      "a": {
+        "theta": -1.7717,
+        "grade": 0,
+        "confidence": 0.99974,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.1031,
+        "grade": 0,
+        "confidence": 0.99996,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 136,
+      "role": "frontend_development",
+      "latent_theta": 2.0288027499712165,
+      "truth_grade": 2,
+      "boundary_distance": 1.0288027499712165,
+      "a": {
+        "theta": 1.5861,
+        "grade": 2,
+        "confidence": 0.94853,
+        "questions": 25
+      },
+      "b": {
+        "theta": 2.4005,
+        "grade": 2,
+        "confidence": 0.99997,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 137,
+      "role": "qa_engineering",
+      "latent_theta": 0.2898569518658354,
+      "truth_grade": 1,
+      "boundary_distance": 0.7101430481341646,
+      "a": {
+        "theta": 0.409,
+        "grade": 1,
+        "confidence": 0.92828,
+        "questions": 27
+      },
+      "b": {
+        "theta": 0.5978,
+        "grade": 1,
+        "confidence": 0.8436,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 138,
+      "role": "devops",
+      "latent_theta": -2.1628672754144818,
+      "truth_grade": 0,
+      "boundary_distance": 1.6628672754144818,
+      "a": {
+        "theta": -2.5119,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.8638,
+        "grade": 0,
+        "confidence": 0.99993,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 139,
+      "role": "data_analytics",
+      "latent_theta": 2.171073523221599,
+      "truth_grade": 2,
+      "boundary_distance": 1.1710735232215992,
+      "a": {
+        "theta": 1.9526,
+        "grade": 2,
+        "confidence": 0.99578,
+        "questions": 27
+      },
+      "b": {
+        "theta": 1.6301,
+        "grade": 2,
+        "confidence": 0.95907,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 140,
+      "role": "backend_python",
+      "latent_theta": -0.10243442764429522,
+      "truth_grade": 1,
+      "boundary_distance": 0.3975655723557048,
+      "a": {
+        "theta": -0.1635,
+        "grade": 1,
+        "confidence": 0.83578,
+        "questions": 27
+      },
+      "b": {
+        "theta": -0.3014,
+        "grade": 1,
+        "confidence": 0.7378,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 141,
+      "role": "frontend_development",
+      "latent_theta": 0.888578324735104,
+      "truth_grade": 1,
+      "boundary_distance": 0.11142167526489599,
+      "a": {
+        "theta": 0.6582,
+        "grade": 1,
+        "confidence": 0.80217,
+        "questions": 26
+      },
+      "b": {
+        "theta": 1.3161,
+        "grade": 2,
+        "confidence": 0.82471,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 142,
+      "role": "qa_engineering",
+      "latent_theta": 2.0537821784947354,
+      "truth_grade": 2,
+      "boundary_distance": 1.0537821784947354,
+      "a": {
+        "theta": 1.7887,
+        "grade": 2,
+        "confidence": 0.98684,
+        "questions": 29
+      },
+      "b": {
+        "theta": 1.4699,
+        "grade": 2,
+        "confidence": 0.90598,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 143,
+      "role": "devops",
+      "latent_theta": 0.3865732267798494,
+      "truth_grade": 1,
+      "boundary_distance": 0.6134267732201506,
+      "a": {
+        "theta": 0.642,
+        "grade": 1,
+        "confidence": 0.81206,
+        "questions": 26
+      },
+      "b": {
+        "theta": 0.3778,
+        "grade": 1,
+        "confidence": 0.93635,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 144,
+      "role": "data_analytics",
+      "latent_theta": -0.31190142691535483,
+      "truth_grade": 1,
+      "boundary_distance": 0.18809857308464517,
+      "a": {
+        "theta": -0.3137,
+        "grade": 1,
+        "confidence": 0.72735,
+        "questions": 29
+      },
+      "b": {
+        "theta": -0.2648,
+        "grade": 1,
+        "confidence": 0.76202,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 145,
+      "role": "backend_python",
+      "latent_theta": -0.45251222099717525,
+      "truth_grade": 1,
+      "boundary_distance": 0.04748777900282475,
+      "a": {
+        "theta": -0.3831,
+        "grade": 1,
+        "confidence": 0.66745,
+        "questions": 31
+      },
+      "b": {
+        "theta": -0.3883,
+        "grade": 1,
+        "confidence": 0.65511,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 146,
+      "role": "frontend_development",
+      "latent_theta": 0.038936043603136294,
+      "truth_grade": 1,
+      "boundary_distance": 0.5389360436031363,
+      "a": {
+        "theta": 0.5703,
+        "grade": 1,
+        "confidence": 0.86033,
+        "questions": 27
+      },
+      "b": {
+        "theta": 0.2512,
+        "grade": 1,
+        "confidence": 0.9513,
+        "questions": 25
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 147,
+      "role": "qa_engineering",
+      "latent_theta": 1.3048249174435682,
+      "truth_grade": 2,
+      "boundary_distance": 0.3048249174435682,
+      "a": {
+        "theta": 0.7899,
+        "grade": 1,
+        "confidence": 0.68334,
+        "questions": 27
+      },
+      "b": {
+        "theta": 2.0095,
+        "grade": 2,
+        "confidence": 0.99785,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 148,
+      "role": "devops",
+      "latent_theta": 0.5381710221185645,
+      "truth_grade": 1,
+      "boundary_distance": 0.4618289778814355,
+      "a": {
+        "theta": 0.8914,
+        "grade": 1,
+        "confidence": 0.57093,
+        "questions": 28
+      },
+      "b": {
+        "theta": 0.0626,
+        "grade": 1,
+        "confidence": 0.93405,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 149,
+      "role": "data_analytics",
+      "latent_theta": 0.7582095171516721,
+      "truth_grade": 1,
+      "boundary_distance": 0.24179048284832794,
+      "a": {
+        "theta": 0.7122,
+        "grade": 1,
+        "confidence": 0.76473,
+        "questions": 28
+      },
+      "b": {
+        "theta": 1.3027,
+        "grade": 2,
+        "confidence": 0.81453,
+        "questions": 25
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 150,
+      "role": "backend_python",
+      "latent_theta": -0.77016549590799,
+      "truth_grade": 0,
+      "boundary_distance": 0.27016549590799,
+      "a": {
+        "theta": -0.5713,
+        "grade": 0,
+        "confidence": 0.54693,
+        "questions": 27
+      },
+      "b": {
+        "theta": -0.2231,
+        "grade": 1,
+        "confidence": 0.79536,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 151,
+      "role": "frontend_development",
+      "latent_theta": -2.0986411580977826,
+      "truth_grade": 0,
+      "boundary_distance": 1.5986411580977826,
+      "a": {
+        "theta": -2.0774,
+        "grade": 0,
+        "confidence": 0.99999,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.2811,
+        "grade": 0,
+        "confidence": 0.98227,
+        "questions": 31
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 152,
+      "role": "qa_engineering",
+      "latent_theta": 0.8433453445592782,
+      "truth_grade": 1,
+      "boundary_distance": 0.15665465544072177,
+      "a": {
+        "theta": 1.3652,
+        "grade": 2,
+        "confidence": 0.85805,
+        "questions": 25
+      },
+      "b": {
+        "theta": 0.8093,
+        "grade": 1,
+        "confidence": 0.67224,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 153,
+      "role": "devops",
+      "latent_theta": -1.3306705700500214,
+      "truth_grade": 0,
+      "boundary_distance": 0.8306705700500214,
+      "a": {
+        "theta": -1.5713,
+        "grade": 0,
+        "confidence": 0.99842,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.6115,
+        "grade": 0,
+        "confidence": 0.99899,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 154,
+      "role": "data_analytics",
+      "latent_theta": 1.0367171577084018,
+      "truth_grade": 2,
+      "boundary_distance": 0.03671715770840178,
+      "a": {
+        "theta": 1.1766,
+        "grade": 2,
+        "confidence": 0.72176,
+        "questions": 27
+      },
+      "b": {
+        "theta": 1.0908,
+        "grade": 2,
+        "confidence": 0.62086,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 155,
+      "role": "backend_python",
+      "latent_theta": -2.4548930695908924,
+      "truth_grade": 0,
+      "boundary_distance": 1.9548930695908924,
+      "a": {
+        "theta": -1.918,
+        "grade": 0,
+        "confidence": 0.99996,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.0881,
+        "grade": 0,
+        "confidence": 0.99999,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 156,
+      "role": "frontend_development",
+      "latent_theta": 2.266137639045172,
+      "truth_grade": 2,
+      "boundary_distance": 1.266137639045172,
+      "a": {
+        "theta": 1.7752,
+        "grade": 2,
+        "confidence": 0.98657,
+        "questions": 27
+      },
+      "b": {
+        "theta": 2.577,
+        "grade": 2,
+        "confidence": 0.99999,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 157,
+      "role": "qa_engineering",
+      "latent_theta": -0.38592694873327327,
+      "truth_grade": 1,
+      "boundary_distance": 0.11407305126672673,
+      "a": {
+        "theta": -0.0906,
+        "grade": 1,
+        "confidence": 0.87982,
+        "questions": 27
+      },
+      "b": {
+        "theta": 0.4462,
+        "grade": 1,
+        "confidence": 0.91499,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 158,
+      "role": "devops",
+      "latent_theta": 0.5892609356559926,
+      "truth_grade": 1,
+      "boundary_distance": 0.4107390643440074,
+      "a": {
+        "theta": 0.8458,
+        "grade": 1,
+        "confidence": 0.61813,
+        "questions": 30
+      },
+      "b": {
+        "theta": 0.636,
+        "grade": 1,
+        "confidence": 0.8157,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 159,
+      "role": "data_analytics",
+      "latent_theta": -2.3483096224367963,
+      "truth_grade": 0,
+      "boundary_distance": 1.8483096224367963,
+      "a": {
+        "theta": -2.0203,
+        "grade": 0,
+        "confidence": 0.99998,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.2238,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 160,
+      "role": "backend_python",
+      "latent_theta": -1.9302713995015277,
+      "truth_grade": 0,
+      "boundary_distance": 1.4302713995015277,
+      "a": {
+        "theta": -1.4168,
+        "grade": 0,
+        "confidence": 0.98894,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.0038,
+        "grade": 0,
+        "confidence": 0.99997,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 161,
+      "role": "frontend_development",
+      "latent_theta": 1.8162806702082843,
+      "truth_grade": 2,
+      "boundary_distance": 0.8162806702082843,
+      "a": {
+        "theta": 2.4005,
+        "grade": 2,
+        "confidence": 0.99997,
+        "questions": 32
+      },
+      "b": {
+        "theta": 1.4272,
+        "grade": 2,
+        "confidence": 0.88934,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 162,
+      "role": "qa_engineering",
+      "latent_theta": 2.424824073196943,
+      "truth_grade": 2,
+      "boundary_distance": 1.4248240731969428,
+      "a": {
+        "theta": 2.3426,
+        "grade": 2,
+        "confidence": 0.99995,
+        "questions": 32
+      },
+      "b": {
+        "theta": 2.451,
+        "grade": 2,
+        "confidence": 0.99998,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 163,
+      "role": "devops",
+      "latent_theta": -0.6249628967760712,
+      "truth_grade": 0,
+      "boundary_distance": 0.1249628967760712,
+      "a": {
+        "theta": 0.0611,
+        "grade": 1,
+        "confidence": 0.93263,
+        "questions": 26
+      },
+      "b": {
+        "theta": -0.6018,
+        "grade": 0,
+        "confidence": 0.57828,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 164,
+      "role": "data_analytics",
+      "latent_theta": -2.5146337239843426,
+      "truth_grade": 0,
+      "boundary_distance": 2.0146337239843426,
+      "a": {
+        "theta": -2.0531,
+        "grade": 0,
+        "confidence": 0.99999,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.1507,
+        "grade": 0,
+        "confidence": 0.99999,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 165,
+      "role": "backend_python",
+      "latent_theta": -2.2886698795916827,
+      "truth_grade": 0,
+      "boundary_distance": 1.7886698795916827,
+      "a": {
+        "theta": -2.3198,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.6617,
+        "grade": 0,
+        "confidence": 0.99923,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 166,
+      "role": "frontend_development",
+      "latent_theta": -1.890079915393653,
+      "truth_grade": 0,
+      "boundary_distance": 1.390079915393653,
+      "a": {
+        "theta": -1.546,
+        "grade": 0,
+        "confidence": 0.99804,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.4133,
+        "grade": 0,
+        "confidence": 0.99409,
+        "questions": 31
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 167,
+      "role": "qa_engineering",
+      "latent_theta": -0.2643079831429329,
+      "truth_grade": 1,
+      "boundary_distance": 0.2356920168570671,
+      "a": {
+        "theta": -0.5131,
+        "grade": 1,
+        "confidence": 0.52126,
+        "questions": 30
+      },
+      "b": {
+        "theta": -0.5224,
+        "grade": 1,
+        "confidence": 0.50302,
+        "questions": 30
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 168,
+      "role": "devops",
+      "latent_theta": 0.5720537129240149,
+      "truth_grade": 1,
+      "boundary_distance": 0.42794628707598514,
+      "a": {
+        "theta": 0.7251,
+        "grade": 1,
+        "confidence": 0.74511,
+        "questions": 28
+      },
+      "b": {
+        "theta": 0.2133,
+        "grade": 1,
+        "confidence": 0.9527,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 169,
+      "role": "data_analytics",
+      "latent_theta": 0.14732313203070468,
+      "truth_grade": 1,
+      "boundary_distance": 0.6473231320307047,
+      "a": {
+        "theta": 0.2347,
+        "grade": 1,
+        "confidence": 0.95344,
+        "questions": 26
+      },
+      "b": {
+        "theta": -0.0826,
+        "grade": 1,
+        "confidence": 0.87998,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 170,
+      "role": "backend_python",
+      "latent_theta": 2.0996823388071117,
+      "truth_grade": 2,
+      "boundary_distance": 1.0996823388071117,
+      "a": {
+        "theta": 1.7482,
+        "grade": 2,
+        "confidence": 0.97908,
+        "questions": 32
+      },
+      "b": {
+        "theta": 1.7962,
+        "grade": 2,
+        "confidence": 0.98735,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 171,
+      "role": "frontend_development",
+      "latent_theta": 1.4046126912379968,
+      "truth_grade": 2,
+      "boundary_distance": 0.4046126912379968,
+      "a": {
+        "theta": 1.5004,
+        "grade": 2,
+        "confidence": 0.9203,
+        "questions": 25
+      },
+      "b": {
+        "theta": 0.9457,
+        "grade": 1,
+        "confidence": 0.51834,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 172,
+      "role": "qa_engineering",
+      "latent_theta": 1.0948598333556947,
+      "truth_grade": 2,
+      "boundary_distance": 0.0948598333556947,
+      "a": {
+        "theta": 0.8739,
+        "grade": 1,
+        "confidence": 0.60405,
+        "questions": 27
+      },
+      "b": {
+        "theta": 0.6136,
+        "grade": 1,
+        "confidence": 0.83418,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 173,
+      "role": "devops",
+      "latent_theta": 0.8704289747794762,
+      "truth_grade": 1,
+      "boundary_distance": 0.12957102522052377,
+      "a": {
+        "theta": 0.7394,
+        "grade": 1,
+        "confidence": 0.73641,
+        "questions": 26
+      },
+      "b": {
+        "theta": 0.6101,
+        "grade": 1,
+        "confidence": 0.83285,
+        "questions": 30
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 174,
+      "role": "data_analytics",
+      "latent_theta": 2.194817079450927,
+      "truth_grade": 2,
+      "boundary_distance": 1.1948170794509272,
+      "a": {
+        "theta": 1.2939,
+        "grade": 2,
+        "confidence": 0.80785,
+        "questions": 29
+      },
+      "b": {
+        "theta": 2.3221,
+        "grade": 2,
+        "confidence": 0.99992,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 175,
+      "role": "backend_python",
+      "latent_theta": -2.2857299034505436,
+      "truth_grade": 0,
+      "boundary_distance": 1.7857299034505436,
+      "a": {
+        "theta": -1.9852,
+        "grade": 0,
+        "confidence": 0.99998,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.4115,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 176,
+      "role": "frontend_development",
+      "latent_theta": -0.07302462130882104,
+      "truth_grade": 1,
+      "boundary_distance": 0.42697537869117896,
+      "a": {
+        "theta": 0.8051,
+        "grade": 1,
+        "confidence": 0.67912,
+        "questions": 28
+      },
+      "b": {
+        "theta": 0.0716,
+        "grade": 1,
+        "confidence": 0.93702,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 177,
+      "role": "qa_engineering",
+      "latent_theta": -1.6682017155161954,
+      "truth_grade": 0,
+      "boundary_distance": 1.1682017155161954,
+      "a": {
+        "theta": -0.6976,
+        "grade": 0,
+        "confidence": 0.67934,
+        "questions": 28
+      },
+      "b": {
+        "theta": -1.597,
+        "grade": 0,
+        "confidence": 0.99897,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 178,
+      "role": "devops",
+      "latent_theta": -1.762960775174606,
+      "truth_grade": 0,
+      "boundary_distance": 1.262960775174606,
+      "a": {
+        "theta": -1.4892,
+        "grade": 0,
+        "confidence": 0.99645,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.7976,
+        "grade": 0,
+        "confidence": 0.9998,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "authored_process",
+      "person": 179,
+      "role": "data_analytics",
+      "latent_theta": 1.2761868521712825,
+      "truth_grade": 2,
+      "boundary_distance": 0.27618685217128247,
+      "a": {
+        "theta": 1.1078,
+        "grade": 2,
+        "confidence": 0.64924,
+        "questions": 27
+      },
+      "b": {
+        "theta": 0.8325,
+        "grade": 1,
+        "confidence": 0.63797,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 0,
+      "role": "backend_python",
+      "latent_theta": -0.40419712405476327,
+      "truth_grade": 1,
+      "boundary_distance": 0.09580287594523673,
+      "a": {
+        "theta": -0.8238,
+        "grade": 0,
+        "confidence": 0.78783,
+        "questions": 31
+      },
+      "b": {
+        "theta": -0.3479,
+        "grade": 1,
+        "confidence": 0.69996,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 1,
+      "role": "frontend_development",
+      "latent_theta": -2.5750836343394345,
+      "truth_grade": 0,
+      "boundary_distance": 2.0750836343394345,
+      "a": {
+        "theta": -2.238,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.2396,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 2,
+      "role": "qa_engineering",
+      "latent_theta": -0.9687687600153856,
+      "truth_grade": 0,
+      "boundary_distance": 0.4687687600153856,
+      "a": {
+        "theta": -0.5407,
+        "grade": 0,
+        "confidence": 0.50243,
+        "questions": 31
+      },
+      "b": {
+        "theta": -1.0994,
+        "grade": 0,
+        "confidence": 0.94348,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 3,
+      "role": "devops",
+      "latent_theta": 1.2192060056343537,
+      "truth_grade": 2,
+      "boundary_distance": 0.21920600563435366,
+      "a": {
+        "theta": 0.7829,
+        "grade": 1,
+        "confidence": 0.6916,
+        "questions": 28
+      },
+      "b": {
+        "theta": 0.7398,
+        "grade": 1,
+        "confidence": 0.73829,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 4,
+      "role": "data_analytics",
+      "latent_theta": -0.3150709154490503,
+      "truth_grade": 1,
+      "boundary_distance": 0.1849290845509497,
+      "a": {
+        "theta": -1.1609,
+        "grade": 0,
+        "confidence": 0.96199,
+        "questions": 30
+      },
+      "b": {
+        "theta": -0.3033,
+        "grade": 1,
+        "confidence": 0.73169,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 5,
+      "role": "backend_python",
+      "latent_theta": -2.0186888414046167,
+      "truth_grade": 0,
+      "boundary_distance": 1.5186888414046167,
+      "a": {
+        "theta": -2.0805,
+        "grade": 0,
+        "confidence": 0.99999,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.0881,
+        "grade": 0,
+        "confidence": 0.99999,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 6,
+      "role": "frontend_development",
+      "latent_theta": 2.36180113342062,
+      "truth_grade": 2,
+      "boundary_distance": 1.3618011334206201,
+      "a": {
+        "theta": 2.0383,
+        "grade": 2,
+        "confidence": 0.99807,
+        "questions": 28
+      },
+      "b": {
+        "theta": 1.5715,
+        "grade": 2,
+        "confidence": 0.94482,
+        "questions": 30
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 7,
+      "role": "qa_engineering",
+      "latent_theta": 1.716301443733145,
+      "truth_grade": 2,
+      "boundary_distance": 0.716301443733145,
+      "a": {
+        "theta": 0.9365,
+        "grade": 1,
+        "confidence": 0.52534,
+        "questions": 30
+      },
+      "b": {
+        "theta": 0.5201,
+        "grade": 1,
+        "confidence": 0.88585,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 8,
+      "role": "devops",
+      "latent_theta": 0.9835217984209566,
+      "truth_grade": 1,
+      "boundary_distance": 0.01647820157904345,
+      "a": {
+        "theta": 1.1049,
+        "grade": 2,
+        "confidence": 0.65525,
+        "questions": 26
+      },
+      "b": {
+        "theta": 1.1222,
+        "grade": 2,
+        "confidence": 0.67285,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 9,
+      "role": "data_analytics",
+      "latent_theta": 0.7804590378088414,
+      "truth_grade": 1,
+      "boundary_distance": 0.2195409621911586,
+      "a": {
+        "theta": -0.0697,
+        "grade": 1,
+        "confidence": 0.89011,
+        "questions": 28
+      },
+      "b": {
+        "theta": 0.6539,
+        "grade": 1,
+        "confidence": 0.80521,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 10,
+      "role": "backend_python",
+      "latent_theta": -2.3931498870017203,
+      "truth_grade": 0,
+      "boundary_distance": 1.8931498870017203,
+      "a": {
+        "theta": -2.0531,
+        "grade": 0,
+        "confidence": 0.99999,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.6838,
+        "grade": 0,
+        "confidence": 0.99948,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 11,
+      "role": "frontend_development",
+      "latent_theta": 0.9204298996711007,
+      "truth_grade": 1,
+      "boundary_distance": 0.07957010032889933,
+      "a": {
+        "theta": 0.1356,
+        "grade": 1,
+        "confidence": 0.94854,
+        "questions": 26
+      },
+      "b": {
+        "theta": -0.0486,
+        "grade": 1,
+        "confidence": 0.89814,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 12,
+      "role": "qa_engineering",
+      "latent_theta": 2.042237709629206,
+      "truth_grade": 2,
+      "boundary_distance": 1.0422377096292061,
+      "a": {
+        "theta": 1.7296,
+        "grade": 2,
+        "confidence": 0.9773,
+        "questions": 25
+      },
+      "b": {
+        "theta": 0.8203,
+        "grade": 1,
+        "confidence": 0.65267,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 13,
+      "role": "devops",
+      "latent_theta": 1.4671134770206118,
+      "truth_grade": 2,
+      "boundary_distance": 0.4671134770206118,
+      "a": {
+        "theta": 1.0111,
+        "grade": 2,
+        "confidence": 0.55497,
+        "questions": 26
+      },
+      "b": {
+        "theta": 0.819,
+        "grade": 1,
+        "confidence": 0.65773,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 14,
+      "role": "data_analytics",
+      "latent_theta": -0.35542455648296256,
+      "truth_grade": 1,
+      "boundary_distance": 0.14457544351703744,
+      "a": {
+        "theta": -0.6468,
+        "grade": 0,
+        "confidence": 0.62143,
+        "questions": 28
+      },
+      "b": {
+        "theta": -0.466,
+        "grade": 1,
+        "confidence": 0.56925,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 15,
+      "role": "backend_python",
+      "latent_theta": 1.1917795527833324,
+      "truth_grade": 2,
+      "boundary_distance": 0.19177955278333236,
+      "a": {
+        "theta": 0.3144,
+        "grade": 1,
+        "confidence": 0.94971,
+        "questions": 27
+      },
+      "b": {
+        "theta": 0.8011,
+        "grade": 1,
+        "confidence": 0.68153,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 16,
+      "role": "frontend_development",
+      "latent_theta": 0.843950571249735,
+      "truth_grade": 1,
+      "boundary_distance": 0.15604942875026495,
+      "a": {
+        "theta": 0.2935,
+        "grade": 1,
+        "confidence": 0.95077,
+        "questions": 27
+      },
+      "b": {
+        "theta": 0.2812,
+        "grade": 1,
+        "confidence": 0.9501,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 17,
+      "role": "qa_engineering",
+      "latent_theta": 1.5461060461042724,
+      "truth_grade": 2,
+      "boundary_distance": 0.5461060461042724,
+      "a": {
+        "theta": 0.9674,
+        "grade": 2,
+        "confidence": 0.51605,
+        "questions": 28
+      },
+      "b": {
+        "theta": 1.2123,
+        "grade": 2,
+        "confidence": 0.75072,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 18,
+      "role": "devops",
+      "latent_theta": -1.2695127605307694,
+      "truth_grade": 0,
+      "boundary_distance": 0.7695127605307694,
+      "a": {
+        "theta": -1.5041,
+        "grade": 0,
+        "confidence": 0.99699,
+        "questions": 32
+      },
+      "b": {
+        "theta": -0.8508,
+        "grade": 0,
+        "confidence": 0.81087,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 19,
+      "role": "data_analytics",
+      "latent_theta": -1.5905183574217492,
+      "truth_grade": 0,
+      "boundary_distance": 1.0905183574217492,
+      "a": {
+        "theta": -1.547,
+        "grade": 0,
+        "confidence": 0.99838,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.4511,
+        "grade": 0,
+        "confidence": 0.99539,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 20,
+      "role": "backend_python",
+      "latent_theta": 1.161624679193174,
+      "truth_grade": 2,
+      "boundary_distance": 0.16162467919317391,
+      "a": {
+        "theta": 0.8327,
+        "grade": 1,
+        "confidence": 0.64116,
+        "questions": 30
+      },
+      "b": {
+        "theta": 0.7965,
+        "grade": 1,
+        "confidence": 0.68648,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 21,
+      "role": "frontend_development",
+      "latent_theta": 0.9474504347256412,
+      "truth_grade": 1,
+      "boundary_distance": 0.052549565274358834,
+      "a": {
+        "theta": 0.2218,
+        "grade": 1,
+        "confidence": 0.9539,
+        "questions": 26
+      },
+      "b": {
+        "theta": 0.7347,
+        "grade": 1,
+        "confidence": 0.7405,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 22,
+      "role": "qa_engineering",
+      "latent_theta": -1.9400069226429362,
+      "truth_grade": 0,
+      "boundary_distance": 1.4400069226429362,
+      "a": {
+        "theta": -2.1951,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.0774,
+        "grade": 0,
+        "confidence": 0.99999,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 23,
+      "role": "devops",
+      "latent_theta": 2.2946173835098334,
+      "truth_grade": 2,
+      "boundary_distance": 1.2946173835098334,
+      "a": {
+        "theta": 2.3327,
+        "grade": 2,
+        "confidence": 0.99994,
+        "questions": 32
+      },
+      "b": {
+        "theta": 1.0271,
+        "grade": 2,
+        "confidence": 0.56539,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 24,
+      "role": "data_analytics",
+      "latent_theta": -2.0655493036889143,
+      "truth_grade": 0,
+      "boundary_distance": 1.5655493036889143,
+      "a": {
+        "theta": -1.4349,
+        "grade": 0,
+        "confidence": 0.99216,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.1522,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 25,
+      "role": "backend_python",
+      "latent_theta": -0.09402135944430468,
+      "truth_grade": 1,
+      "boundary_distance": 0.4059786405556953,
+      "a": {
+        "theta": -0.0501,
+        "grade": 1,
+        "confidence": 0.89674,
+        "questions": 29
+      },
+      "b": {
+        "theta": -0.5633,
+        "grade": 0,
+        "confidence": 0.5311,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 26,
+      "role": "frontend_development",
+      "latent_theta": -0.2978943449681317,
+      "truth_grade": 1,
+      "boundary_distance": 0.20210565503186828,
+      "a": {
+        "theta": -0.5447,
+        "grade": 0,
+        "confidence": 0.51627,
+        "questions": 28
+      },
+      "b": {
+        "theta": -1.0771,
+        "grade": 0,
+        "confidence": 0.93377,
+        "questions": 30
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 27,
+      "role": "qa_engineering",
+      "latent_theta": 2.47399002249517,
+      "truth_grade": 2,
+      "boundary_distance": 1.4739900224951699,
+      "a": {
+        "theta": 1.6089,
+        "grade": 2,
+        "confidence": 0.94652,
+        "questions": 32
+      },
+      "b": {
+        "theta": 1.5011,
+        "grade": 2,
+        "confidence": 0.92226,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 28,
+      "role": "devops",
+      "latent_theta": 1.1267734929444724,
+      "truth_grade": 2,
+      "boundary_distance": 0.12677349294447238,
+      "a": {
+        "theta": 0.324,
+        "grade": 1,
+        "confidence": 0.94655,
+        "questions": 26
+      },
+      "b": {
+        "theta": 0.7599,
+        "grade": 1,
+        "confidence": 0.72223,
+        "questions": 30
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 29,
+      "role": "data_analytics",
+      "latent_theta": -0.6572604777010382,
+      "truth_grade": 0,
+      "boundary_distance": 0.15726047770103824,
+      "a": {
+        "theta": -0.92,
+        "grade": 0,
+        "confidence": 0.85479,
+        "questions": 31
+      },
+      "b": {
+        "theta": -0.8137,
+        "grade": 0,
+        "confidence": 0.78177,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 30,
+      "role": "backend_python",
+      "latent_theta": 0.8523947711063249,
+      "truth_grade": 1,
+      "boundary_distance": 0.1476052288936751,
+      "a": {
+        "theta": 0.5584,
+        "grade": 1,
+        "confidence": 0.86489,
+        "questions": 26
+      },
+      "b": {
+        "theta": 0.5469,
+        "grade": 1,
+        "confidence": 0.86982,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 31,
+      "role": "frontend_development",
+      "latent_theta": -1.7870998211323692,
+      "truth_grade": 0,
+      "boundary_distance": 1.2870998211323692,
+      "a": {
+        "theta": -1.3051,
+        "grade": 0,
+        "confidence": 0.98507,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.5041,
+        "grade": 0,
+        "confidence": 0.99699,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 32,
+      "role": "qa_engineering",
+      "latent_theta": 2.5317194581100013,
+      "truth_grade": 2,
+      "boundary_distance": 1.5317194581100013,
+      "a": {
+        "theta": 2.3095,
+        "grade": 2,
+        "confidence": 0.99978,
+        "questions": 32
+      },
+      "b": {
+        "theta": 1.7251,
+        "grade": 2,
+        "confidence": 0.97646,
+        "questions": 25
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 33,
+      "role": "devops",
+      "latent_theta": 0.547978705685471,
+      "truth_grade": 1,
+      "boundary_distance": 0.452021294314529,
+      "a": {
+        "theta": 0.1027,
+        "grade": 1,
+        "confidence": 0.94318,
+        "questions": 27
+      },
+      "b": {
+        "theta": 0.1407,
+        "grade": 1,
+        "confidence": 0.94636,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 34,
+      "role": "data_analytics",
+      "latent_theta": 0.5176992736910053,
+      "truth_grade": 1,
+      "boundary_distance": 0.4823007263089947,
+      "a": {
+        "theta": 0.3939,
+        "grade": 1,
+        "confidence": 0.93266,
+        "questions": 26
+      },
+      "b": {
+        "theta": -0.0899,
+        "grade": 1,
+        "confidence": 0.87689,
+        "questions": 31
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 35,
+      "role": "backend_python",
+      "latent_theta": 2.4953100929909526,
+      "truth_grade": 2,
+      "boundary_distance": 1.4953100929909526,
+      "a": {
+        "theta": 1.7801,
+        "grade": 2,
+        "confidence": 0.98396,
+        "questions": 28
+      },
+      "b": {
+        "theta": 2.1294,
+        "grade": 2,
+        "confidence": 0.9996,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 36,
+      "role": "frontend_development",
+      "latent_theta": 0.412963053257013,
+      "truth_grade": 1,
+      "boundary_distance": 0.587036946742987,
+      "a": {
+        "theta": 0.6243,
+        "grade": 1,
+        "confidence": 0.82451,
+        "questions": 26
+      },
+      "b": {
+        "theta": 0.0054,
+        "grade": 1,
+        "confidence": 0.91656,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 37,
+      "role": "qa_engineering",
+      "latent_theta": 1.5051850440410863,
+      "truth_grade": 2,
+      "boundary_distance": 0.5051850440410863,
+      "a": {
+        "theta": 0.786,
+        "grade": 1,
+        "confidence": 0.68958,
+        "questions": 27
+      },
+      "b": {
+        "theta": 1.6662,
+        "grade": 2,
+        "confidence": 0.96702,
+        "questions": 25
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 38,
+      "role": "devops",
+      "latent_theta": 0.8793697635239992,
+      "truth_grade": 1,
+      "boundary_distance": 0.1206302364760008,
+      "a": {
+        "theta": 0.6022,
+        "grade": 1,
+        "confidence": 0.83898,
+        "questions": 26
+      },
+      "b": {
+        "theta": 0.0672,
+        "grade": 1,
+        "confidence": 0.93276,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 39,
+      "role": "data_analytics",
+      "latent_theta": -0.38709029811452567,
+      "truth_grade": 1,
+      "boundary_distance": 0.11290970188547433,
+      "a": {
+        "theta": -1.6025,
+        "grade": 0,
+        "confidence": 0.99887,
+        "questions": 32
+      },
+      "b": {
+        "theta": -0.5111,
+        "grade": 1,
+        "confidence": 0.53376,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 40,
+      "role": "backend_python",
+      "latent_theta": -0.12467344648653134,
+      "truth_grade": 1,
+      "boundary_distance": 0.37532655351346866,
+      "a": {
+        "theta": -0.5961,
+        "grade": 0,
+        "confidence": 0.55941,
+        "questions": 32
+      },
+      "b": {
+        "theta": -0.4321,
+        "grade": 1,
+        "confidence": 0.60954,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 41,
+      "role": "frontend_development",
+      "latent_theta": 2.0735863750282064,
+      "truth_grade": 2,
+      "boundary_distance": 1.0735863750282064,
+      "a": {
+        "theta": 1.2161,
+        "grade": 2,
+        "confidence": 0.75358,
+        "questions": 25
+      },
+      "b": {
+        "theta": 1.7401,
+        "grade": 2,
+        "confidence": 0.97898,
+        "questions": 25
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 42,
+      "role": "qa_engineering",
+      "latent_theta": 1.1009541223421309,
+      "truth_grade": 2,
+      "boundary_distance": 0.10095412234213086,
+      "a": {
+        "theta": 0.7383,
+        "grade": 1,
+        "confidence": 0.72937,
+        "questions": 28
+      },
+      "b": {
+        "theta": 0.3398,
+        "grade": 1,
+        "confidence": 0.94425,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 43,
+      "role": "devops",
+      "latent_theta": 1.7969589687278242,
+      "truth_grade": 2,
+      "boundary_distance": 0.7969589687278242,
+      "a": {
+        "theta": 1.0006,
+        "grade": 2,
+        "confidence": 0.53978,
+        "questions": 29
+      },
+      "b": {
+        "theta": 0.7689,
+        "grade": 1,
+        "confidence": 0.70386,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 44,
+      "role": "data_analytics",
+      "latent_theta": -1.225306292476868,
+      "truth_grade": 0,
+      "boundary_distance": 0.7253062924768681,
+      "a": {
+        "theta": -0.9091,
+        "grade": 0,
+        "confidence": 0.85004,
+        "questions": 30
+      },
+      "b": {
+        "theta": -1.4672,
+        "grade": 0,
+        "confidence": 0.99641,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 45,
+      "role": "backend_python",
+      "latent_theta": -2.5953552322676408,
+      "truth_grade": 0,
+      "boundary_distance": 2.0953552322676408,
+      "a": {
+        "theta": -1.9511,
+        "grade": 0,
+        "confidence": 0.99997,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.3564,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 46,
+      "role": "frontend_development",
+      "latent_theta": 1.7761553219604087,
+      "truth_grade": 2,
+      "boundary_distance": 0.7761553219604087,
+      "a": {
+        "theta": 1.2522,
+        "grade": 2,
+        "confidence": 0.77392,
+        "questions": 29
+      },
+      "b": {
+        "theta": 1.3559,
+        "grade": 2,
+        "confidence": 0.85191,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 47,
+      "role": "qa_engineering",
+      "latent_theta": 1.0102648225627195,
+      "truth_grade": 2,
+      "boundary_distance": 0.010264822562719544,
+      "a": {
+        "theta": 0.7135,
+        "grade": 1,
+        "confidence": 0.75197,
+        "questions": 27
+      },
+      "b": {
+        "theta": 0.523,
+        "grade": 1,
+        "confidence": 0.88224,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 48,
+      "role": "devops",
+      "latent_theta": 1.586000992134375,
+      "truth_grade": 2,
+      "boundary_distance": 0.586000992134375,
+      "a": {
+        "theta": 1.7401,
+        "grade": 2,
+        "confidence": 0.97898,
+        "questions": 25
+      },
+      "b": {
+        "theta": 0.7575,
+        "grade": 1,
+        "confidence": 0.72757,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 49,
+      "role": "data_analytics",
+      "latent_theta": -2.6755094259270344,
+      "truth_grade": 0,
+      "boundary_distance": 2.1755094259270344,
+      "a": {
+        "theta": -2.5945,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.2606,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 50,
+      "role": "backend_python",
+      "latent_theta": -1.1656781057445658,
+      "truth_grade": 0,
+      "boundary_distance": 0.6656781057445658,
+      "a": {
+        "theta": -0.7042,
+        "grade": 0,
+        "confidence": 0.67602,
+        "questions": 31
+      },
+      "b": {
+        "theta": -1.6317,
+        "grade": 0,
+        "confidence": 0.99906,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 51,
+      "role": "frontend_development",
+      "latent_theta": 1.0049742785814049,
+      "truth_grade": 2,
+      "boundary_distance": 0.004974278581404867,
+      "a": {
+        "theta": 0.7066,
+        "grade": 1,
+        "confidence": 0.76327,
+        "questions": 25
+      },
+      "b": {
+        "theta": 0.2834,
+        "grade": 1,
+        "confidence": 0.94964,
+        "questions": 30
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 52,
+      "role": "qa_engineering",
+      "latent_theta": 1.3157413328995204,
+      "truth_grade": 2,
+      "boundary_distance": 0.31574133289952044,
+      "a": {
+        "theta": 1.2135,
+        "grade": 2,
+        "confidence": 0.75034,
+        "questions": 29
+      },
+      "b": {
+        "theta": 0.5424,
+        "grade": 1,
+        "confidence": 0.87326,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 53,
+      "role": "devops",
+      "latent_theta": 0.6637358366262132,
+      "truth_grade": 1,
+      "boundary_distance": 0.33626416337378684,
+      "a": {
+        "theta": 0.3422,
+        "grade": 1,
+        "confidence": 0.94535,
+        "questions": 28
+      },
+      "b": {
+        "theta": 0.4861,
+        "grade": 1,
+        "confidence": 0.90393,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 54,
+      "role": "data_analytics",
+      "latent_theta": 1.5693475811873165,
+      "truth_grade": 2,
+      "boundary_distance": 0.5693475811873165,
+      "a": {
+        "theta": 1.0904,
+        "grade": 2,
+        "confidence": 0.62155,
+        "questions": 30
+      },
+      "b": {
+        "theta": 1.1911,
+        "grade": 2,
+        "confidence": 0.72985,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 55,
+      "role": "backend_python",
+      "latent_theta": 0.9509266552175855,
+      "truth_grade": 1,
+      "boundary_distance": 0.04907334478241454,
+      "a": {
+        "theta": 0.4878,
+        "grade": 1,
+        "confidence": 0.89949,
+        "questions": 26
+      },
+      "b": {
+        "theta": 0.7721,
+        "grade": 1,
+        "confidence": 0.70349,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 56,
+      "role": "frontend_development",
+      "latent_theta": 0.0008438131135406479,
+      "truth_grade": 1,
+      "boundary_distance": 0.5008438131135406,
+      "a": {
+        "theta": -0.6605,
+        "grade": 0,
+        "confidence": 0.64237,
+        "questions": 28
+      },
+      "b": {
+        "theta": -0.0276,
+        "grade": 1,
+        "confidence": 0.90293,
+        "questions": 30
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 57,
+      "role": "qa_engineering",
+      "latent_theta": 2.022864368413467,
+      "truth_grade": 2,
+      "boundary_distance": 1.022864368413467,
+      "a": {
+        "theta": 1.4854,
+        "grade": 2,
+        "confidence": 0.91408,
+        "questions": 29
+      },
+      "b": {
+        "theta": 1.3328,
+        "grade": 2,
+        "confidence": 0.83453,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 58,
+      "role": "devops",
+      "latent_theta": -1.9851950610139855,
+      "truth_grade": 0,
+      "boundary_distance": 1.4851950610139855,
+      "a": {
+        "theta": -1.0333,
+        "grade": 0,
+        "confidence": 0.88879,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.667,
+        "grade": 0,
+        "confidence": 0.99898,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 59,
+      "role": "data_analytics",
+      "latent_theta": -1.2292003968164933,
+      "truth_grade": 0,
+      "boundary_distance": 0.7292003968164933,
+      "a": {
+        "theta": -1.5905,
+        "grade": 0,
+        "confidence": 0.99853,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.1855,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 60,
+      "role": "backend_python",
+      "latent_theta": -1.0137134869073972,
+      "truth_grade": 0,
+      "boundary_distance": 0.5137134869073972,
+      "a": {
+        "theta": -1.4672,
+        "grade": 0,
+        "confidence": 0.99641,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.1842,
+        "grade": 0,
+        "confidence": 0.96612,
+        "questions": 30
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 61,
+      "role": "frontend_development",
+      "latent_theta": 2.044164199220911,
+      "truth_grade": 2,
+      "boundary_distance": 1.0441641992209112,
+      "a": {
+        "theta": 1.3158,
+        "grade": 2,
+        "confidence": 0.82442,
+        "questions": 29
+      },
+      "b": {
+        "theta": 1.4705,
+        "grade": 2,
+        "confidence": 0.90904,
+        "questions": 24
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 62,
+      "role": "qa_engineering",
+      "latent_theta": -0.5044302984303046,
+      "truth_grade": 0,
+      "boundary_distance": 0.0044302984303046244,
+      "a": {
+        "theta": -0.7171,
+        "grade": 0,
+        "confidence": 0.69669,
+        "questions": 28
+      },
+      "b": {
+        "theta": -0.639,
+        "grade": 0,
+        "confidence": 0.61223,
+        "questions": 31
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 63,
+      "role": "devops",
+      "latent_theta": 0.19793398785315475,
+      "truth_grade": 1,
+      "boundary_distance": 0.6979339878531547,
+      "a": {
+        "theta": -0.2139,
+        "grade": 1,
+        "confidence": 0.80752,
+        "questions": 30
+      },
+      "b": {
+        "theta": -0.1459,
+        "grade": 1,
+        "confidence": 0.84985,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 64,
+      "role": "data_analytics",
+      "latent_theta": -2.347111747315284,
+      "truth_grade": 0,
+      "boundary_distance": 1.8471117473152838,
+      "a": {
+        "theta": -1.5743,
+        "grade": 0,
+        "confidence": 0.99864,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.1484,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 65,
+      "role": "backend_python",
+      "latent_theta": -0.01917791545967562,
+      "truth_grade": 1,
+      "boundary_distance": 0.4808220845403244,
+      "a": {
+        "theta": -0.0509,
+        "grade": 1,
+        "confidence": 0.8941,
+        "questions": 26
+      },
+      "b": {
+        "theta": 0.0149,
+        "grade": 1,
+        "confidence": 0.91753,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 66,
+      "role": "frontend_development",
+      "latent_theta": 0.6717662709682637,
+      "truth_grade": 1,
+      "boundary_distance": 0.3282337290317363,
+      "a": {
+        "theta": 0.4227,
+        "grade": 1,
+        "confidence": 0.922,
+        "questions": 26
+      },
+      "b": {
+        "theta": 0.7439,
+        "grade": 1,
+        "confidence": 0.72656,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 67,
+      "role": "qa_engineering",
+      "latent_theta": 1.5859126347178227,
+      "truth_grade": 2,
+      "boundary_distance": 0.5859126347178227,
+      "a": {
+        "theta": 0.8181,
+        "grade": 1,
+        "confidence": 0.65462,
+        "questions": 25
+      },
+      "b": {
+        "theta": 1.1626,
+        "grade": 2,
+        "confidence": 0.70708,
+        "questions": 25
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 68,
+      "role": "devops",
+      "latent_theta": -2.182369269674422,
+      "truth_grade": 0,
+      "boundary_distance": 1.682369269674422,
+      "a": {
+        "theta": -2.3046,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.9656,
+        "grade": 0,
+        "confidence": 0.99998,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 69,
+      "role": "data_analytics",
+      "latent_theta": 0.5348669578658991,
+      "truth_grade": 1,
+      "boundary_distance": 0.4651330421341009,
+      "a": {
+        "theta": 0.1977,
+        "grade": 1,
+        "confidence": 0.95411,
+        "questions": 27
+      },
+      "b": {
+        "theta": 0.769,
+        "grade": 1,
+        "confidence": 0.7101,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 70,
+      "role": "backend_python",
+      "latent_theta": -2.6028384881386937,
+      "truth_grade": 0,
+      "boundary_distance": 2.1028384881386937,
+      "a": {
+        "theta": -1.4907,
+        "grade": 0,
+        "confidence": 0.99563,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.1877,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 71,
+      "role": "frontend_development",
+      "latent_theta": 2.383132349654769,
+      "truth_grade": 2,
+      "boundary_distance": 1.383132349654769,
+      "a": {
+        "theta": 1.5538,
+        "grade": 2,
+        "confidence": 0.93736,
+        "questions": 25
+      },
+      "b": {
+        "theta": 1.7564,
+        "grade": 2,
+        "confidence": 0.98265,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 72,
+      "role": "qa_engineering",
+      "latent_theta": 1.5486850741323037,
+      "truth_grade": 2,
+      "boundary_distance": 0.5486850741323037,
+      "a": {
+        "theta": 0.7443,
+        "grade": 1,
+        "confidence": 0.73239,
+        "questions": 27
+      },
+      "b": {
+        "theta": 0.6607,
+        "grade": 1,
+        "confidence": 0.79533,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 73,
+      "role": "devops",
+      "latent_theta": 1.4639202619895135,
+      "truth_grade": 2,
+      "boundary_distance": 0.4639202619895135,
+      "a": {
+        "theta": 0.8918,
+        "grade": 1,
+        "confidence": 0.58044,
+        "questions": 26
+      },
+      "b": {
+        "theta": 1.382,
+        "grade": 2,
+        "confidence": 0.86875,
+        "questions": 25
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 74,
+      "role": "data_analytics",
+      "latent_theta": -1.941066340896681,
+      "truth_grade": 0,
+      "boundary_distance": 1.441066340896681,
+      "a": {
+        "theta": -1.7449,
+        "grade": 0,
+        "confidence": 0.99963,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.2123,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 75,
+      "role": "backend_python",
+      "latent_theta": -1.584667274133614,
+      "truth_grade": 0,
+      "boundary_distance": 1.084667274133614,
+      "a": {
+        "theta": -1.973,
+        "grade": 0,
+        "confidence": 0.99997,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.022,
+        "grade": 0,
+        "confidence": 0.91126,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 76,
+      "role": "frontend_development",
+      "latent_theta": -1.747664419392669,
+      "truth_grade": 0,
+      "boundary_distance": 1.247664419392669,
+      "a": {
+        "theta": -2.3616,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.8322,
+        "grade": 0,
+        "confidence": 0.99991,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 77,
+      "role": "qa_engineering",
+      "latent_theta": -1.722733809580196,
+      "truth_grade": 0,
+      "boundary_distance": 1.222733809580196,
+      "a": {
+        "theta": -1.7295,
+        "grade": 0,
+        "confidence": 0.99971,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.7542,
+        "grade": 0,
+        "confidence": 0.99935,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 78,
+      "role": "devops",
+      "latent_theta": -1.7159522892100576,
+      "truth_grade": 0,
+      "boundary_distance": 1.2159522892100576,
+      "a": {
+        "theta": -2.0774,
+        "grade": 0,
+        "confidence": 0.99999,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.4687,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 79,
+      "role": "data_analytics",
+      "latent_theta": -2.633336764262842,
+      "truth_grade": 0,
+      "boundary_distance": 2.133336764262842,
+      "a": {
+        "theta": -2.6991,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.1012,
+        "grade": 0,
+        "confidence": 0.99999,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 80,
+      "role": "backend_python",
+      "latent_theta": -1.3268195749893568,
+      "truth_grade": 0,
+      "boundary_distance": 0.8268195749893568,
+      "a": {
+        "theta": -0.6148,
+        "grade": 0,
+        "confidence": 0.58137,
+        "questions": 30
+      },
+      "b": {
+        "theta": -1.2305,
+        "grade": 0,
+        "confidence": 0.96459,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 81,
+      "role": "frontend_development",
+      "latent_theta": 2.5497707523123205,
+      "truth_grade": 2,
+      "boundary_distance": 1.5497707523123205,
+      "a": {
+        "theta": 1.9839,
+        "grade": 2,
+        "confidence": 0.99702,
+        "questions": 27
+      },
+      "b": {
+        "theta": 1.6211,
+        "grade": 2,
+        "confidence": 0.96201,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 82,
+      "role": "qa_engineering",
+      "latent_theta": -1.9644088230659693,
+      "truth_grade": 0,
+      "boundary_distance": 1.4644088230659693,
+      "a": {
+        "theta": -1.6403,
+        "grade": 0,
+        "confidence": 0.99916,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.709,
+        "grade": 0,
+        "confidence": 0.99957,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 83,
+      "role": "devops",
+      "latent_theta": -0.5855316589492245,
+      "truth_grade": 0,
+      "boundary_distance": 0.08553165894922454,
+      "a": {
+        "theta": -0.9937,
+        "grade": 0,
+        "confidence": 0.89732,
+        "questions": 32
+      },
+      "b": {
+        "theta": -0.6085,
+        "grade": 0,
+        "confidence": 0.58814,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 84,
+      "role": "data_analytics",
+      "latent_theta": 0.6788035132183876,
+      "truth_grade": 1,
+      "boundary_distance": 0.3211964867816124,
+      "a": {
+        "theta": 0.4878,
+        "grade": 1,
+        "confidence": 0.89949,
+        "questions": 26
+      },
+      "b": {
+        "theta": 0.7417,
+        "grade": 1,
+        "confidence": 0.735,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 85,
+      "role": "backend_python",
+      "latent_theta": 1.8290422795162566,
+      "truth_grade": 2,
+      "boundary_distance": 0.8290422795162566,
+      "a": {
+        "theta": 0.366,
+        "grade": 1,
+        "confidence": 0.9375,
+        "questions": 26
+      },
+      "b": {
+        "theta": 1.4024,
+        "grade": 2,
+        "confidence": 0.86561,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 86,
+      "role": "frontend_development",
+      "latent_theta": 0.810358721585962,
+      "truth_grade": 1,
+      "boundary_distance": 0.189641278414038,
+      "a": {
+        "theta": 0.7388,
+        "grade": 1,
+        "confidence": 0.74053,
+        "questions": 26
+      },
+      "b": {
+        "theta": 0.4759,
+        "grade": 1,
+        "confidence": 0.90417,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 87,
+      "role": "qa_engineering",
+      "latent_theta": -0.29957280668036423,
+      "truth_grade": 1,
+      "boundary_distance": 0.20042719331963577,
+      "a": {
+        "theta": -0.5239,
+        "grade": 1,
+        "confidence": 0.52806,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.1791,
+        "grade": 0,
+        "confidence": 0.96345,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 88,
+      "role": "devops",
+      "latent_theta": 1.0480539202659624,
+      "truth_grade": 2,
+      "boundary_distance": 0.048053920265962446,
+      "a": {
+        "theta": 0.8331,
+        "grade": 1,
+        "confidence": 0.64469,
+        "questions": 27
+      },
+      "b": {
+        "theta": 0.565,
+        "grade": 1,
+        "confidence": 0.86712,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 89,
+      "role": "data_analytics",
+      "latent_theta": 0.5513667509223086,
+      "truth_grade": 1,
+      "boundary_distance": 0.4486332490776914,
+      "a": {
+        "theta": -0.1919,
+        "grade": 1,
+        "confidence": 0.82119,
+        "questions": 29
+      },
+      "b": {
+        "theta": 0.1622,
+        "grade": 1,
+        "confidence": 0.94945,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 90,
+      "role": "backend_python",
+      "latent_theta": 1.325397963916787,
+      "truth_grade": 2,
+      "boundary_distance": 0.325397963916787,
+      "a": {
+        "theta": 0.7173,
+        "grade": 1,
+        "confidence": 0.75551,
+        "questions": 27
+      },
+      "b": {
+        "theta": 0.833,
+        "grade": 1,
+        "confidence": 0.6339,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 91,
+      "role": "frontend_development",
+      "latent_theta": 0.8477909040681739,
+      "truth_grade": 1,
+      "boundary_distance": 0.15220909593182608,
+      "a": {
+        "theta": 0.5753,
+        "grade": 1,
+        "confidence": 0.85603,
+        "questions": 26
+      },
+      "b": {
+        "theta": 0.0716,
+        "grade": 1,
+        "confidence": 0.93702,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 92,
+      "role": "qa_engineering",
+      "latent_theta": 1.9496768479826612,
+      "truth_grade": 2,
+      "boundary_distance": 0.9496768479826612,
+      "a": {
+        "theta": 1.7401,
+        "grade": 2,
+        "confidence": 0.97898,
+        "questions": 25
+      },
+      "b": {
+        "theta": 1.3932,
+        "grade": 2,
+        "confidence": 0.87317,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 93,
+      "role": "devops",
+      "latent_theta": 1.5308089597400079,
+      "truth_grade": 2,
+      "boundary_distance": 0.5308089597400079,
+      "a": {
+        "theta": 0.7863,
+        "grade": 1,
+        "confidence": 0.68924,
+        "questions": 26
+      },
+      "b": {
+        "theta": 0.3173,
+        "grade": 1,
+        "confidence": 0.94509,
+        "questions": 25
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 94,
+      "role": "data_analytics",
+      "latent_theta": -0.7525154637537752,
+      "truth_grade": 0,
+      "boundary_distance": 0.2525154637537752,
+      "a": {
+        "theta": -1.0559,
+        "grade": 0,
+        "confidence": 0.92464,
+        "questions": 30
+      },
+      "b": {
+        "theta": -0.3947,
+        "grade": 1,
+        "confidence": 0.66023,
+        "questions": 31
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 95,
+      "role": "backend_python",
+      "latent_theta": -0.9648917900545706,
+      "truth_grade": 0,
+      "boundary_distance": 0.4648917900545706,
+      "a": {
+        "theta": -0.5658,
+        "grade": 0,
+        "confidence": 0.5299,
+        "questions": 31
+      },
+      "b": {
+        "theta": -1.5215,
+        "grade": 0,
+        "confidence": 0.99743,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 96,
+      "role": "frontend_development",
+      "latent_theta": -0.18478657709295065,
+      "truth_grade": 1,
+      "boundary_distance": 0.31521342290704935,
+      "a": {
+        "theta": -0.5684,
+        "grade": 0,
+        "confidence": 0.53124,
+        "questions": 31
+      },
+      "b": {
+        "theta": -0.1366,
+        "grade": 1,
+        "confidence": 0.85698,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 97,
+      "role": "qa_engineering",
+      "latent_theta": -2.2385666688214614,
+      "truth_grade": 0,
+      "boundary_distance": 1.7385666688214614,
+      "a": {
+        "theta": -2.5222,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.8962,
+        "grade": 0,
+        "confidence": 0.99994,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 98,
+      "role": "devops",
+      "latent_theta": -0.29452594653127884,
+      "truth_grade": 1,
+      "boundary_distance": 0.20547405346872116,
+      "a": {
+        "theta": -0.518,
+        "grade": 1,
+        "confidence": 0.51427,
+        "questions": 26
+      },
+      "b": {
+        "theta": -0.0137,
+        "grade": 1,
+        "confidence": 0.91261,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 99,
+      "role": "data_analytics",
+      "latent_theta": -2.3016770531737656,
+      "truth_grade": 0,
+      "boundary_distance": 1.8016770531737656,
+      "a": {
+        "theta": -2.3198,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.9148,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 100,
+      "role": "backend_python",
+      "latent_theta": 1.3838415849805141,
+      "truth_grade": 2,
+      "boundary_distance": 0.38384158498051413,
+      "a": {
+        "theta": 0.7474,
+        "grade": 1,
+        "confidence": 0.72412,
+        "questions": 24
+      },
+      "b": {
+        "theta": 1.0468,
+        "grade": 2,
+        "confidence": 0.59649,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 101,
+      "role": "frontend_development",
+      "latent_theta": -0.4227040519800638,
+      "truth_grade": 1,
+      "boundary_distance": 0.07729594801993622,
+      "a": {
+        "theta": -0.7748,
+        "grade": 0,
+        "confidence": 0.74691,
+        "questions": 29
+      },
+      "b": {
+        "theta": -0.4999,
+        "grade": 1,
+        "confidence": 0.52837,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 102,
+      "role": "qa_engineering",
+      "latent_theta": 1.8360427138254733,
+      "truth_grade": 2,
+      "boundary_distance": 0.8360427138254733,
+      "a": {
+        "theta": 1.045,
+        "grade": 2,
+        "confidence": 0.58156,
+        "questions": 30
+      },
+      "b": {
+        "theta": 1.7251,
+        "grade": 2,
+        "confidence": 0.97646,
+        "questions": 25
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 103,
+      "role": "devops",
+      "latent_theta": 0.22731498668833927,
+      "truth_grade": 1,
+      "boundary_distance": 0.7273149866883393,
+      "a": {
+        "theta": -0.0029,
+        "grade": 1,
+        "confidence": 0.91376,
+        "questions": 26
+      },
+      "b": {
+        "theta": 0.0467,
+        "grade": 1,
+        "confidence": 0.92865,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 104,
+      "role": "data_analytics",
+      "latent_theta": 0.3447534605551241,
+      "truth_grade": 1,
+      "boundary_distance": 0.6552465394448759,
+      "a": {
+        "theta": -0.3205,
+        "grade": 1,
+        "confidence": 0.71872,
+        "questions": 29
+      },
+      "b": {
+        "theta": -0.3129,
+        "grade": 1,
+        "confidence": 0.73162,
+        "questions": 31
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 105,
+      "role": "backend_python",
+      "latent_theta": 0.5791904899475662,
+      "truth_grade": 1,
+      "boundary_distance": 0.42080951005243383,
+      "a": {
+        "theta": 0.689,
+        "grade": 1,
+        "confidence": 0.77956,
+        "questions": 27
+      },
+      "b": {
+        "theta": -0.2427,
+        "grade": 1,
+        "confidence": 0.78464,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 106,
+      "role": "frontend_development",
+      "latent_theta": -1.9842145329048304,
+      "truth_grade": 0,
+      "boundary_distance": 1.4842145329048304,
+      "a": {
+        "theta": -0.7612,
+        "grade": 0,
+        "confidence": 0.73498,
+        "questions": 30
+      },
+      "b": {
+        "theta": -2.3677,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 107,
+      "role": "qa_engineering",
+      "latent_theta": 1.3221828862976848,
+      "truth_grade": 2,
+      "boundary_distance": 0.32218288629768477,
+      "a": {
+        "theta": 0.3388,
+        "grade": 1,
+        "confidence": 0.94175,
+        "questions": 25
+      },
+      "b": {
+        "theta": 0.7451,
+        "grade": 1,
+        "confidence": 0.73038,
+        "questions": 25
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 108,
+      "role": "devops",
+      "latent_theta": 2.0046470043537443,
+      "truth_grade": 2,
+      "boundary_distance": 1.0046470043537443,
+      "a": {
+        "theta": 1.7161,
+        "grade": 2,
+        "confidence": 0.97578,
+        "questions": 31
+      },
+      "b": {
+        "theta": 1.5004,
+        "grade": 2,
+        "confidence": 0.9203,
+        "questions": 25
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 109,
+      "role": "data_analytics",
+      "latent_theta": -1.4533103164232744,
+      "truth_grade": 0,
+      "boundary_distance": 0.9533103164232744,
+      "a": {
+        "theta": -1.5605,
+        "grade": 0,
+        "confidence": 0.9984,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.3568,
+        "grade": 0,
+        "confidence": 0.98238,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 110,
+      "role": "backend_python",
+      "latent_theta": -0.7648282594434037,
+      "truth_grade": 0,
+      "boundary_distance": 0.2648282594434037,
+      "a": {
+        "theta": -0.5481,
+        "grade": 0,
+        "confidence": 0.52232,
+        "questions": 27
+      },
+      "b": {
+        "theta": 0.1498,
+        "grade": 1,
+        "confidence": 0.94958,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 111,
+      "role": "frontend_development",
+      "latent_theta": 0.5246808908603007,
+      "truth_grade": 1,
+      "boundary_distance": 0.4753191091396993,
+      "a": {
+        "theta": 0.055,
+        "grade": 1,
+        "confidence": 0.93304,
+        "questions": 27
+      },
+      "b": {
+        "theta": 0.8091,
+        "grade": 1,
+        "confidence": 0.66269,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 112,
+      "role": "qa_engineering",
+      "latent_theta": 0.6714067937184458,
+      "truth_grade": 1,
+      "boundary_distance": 0.3285932062815542,
+      "a": {
+        "theta": 0.2243,
+        "grade": 1,
+        "confidence": 0.95199,
+        "questions": 26
+      },
+      "b": {
+        "theta": -0.1533,
+        "grade": 1,
+        "confidence": 0.84332,
+        "questions": 30
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 113,
+      "role": "devops",
+      "latent_theta": 2.101412653036112,
+      "truth_grade": 2,
+      "boundary_distance": 1.1014126530361121,
+      "a": {
+        "theta": 1.8639,
+        "grade": 2,
+        "confidence": 0.99371,
+        "questions": 30
+      },
+      "b": {
+        "theta": 1.3076,
+        "grade": 2,
+        "confidence": 0.8184,
+        "questions": 25
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 114,
+      "role": "data_analytics",
+      "latent_theta": -0.8897938659378524,
+      "truth_grade": 0,
+      "boundary_distance": 0.38979386593785237,
+      "a": {
+        "theta": -0.6784,
+        "grade": 0,
+        "confidence": 0.65908,
+        "questions": 28
+      },
+      "b": {
+        "theta": -0.9194,
+        "grade": 0,
+        "confidence": 0.8583,
+        "questions": 30
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 115,
+      "role": "backend_python",
+      "latent_theta": -0.7944476239706699,
+      "truth_grade": 0,
+      "boundary_distance": 0.2944476239706699,
+      "a": {
+        "theta": -0.7511,
+        "grade": 0,
+        "confidence": 0.72459,
+        "questions": 28
+      },
+      "b": {
+        "theta": -1.0557,
+        "grade": 0,
+        "confidence": 0.92563,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 116,
+      "role": "frontend_development",
+      "latent_theta": -1.4069279548436666,
+      "truth_grade": 0,
+      "boundary_distance": 0.9069279548436666,
+      "a": {
+        "theta": -1.4916,
+        "grade": 0,
+        "confidence": 0.99698,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.0003,
+        "grade": 0,
+        "confidence": 0.90131,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 117,
+      "role": "qa_engineering",
+      "latent_theta": 1.590322964531321,
+      "truth_grade": 2,
+      "boundary_distance": 0.590322964531321,
+      "a": {
+        "theta": 0.6022,
+        "grade": 1,
+        "confidence": 0.83898,
+        "questions": 26
+      },
+      "b": {
+        "theta": 1.2599,
+        "grade": 2,
+        "confidence": 0.78876,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 118,
+      "role": "devops",
+      "latent_theta": -0.4178650814341496,
+      "truth_grade": 1,
+      "boundary_distance": 0.08213491856585042,
+      "a": {
+        "theta": 0.0019,
+        "grade": 1,
+        "confidence": 0.91518,
+        "questions": 26
+      },
+      "b": {
+        "theta": -0.6635,
+        "grade": 0,
+        "confidence": 0.6413,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 119,
+      "role": "data_analytics",
+      "latent_theta": 0.7253829976726673,
+      "truth_grade": 1,
+      "boundary_distance": 0.27461700232733266,
+      "a": {
+        "theta": -0.5295,
+        "grade": 1,
+        "confidence": 0.50463,
+        "questions": 28
+      },
+      "b": {
+        "theta": -0.0438,
+        "grade": 1,
+        "confidence": 0.89801,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 120,
+      "role": "backend_python",
+      "latent_theta": -1.8879663879523683,
+      "truth_grade": 0,
+      "boundary_distance": 1.3879663879523683,
+      "a": {
+        "theta": -1.5215,
+        "grade": 0,
+        "confidence": 0.99743,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.8044,
+        "grade": 0,
+        "confidence": 0.99979,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 121,
+      "role": "frontend_development",
+      "latent_theta": 0.9786986385665855,
+      "truth_grade": 1,
+      "boundary_distance": 0.021301361433414545,
+      "a": {
+        "theta": 0.2671,
+        "grade": 1,
+        "confidence": 0.95318,
+        "questions": 26
+      },
+      "b": {
+        "theta": 0.1025,
+        "grade": 1,
+        "confidence": 0.943,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 122,
+      "role": "qa_engineering",
+      "latent_theta": 2.4170280727371196,
+      "truth_grade": 2,
+      "boundary_distance": 1.4170280727371196,
+      "a": {
+        "theta": 1.5581,
+        "grade": 2,
+        "confidence": 0.94393,
+        "questions": 27
+      },
+      "b": {
+        "theta": 1.2478,
+        "grade": 2,
+        "confidence": 0.77827,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 123,
+      "role": "devops",
+      "latent_theta": -1.911840807416319,
+      "truth_grade": 0,
+      "boundary_distance": 1.411840807416319,
+      "a": {
+        "theta": -2.1902,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.1565,
+        "grade": 0,
+        "confidence": 0.94432,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 124,
+      "role": "data_analytics",
+      "latent_theta": -2.188664456822049,
+      "truth_grade": 0,
+      "boundary_distance": 1.6886644568220488,
+      "a": {
+        "theta": -2.0531,
+        "grade": 0,
+        "confidence": 0.99999,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.973,
+        "grade": 0,
+        "confidence": 0.99997,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 125,
+      "role": "backend_python",
+      "latent_theta": 2.3620858583715068,
+      "truth_grade": 2,
+      "boundary_distance": 1.3620858583715068,
+      "a": {
+        "theta": 1.9685,
+        "grade": 2,
+        "confidence": 0.99645,
+        "questions": 27
+      },
+      "b": {
+        "theta": 1.3594,
+        "grade": 2,
+        "confidence": 0.84953,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 126,
+      "role": "frontend_development",
+      "latent_theta": -1.7759340994599175,
+      "truth_grade": 0,
+      "boundary_distance": 1.2759340994599175,
+      "a": {
+        "theta": -2.3117,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.3722,
+        "grade": 0,
+        "confidence": 0.99127,
+        "questions": 30
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 127,
+      "role": "qa_engineering",
+      "latent_theta": -0.9529216156953195,
+      "truth_grade": 0,
+      "boundary_distance": 0.4529216156953195,
+      "a": {
+        "theta": -1.1845,
+        "grade": 0,
+        "confidence": 0.96641,
+        "questions": 30
+      },
+      "b": {
+        "theta": -2.0013,
+        "grade": 0,
+        "confidence": 0.99997,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 128,
+      "role": "devops",
+      "latent_theta": -1.8185651904115683,
+      "truth_grade": 0,
+      "boundary_distance": 1.3185651904115683,
+      "a": {
+        "theta": -1.602,
+        "grade": 0,
+        "confidence": 0.99856,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.756,
+        "grade": 0,
+        "confidence": 0.99955,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 129,
+      "role": "data_analytics",
+      "latent_theta": 2.6313290740601376,
+      "truth_grade": 2,
+      "boundary_distance": 1.6313290740601376,
+      "a": {
+        "theta": 2.0483,
+        "grade": 2,
+        "confidence": 0.99824,
+        "questions": 28
+      },
+      "b": {
+        "theta": 2.1505,
+        "grade": 2,
+        "confidence": 0.99959,
+        "questions": 31
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 130,
+      "role": "backend_python",
+      "latent_theta": -0.29102561795913706,
+      "truth_grade": 1,
+      "boundary_distance": 0.20897438204086294,
+      "a": {
+        "theta": -0.9418,
+        "grade": 0,
+        "confidence": 0.86921,
+        "questions": 29
+      },
+      "b": {
+        "theta": -0.3187,
+        "grade": 1,
+        "confidence": 0.72065,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 131,
+      "role": "frontend_development",
+      "latent_theta": 1.8623049504940177,
+      "truth_grade": 2,
+      "boundary_distance": 0.8623049504940177,
+      "a": {
+        "theta": 1.0501,
+        "grade": 2,
+        "confidence": 0.59791,
+        "questions": 27
+      },
+      "b": {
+        "theta": 1.7957,
+        "grade": 2,
+        "confidence": 0.98892,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 132,
+      "role": "qa_engineering",
+      "latent_theta": -2.203713483830407,
+      "truth_grade": 0,
+      "boundary_distance": 1.7037134838304069,
+      "a": {
+        "theta": -2.3678,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.1757,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 133,
+      "role": "devops",
+      "latent_theta": -0.4447720371805741,
+      "truth_grade": 1,
+      "boundary_distance": 0.05522796281942588,
+      "a": {
+        "theta": -0.8928,
+        "grade": 0,
+        "confidence": 0.83709,
+        "questions": 28
+      },
+      "b": {
+        "theta": 0.1125,
+        "grade": 1,
+        "confidence": 0.94098,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 134,
+      "role": "data_analytics",
+      "latent_theta": -1.1597559328245193,
+      "truth_grade": 0,
+      "boundary_distance": 0.6597559328245193,
+      "a": {
+        "theta": -0.9421,
+        "grade": 0,
+        "confidence": 0.8724,
+        "questions": 29
+      },
+      "b": {
+        "theta": -1.2763,
+        "grade": 0,
+        "confidence": 0.9824,
+        "questions": 30
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 135,
+      "role": "backend_python",
+      "latent_theta": -2.4167056702896033,
+      "truth_grade": 0,
+      "boundary_distance": 1.9167056702896033,
+      "a": {
+        "theta": -1.7401,
+        "grade": 0,
+        "confidence": 0.99968,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.1382,
+        "grade": 0,
+        "confidence": 0.99999,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 136,
+      "role": "frontend_development",
+      "latent_theta": 2.0288027499712165,
+      "truth_grade": 2,
+      "boundary_distance": 1.0288027499712165,
+      "a": {
+        "theta": 1.5861,
+        "grade": 2,
+        "confidence": 0.94853,
+        "questions": 25
+      },
+      "b": {
+        "theta": 2.4005,
+        "grade": 2,
+        "confidence": 0.99997,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 137,
+      "role": "qa_engineering",
+      "latent_theta": 0.2898569518658354,
+      "truth_grade": 1,
+      "boundary_distance": 0.7101430481341646,
+      "a": {
+        "theta": -0.6201,
+        "grade": 0,
+        "confidence": 0.58685,
+        "questions": 32
+      },
+      "b": {
+        "theta": 0.4689,
+        "grade": 1,
+        "confidence": 0.91104,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 138,
+      "role": "devops",
+      "latent_theta": -2.1628672754144818,
+      "truth_grade": 0,
+      "boundary_distance": 1.6628672754144818,
+      "a": {
+        "theta": -2.5119,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.8638,
+        "grade": 0,
+        "confidence": 0.99993,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 139,
+      "role": "data_analytics",
+      "latent_theta": 2.171073523221599,
+      "truth_grade": 2,
+      "boundary_distance": 1.1710735232215992,
+      "a": {
+        "theta": 1.7879,
+        "grade": 2,
+        "confidence": 0.98519,
+        "questions": 28
+      },
+      "b": {
+        "theta": 1.6301,
+        "grade": 2,
+        "confidence": 0.95907,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 140,
+      "role": "backend_python",
+      "latent_theta": -0.10243442764429522,
+      "truth_grade": 1,
+      "boundary_distance": 0.3975655723557048,
+      "a": {
+        "theta": -0.6322,
+        "grade": 0,
+        "confidence": 0.59276,
+        "questions": 32
+      },
+      "b": {
+        "theta": -0.3809,
+        "grade": 1,
+        "confidence": 0.66262,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 141,
+      "role": "frontend_development",
+      "latent_theta": 0.888578324735104,
+      "truth_grade": 1,
+      "boundary_distance": 0.11142167526489599,
+      "a": {
+        "theta": 0.3183,
+        "grade": 1,
+        "confidence": 0.94474,
+        "questions": 25
+      },
+      "b": {
+        "theta": 0.7812,
+        "grade": 1,
+        "confidence": 0.69502,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 142,
+      "role": "qa_engineering",
+      "latent_theta": 2.0537821784947354,
+      "truth_grade": 2,
+      "boundary_distance": 1.0537821784947354,
+      "a": {
+        "theta": 1.7428,
+        "grade": 2,
+        "confidence": 0.98024,
+        "questions": 28
+      },
+      "b": {
+        "theta": 1.0753,
+        "grade": 2,
+        "confidence": 0.61768,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 143,
+      "role": "devops",
+      "latent_theta": 0.3865732267798494,
+      "truth_grade": 1,
+      "boundary_distance": 0.6134267732201506,
+      "a": {
+        "theta": 0.5539,
+        "grade": 1,
+        "confidence": 0.86911,
+        "questions": 27
+      },
+      "b": {
+        "theta": 0.3778,
+        "grade": 1,
+        "confidence": 0.93635,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 144,
+      "role": "data_analytics",
+      "latent_theta": -0.31190142691535483,
+      "truth_grade": 1,
+      "boundary_distance": 0.18809857308464517,
+      "a": {
+        "theta": -0.6494,
+        "grade": 0,
+        "confidence": 0.62474,
+        "questions": 31
+      },
+      "b": {
+        "theta": -0.5342,
+        "grade": 1,
+        "confidence": 0.50359,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 145,
+      "role": "backend_python",
+      "latent_theta": -0.45251222099717525,
+      "truth_grade": 1,
+      "boundary_distance": 0.04748777900282475,
+      "a": {
+        "theta": -0.6784,
+        "grade": 0,
+        "confidence": 0.65908,
+        "questions": 28
+      },
+      "b": {
+        "theta": -0.4489,
+        "grade": 1,
+        "confidence": 0.59295,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 146,
+      "role": "frontend_development",
+      "latent_theta": 0.038936043603136294,
+      "truth_grade": 1,
+      "boundary_distance": 0.5389360436031363,
+      "a": {
+        "theta": 0.3109,
+        "grade": 1,
+        "confidence": 0.94847,
+        "questions": 27
+      },
+      "b": {
+        "theta": 0.0068,
+        "grade": 1,
+        "confidence": 0.91947,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 147,
+      "role": "qa_engineering",
+      "latent_theta": 1.3048249174435682,
+      "truth_grade": 2,
+      "boundary_distance": 0.3048249174435682,
+      "a": {
+        "theta": 0.7899,
+        "grade": 1,
+        "confidence": 0.68334,
+        "questions": 27
+      },
+      "b": {
+        "theta": 0.8753,
+        "grade": 1,
+        "confidence": 0.60029,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 148,
+      "role": "devops",
+      "latent_theta": 0.5381710221185645,
+      "truth_grade": 1,
+      "boundary_distance": 0.4618289778814355,
+      "a": {
+        "theta": 0.7917,
+        "grade": 1,
+        "confidence": 0.67467,
+        "questions": 27
+      },
+      "b": {
+        "theta": -0.2038,
+        "grade": 1,
+        "confidence": 0.81709,
+        "questions": 30
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 149,
+      "role": "data_analytics",
+      "latent_theta": 0.7582095171516721,
+      "truth_grade": 1,
+      "boundary_distance": 0.24179048284832794,
+      "a": {
+        "theta": 0.427,
+        "grade": 1,
+        "confidence": 0.92618,
+        "questions": 27
+      },
+      "b": {
+        "theta": 0.9512,
+        "grade": 1,
+        "confidence": 0.51633,
+        "questions": 30
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 150,
+      "role": "backend_python",
+      "latent_theta": -0.77016549590799,
+      "truth_grade": 0,
+      "boundary_distance": 0.27016549590799,
+      "a": {
+        "theta": -0.798,
+        "grade": 0,
+        "confidence": 0.76616,
+        "questions": 27
+      },
+      "b": {
+        "theta": -0.4876,
+        "grade": 1,
+        "confidence": 0.552,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 151,
+      "role": "frontend_development",
+      "latent_theta": -2.0986411580977826,
+      "truth_grade": 0,
+      "boundary_distance": 1.5986411580977826,
+      "a": {
+        "theta": -2.4687,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.5041,
+        "grade": 0,
+        "confidence": 0.99699,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 152,
+      "role": "qa_engineering",
+      "latent_theta": 0.8433453445592782,
+      "truth_grade": 1,
+      "boundary_distance": 0.15665465544072177,
+      "a": {
+        "theta": 0.307,
+        "grade": 1,
+        "confidence": 0.94831,
+        "questions": 25
+      },
+      "b": {
+        "theta": 0.3317,
+        "grade": 1,
+        "confidence": 0.94634,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 153,
+      "role": "devops",
+      "latent_theta": -1.3306705700500214,
+      "truth_grade": 0,
+      "boundary_distance": 0.8306705700500214,
+      "a": {
+        "theta": -1.5713,
+        "grade": 0,
+        "confidence": 0.99842,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.7469,
+        "grade": 0,
+        "confidence": 0.99972,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 154,
+      "role": "data_analytics",
+      "latent_theta": 1.0367171577084018,
+      "truth_grade": 2,
+      "boundary_distance": 0.03671715770840178,
+      "a": {
+        "theta": 1.0864,
+        "grade": 2,
+        "confidence": 0.639,
+        "questions": 28
+      },
+      "b": {
+        "theta": 0.5969,
+        "grade": 1,
+        "confidence": 0.84453,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 155,
+      "role": "backend_python",
+      "latent_theta": -2.4548930695908924,
+      "truth_grade": 0,
+      "boundary_distance": 1.9548930695908924,
+      "a": {
+        "theta": -1.918,
+        "grade": 0,
+        "confidence": 0.99996,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.0881,
+        "grade": 0,
+        "confidence": 0.99999,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 156,
+      "role": "frontend_development",
+      "latent_theta": 2.266137639045172,
+      "truth_grade": 2,
+      "boundary_distance": 1.266137639045172,
+      "a": {
+        "theta": 1.622,
+        "grade": 2,
+        "confidence": 0.96119,
+        "questions": 27
+      },
+      "b": {
+        "theta": 2.3381,
+        "grade": 2,
+        "confidence": 0.99994,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 157,
+      "role": "qa_engineering",
+      "latent_theta": -0.38592694873327327,
+      "truth_grade": 1,
+      "boundary_distance": 0.11407305126672673,
+      "a": {
+        "theta": -0.1583,
+        "grade": 1,
+        "confidence": 0.84043,
+        "questions": 27
+      },
+      "b": {
+        "theta": -0.7123,
+        "grade": 0,
+        "confidence": 0.68654,
+        "questions": 31
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 158,
+      "role": "devops",
+      "latent_theta": 0.5892609356559926,
+      "truth_grade": 1,
+      "boundary_distance": 0.4107390643440074,
+      "a": {
+        "theta": 0.8458,
+        "grade": 1,
+        "confidence": 0.61813,
+        "questions": 30
+      },
+      "b": {
+        "theta": 0.4596,
+        "grade": 1,
+        "confidence": 0.91141,
+        "questions": 26
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 159,
+      "role": "data_analytics",
+      "latent_theta": -2.3483096224367963,
+      "truth_grade": 0,
+      "boundary_distance": 1.8483096224367963,
+      "a": {
+        "theta": -2.0562,
+        "grade": 0,
+        "confidence": 0.99999,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.7837,
+        "grade": 0,
+        "confidence": 0.99984,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 160,
+      "role": "backend_python",
+      "latent_theta": -1.9302713995015277,
+      "truth_grade": 0,
+      "boundary_distance": 1.4302713995015277,
+      "a": {
+        "theta": -1.4168,
+        "grade": 0,
+        "confidence": 0.98894,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.0038,
+        "grade": 0,
+        "confidence": 0.99997,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 161,
+      "role": "frontend_development",
+      "latent_theta": 1.8162806702082843,
+      "truth_grade": 2,
+      "boundary_distance": 0.8162806702082843,
+      "a": {
+        "theta": 1.8716,
+        "grade": 2,
+        "confidence": 0.99398,
+        "questions": 28
+      },
+      "b": {
+        "theta": 1.1182,
+        "grade": 2,
+        "confidence": 0.66525,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 162,
+      "role": "qa_engineering",
+      "latent_theta": 2.424824073196943,
+      "truth_grade": 2,
+      "boundary_distance": 1.4248240731969428,
+      "a": {
+        "theta": 2.0505,
+        "grade": 2,
+        "confidence": 0.99832,
+        "questions": 28
+      },
+      "b": {
+        "theta": 2.1403,
+        "grade": 2,
+        "confidence": 0.99931,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 163,
+      "role": "devops",
+      "latent_theta": -0.6249628967760712,
+      "truth_grade": 0,
+      "boundary_distance": 0.1249628967760712,
+      "a": {
+        "theta": -0.8208,
+        "grade": 0,
+        "confidence": 0.78284,
+        "questions": 31
+      },
+      "b": {
+        "theta": -0.6018,
+        "grade": 0,
+        "confidence": 0.57828,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 164,
+      "role": "data_analytics",
+      "latent_theta": -2.5146337239843426,
+      "truth_grade": 0,
+      "boundary_distance": 2.0146337239843426,
+      "a": {
+        "theta": -2.1877,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.4475,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 165,
+      "role": "backend_python",
+      "latent_theta": -2.2886698795916827,
+      "truth_grade": 0,
+      "boundary_distance": 1.7886698795916827,
+      "a": {
+        "theta": -2.3198,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.1238,
+        "grade": 0,
+        "confidence": 0.99999,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 166,
+      "role": "frontend_development",
+      "latent_theta": -1.890079915393653,
+      "truth_grade": 0,
+      "boundary_distance": 1.390079915393653,
+      "a": {
+        "theta": -1.8231,
+        "grade": 0,
+        "confidence": 0.99985,
+        "questions": 32
+      },
+      "b": {
+        "theta": -1.9992,
+        "grade": 0,
+        "confidence": 0.99998,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 167,
+      "role": "qa_engineering",
+      "latent_theta": -0.2643079831429329,
+      "truth_grade": 1,
+      "boundary_distance": 0.2356920168570671,
+      "a": {
+        "theta": -0.4273,
+        "grade": 1,
+        "confidence": 0.60893,
+        "questions": 29
+      },
+      "b": {
+        "theta": -0.5224,
+        "grade": 1,
+        "confidence": 0.50302,
+        "questions": 30
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 168,
+      "role": "devops",
+      "latent_theta": 0.5720537129240149,
+      "truth_grade": 1,
+      "boundary_distance": 0.42794628707598514,
+      "a": {
+        "theta": 0.7251,
+        "grade": 1,
+        "confidence": 0.74511,
+        "questions": 28
+      },
+      "b": {
+        "theta": -0.2289,
+        "grade": 1,
+        "confidence": 0.79252,
+        "questions": 29
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 169,
+      "role": "data_analytics",
+      "latent_theta": 0.14732313203070468,
+      "truth_grade": 1,
+      "boundary_distance": 0.6473231320307047,
+      "a": {
+        "theta": 0.1622,
+        "grade": 1,
+        "confidence": 0.94945,
+        "questions": 26
+      },
+      "b": {
+        "theta": -0.3115,
+        "grade": 1,
+        "confidence": 0.72826,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 170,
+      "role": "backend_python",
+      "latent_theta": 2.0996823388071117,
+      "truth_grade": 2,
+      "boundary_distance": 1.0996823388071117,
+      "a": {
+        "theta": 1.4256,
+        "grade": 2,
+        "confidence": 0.88029,
+        "questions": 32
+      },
+      "b": {
+        "theta": 1.5485,
+        "grade": 2,
+        "confidence": 0.93544,
+        "questions": 25
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 171,
+      "role": "frontend_development",
+      "latent_theta": 1.4046126912379968,
+      "truth_grade": 2,
+      "boundary_distance": 0.4046126912379968,
+      "a": {
+        "theta": 0.7098,
+        "grade": 1,
+        "confidence": 0.75906,
+        "questions": 28
+      },
+      "b": {
+        "theta": 1.0253,
+        "grade": 2,
+        "confidence": 0.56722,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 172,
+      "role": "qa_engineering",
+      "latent_theta": 1.0948598333556947,
+      "truth_grade": 2,
+      "boundary_distance": 0.0948598333556947,
+      "a": {
+        "theta": 0.5561,
+        "grade": 1,
+        "confidence": 0.86712,
+        "questions": 25
+      },
+      "b": {
+        "theta": 0.6136,
+        "grade": 1,
+        "confidence": 0.83418,
+        "questions": 27
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 173,
+      "role": "devops",
+      "latent_theta": 0.8704289747794762,
+      "truth_grade": 1,
+      "boundary_distance": 0.12957102522052377,
+      "a": {
+        "theta": 0.3748,
+        "grade": 1,
+        "confidence": 0.93539,
+        "questions": 25
+      },
+      "b": {
+        "theta": 0.6101,
+        "grade": 1,
+        "confidence": 0.83285,
+        "questions": 30
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 174,
+      "role": "data_analytics",
+      "latent_theta": 2.194817079450927,
+      "truth_grade": 2,
+      "boundary_distance": 1.1948170794509272,
+      "a": {
+        "theta": 0.8094,
+        "grade": 1,
+        "confidence": 0.66966,
+        "questions": 29
+      },
+      "b": {
+        "theta": 1.7296,
+        "grade": 2,
+        "confidence": 0.97738,
+        "questions": 30
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 175,
+      "role": "backend_python",
+      "latent_theta": -2.2857299034505436,
+      "truth_grade": 0,
+      "boundary_distance": 1.7857299034505436,
+      "a": {
+        "theta": -2.1603,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      },
+      "b": {
+        "theta": -2.4115,
+        "grade": 0,
+        "confidence": 1.0,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 176,
+      "role": "frontend_development",
+      "latent_theta": -0.07302462130882104,
+      "truth_grade": 1,
+      "boundary_distance": 0.42697537869117896,
+      "a": {
+        "theta": 0.6231,
+        "grade": 1,
+        "confidence": 0.82535,
+        "questions": 26
+      },
+      "b": {
+        "theta": -0.5628,
+        "grade": 0,
+        "confidence": 0.53244,
+        "questions": 28
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 177,
+      "role": "qa_engineering",
+      "latent_theta": -1.6682017155161954,
+      "truth_grade": 0,
+      "boundary_distance": 1.1682017155161954,
+      "a": {
+        "theta": -0.6976,
+        "grade": 0,
+        "confidence": 0.67934,
+        "questions": 28
+      },
+      "b": {
+        "theta": -1.8638,
+        "grade": 0,
+        "confidence": 0.99993,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 178,
+      "role": "devops",
+      "latent_theta": -1.762960775174606,
+      "truth_grade": 0,
+      "boundary_distance": 1.262960775174606,
+      "a": {
+        "theta": -1.3535,
+        "grade": 0,
+        "confidence": 0.98978,
+        "questions": 31
+      },
+      "b": {
+        "theta": -2.041,
+        "grade": 0,
+        "confidence": 0.99999,
+        "questions": 32
+      }
+    },
+    {
+      "scenario": "parameter_mismatch",
+      "person": 179,
+      "role": "data_analytics",
+      "latent_theta": 1.2761868521712825,
+      "truth_grade": 2,
+      "boundary_distance": 0.27618685217128247,
+      "a": {
+        "theta": 1.1078,
+        "grade": 2,
+        "confidence": 0.64924,
+        "questions": 27
+      },
+      "b": {
+        "theta": 0.7916,
+        "grade": 1,
+        "confidence": 0.68248,
+        "questions": 29
+      }
+    }
+  ],
+  "limitation": "Controlled response generator and authored parameters; all scenarios retained. No human participants, training on validation cases, activation of alternate forms or external hiring claims."
+}

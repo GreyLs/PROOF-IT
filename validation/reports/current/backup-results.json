@@ -1,0 +1,80 @@
+{
+  "restored_successfully": true,
+  "tables": {
+    "users": {
+      "rows": 27,
+      "content_digest_matches": true
+    },
+    "candidates": {
+      "rows": 4054,
+      "content_digest_matches": true
+    },
+    "companies": {
+      "rows": 505,
+      "content_digest_matches": true
+    },
+    "vacancies": {
+      "rows": 496,
+      "content_digest_matches": true
+    },
+    "invitations": {
+      "rows": 1,
+      "content_digest_matches": true
+    },
+    "assessments": {
+      "rows": 4043,
+      "content_digest_matches": true
+    },
+    "documents": {
+      "rows": 6,
+      "content_digest_matches": true
+    },
+    "applications": {
+      "rows": 4,
+      "content_digest_matches": true
+    },
+    "micro_tasks": {
+      "rows": 0,
+      "content_digest_matches": true
+    },
+    "resume_profiles": {
+      "rows": 4055,
+      "content_digest_matches": true
+    },
+    "qualification_tests": {
+      "rows": 12,
+      "content_digest_matches": true
+    },
+    "qualification_certificates": {
+      "rows": 0,
+      "content_digest_matches": true
+    },
+    "qualification_attempt_history": {
+      "rows": 0,
+      "content_digest_matches": true
+    },
+    "intelligence.jobs": {
+      "rows": 0,
+      "content_digest_matches": true
+    },
+    "intelligence.review_cases": {
+      "rows": 0,
+      "content_digest_matches": true
+    },
+    "intelligence.passports": {
+      "rows": 0,
+      "content_digest_matches": true
+    },
+    "intelligence.followups": {
+      "rows": 0,
+      "content_digest_matches": true
+    },
+    "intelligence.weekly_campaigns": {
+      "rows": 0,
+      "content_digest_matches": true
+    }
+  },
+  "files_verified": 88,
+  "backup_directory": "runtime\\backups\\20261010-142202",
+  "original_database_unchanged": true
+}
