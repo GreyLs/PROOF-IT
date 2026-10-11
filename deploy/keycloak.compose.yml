@@ -1,0 +1,43 @@
+services:
+  keycloak-db:
+    image: postgres:17.7-alpine
+    environment:
+      POSTGRES_DB: keycloak
+      POSTGRES_USER: keycloak
+      POSTGRES_PASSWORD: ${PROOFIT_KC_DB_PASSWORD:?Generate "$env:LOCALAPPDATA/Proofit/private-ingress/keycloak.env"}
+    volumes: [keycloak-db:/var/lib/postgresql/data]
+    healthcheck:
+      test: [CMD-SHELL, pg_isready -U keycloak -d keycloak]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    networks: [identity]
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.8.0
+    command: [start, --import-realm]
+    ports: ["127.0.0.1:9091:8080", "127.0.0.1:9092:9000"]
+    environment:
+      KC_DB: postgres
+      KC_DB_URL: jdbc:postgresql://keycloak-db:5432/keycloak
+      KC_DB_USERNAME: keycloak
+      KC_DB_PASSWORD: ${PROOFIT_KC_DB_PASSWORD}
+      KC_BOOTSTRAP_ADMIN_USERNAME: proofit-operator
+      KC_BOOTSTRAP_ADMIN_PASSWORD: ${PROOFIT_KC_ADMIN_PASSWORD:?Generate "$env:LOCALAPPDATA/Proofit/private-ingress/keycloak.env"}
+      KC_HOSTNAME: ${PROOFIT_PUBLIC_ORIGIN:-http://localhost:1717}/identity
+      KC_HTTP_RELATIVE_PATH: /identity
+      KC_HTTP_ENABLED: "true"
+      KC_HEALTH_ENABLED: "true"
+      KC_METRICS_ENABLED: "true"
+      KC_LOG_CONSOLE_OUTPUT: json
+      PROOFIT_OIDC_CLIENT_SECRET: ${PROOFIT_OIDC_CLIENT_SECRET}
+      PROOFIT_PUBLIC_ORIGIN: ${PROOFIT_PUBLIC_ORIGIN:-http://localhost:1717}
+    volumes: ["./keycloak/realm.json:/opt/keycloak/data/import/proofit-realm.json:ro"]
+    depends_on:
+      keycloak-db: {condition: service_healthy}
+    networks: [identity]
+    restart: unless-stopped
+    mem_limit: 1g
+networks:
+  identity:
+volumes:
+  keycloak-db:

@@ -1,0 +1,13 @@
+route:
+  receiver: local-operations
+  group_by: [alertname, service]
+  group_wait: 30s
+  group_interval: 5m
+  repeat_interval: 4h
+receivers:
+  - name: local-operations
+    # Active alerts are available in the private UI. External destinations are opt-in.
+inhibit_rules:
+  - source_matchers: ['alertname="ProofitExporterDown"']
+    target_matchers: ['alertname=~"ProofitServiceDown|ProofitCollectionStale|ProofitDatabaseDown"']
+    equal: [platform, environment]

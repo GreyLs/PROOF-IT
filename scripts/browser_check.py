@@ -1,0 +1,40 @@
+from pathlib import Path
+import json
+from playwright.sync_api import sync_playwright,expect
+ROOT=Path(__file__).resolve().parents[1]
+OUT=ROOT/'validation/reports/current/screenshots';OUT.mkdir(exist_ok=True)
+errors=[]
+with sync_playwright() as p:
+    browser=p.chromium.launch(headless=True)
+    page=browser.new_page(viewport={'width':1440,'height':1100},device_scale_factor=1)
+    page.on('pageerror',lambda e:errors.append(str(e)))
+    page.goto('http://localhost:8080',wait_until='networkidle')
+    page.screenshot(path=str(OUT/'01-login.png'),full_page=True)
+    page.get_by_role('button',name='Я работодатель',exact=True).click()
+    page.wait_for_timeout(800)
+    page.screenshot(path=str(OUT/'02-employer.png'),full_page=True)
+    page.get_by_role('button',name='Банк талантов',exact=True).click()
+    page.wait_for_timeout(800)
+    page.screenshot(path=str(OUT/'03-search.png'),full_page=True)
+    print('Candidate cards:',page.locator('.candidate-card').count())
+    page.get_by_role('button',name='Сохранить',exact=True).click()
+    page.get_by_role('button',name='Сохранённые',exact=True).click()
+    snapshot=page.locator('.saved-snapshot').first
+    snapshot.locator('summary').click()
+    expect(snapshot.get_by_role('button').first).to_be_visible()
+    snapshot.get_by_role('button').first.click()
+    expect(page.locator('.candidate-card')).to_have_count(1)
+    page.get_by_role('button',name='Кабинет кандидата',exact=True).click()
+    page.wait_for_timeout(500)
+    page.screenshot(path=str(OUT/'04-candidate.png'),full_page=True)
+    page.get_by_role('button',name='Подтвердить уровень',exact=True).click()
+    page.wait_for_timeout(400)
+    page.screenshot(path=str(OUT/'05-assessment.png'),full_page=True)
+    page.get_by_role('button',name='Документы',exact=True).click()
+    page.wait_for_timeout(400)
+    page.screenshot(path=str(OUT/'06-documents.png'),full_page=True)
+    page.set_viewport_size({'width':390,'height':844})
+    page.screenshot(path=str(OUT/'07-mobile.png'),full_page=True)
+    overflow=page.evaluate('document.documentElement.scrollWidth > window.innerWidth')
+    print(json.dumps({'errors':errors,'mobile_overflow':overflow},ensure_ascii=False))
+    browser.close()

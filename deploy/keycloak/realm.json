@@ -1,0 +1,23 @@
+{
+  "realm": "proofit", "enabled": true, "displayName": "ПРУФ-ИТ · профессиональная идентичность",
+  "registrationAllowed": false, "resetPasswordAllowed": true, "verifyEmail": true,
+  "loginWithEmailAllowed": true, "duplicateEmailsAllowed": false, "editUsernameAllowed": false,
+  "bruteForceProtected": true, "failureFactor": 5, "waitIncrementSeconds": 60,
+  "maxFailureWaitSeconds": 900, "maxDeltaTimeSeconds": 600,
+  "accessTokenLifespan": 300, "ssoSessionIdleTimeout": 1800, "ssoSessionMaxLifespan": 28800,
+  "revokeRefreshToken": true, "refreshTokenMaxReuse": 0,
+  "passwordPolicy": "length(12) and digits(1) and lowerCase(1) and upperCase(1) and notUsername(undefined)",
+  "sslRequired": "none",
+  "clients": [{
+    "clientId": "proofit", "name": "ПРУФ-ИТ", "enabled": true, "protocol": "openid-connect",
+    "publicClient": false, "secret": "${PROOFIT_OIDC_CLIENT_SECRET}",
+    "standardFlowEnabled": true, "implicitFlowEnabled": false,
+    "directAccessGrantsEnabled": false, "serviceAccountsEnabled": false,
+    "redirectUris": ["${PROOFIT_PUBLIC_ORIGIN}/api/intelligence/assessment/oidc/callback"],
+    "webOrigins": ["${PROOFIT_PUBLIC_ORIGIN}"],
+    "attributes": {"pkce.code.challenge.method": "S256", "oauth2.device.authorization.grant.enabled": "false"},
+    "defaultClientScopes": [], "optionalClientScopes": []
+  }],
+  "eventsEnabled": true, "eventsExpiration": 604800,
+  "adminEventsEnabled": true, "adminEventsDetailsEnabled": false
+}

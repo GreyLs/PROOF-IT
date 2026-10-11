@@ -1,0 +1,83 @@
+# Deployment template for a future VM cluster. Requires external PostgreSQL,
+# secret fsp-runtime, RWX claim fsp-documents, registry images and an inference endpoint.
+# Secrets are supplied outside source control. fsp-runtime must include
+# DATABASE_URL, MAIL_ENCRYPTION_KEY, INTEGRATION_ENCRYPTION_KEY, SMTP_*,
+# OLLAMA_URL, OLLAMA_MODEL (API dialogue inference), and processor settings.
+# Do not apply without configuring them.
+apiVersion: v1
+kind: Namespace
+metadata: {name: fsp}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: fsp-api, namespace: fsp}
+spec:
+  replicas: 2
+  selector: {matchLabels: {app: fsp-api}}
+  template:
+    metadata: {labels: {app: fsp-api}}
+    spec:
+      securityContext: {runAsNonRoot: true, runAsUser: 10001, fsGroup: 10001}
+      containers:
+        - name: api
+          image: registry.example/fsp-api:0.1.0
+          ports: [{containerPort: 8080}]
+          envFrom: [{secretRef: {name: fsp-runtime}}]
+          env:
+            - {name: BIND_ADDR, value: "0.0.0.0:8080"}
+            - {name: STORAGE_DIR, value: /app/runtime/storage}
+            - {name: FSP_DEMO_MODE, value: "false"}
+          resources:
+            requests: {cpu: 250m, memory: 128Mi}
+            limits: {cpu: "2", memory: 512Mi}
+          readinessProbe: {httpGet: {path: /api/health, port: 8080}, periodSeconds: 5}
+          livenessProbe: {httpGet: {path: /api/health/live, port: 8080}, initialDelaySeconds: 20, periodSeconds: 20, failureThreshold: 5}
+          securityContext: {allowPrivilegeEscalation: false, capabilities: {drop: [ALL]}}
+          volumeMounts: [{name: documents, mountPath: /app/runtime/storage}]
+      volumes: [{name: documents, persistentVolumeClaim: {claimName: fsp-documents}}]
+---
+apiVersion: v1
+kind: Service
+metadata: {name: fsp-api, namespace: fsp}
+spec:
+  selector: {app: fsp-api}
+  ports: [{port: 80, targetPort: 8080}]
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: fsp-worker, namespace: fsp}
+spec:
+  replicas: 1
+  selector: {matchLabels: {app: fsp-worker}}
+  template:
+    metadata: {labels: {app: fsp-worker}}
+    spec:
+      securityContext: {runAsNonRoot: true, runAsUser: 10001, fsGroup: 10001}
+      terminationGracePeriodSeconds: 330
+      containers:
+        - name: worker
+          image: registry.example/fsp-worker:0.1.0
+          envFrom: [{secretRef: {name: fsp-runtime}}]
+          env: [{name: STORAGE_DIR, value: /app/runtime/storage}]
+          resources:
+            requests: {cpu: "1", memory: 512Mi}
+            limits: {cpu: "2", memory: 2Gi}
+          securityContext: {allowPrivilegeEscalation: false, capabilities: {drop: [ALL]}}
+          volumeMounts: [{name: documents, mountPath: /app/runtime/storage}]
+      volumes: [{name: documents, persistentVolumeClaim: {claimName: fsp-documents}}]
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: {name: fsp-api, namespace: fsp}
+spec:
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: fsp-api}
+  minReplicas: 2
+  maxReplicas: 8
+  metrics:
+    - type: Resource
+      resource: {name: cpu, target: {type: Utilization, averageUtilization: 65}}
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata: {name: fsp-api, namespace: fsp}
+spec: {minAvailable: 1, selector: {matchLabels: {app: fsp-api}}}

@@ -1,0 +1,67 @@
+name: PROOF-IT quality checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: quality-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  rust:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - run: cargo test --locked
+
+  web:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci --no-audit --no-fund
+        working-directory: web
+      - run: npm run build
+        working-directory: web
+      - run: node --test tests/locale-quality.mjs tests/horizon-targets.mjs tests/decision-ui.mjs
+
+  deterministic-cpu:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: |
+            requirements.lock.txt
+            requirements.forecasting.txt
+            requirements.intelligence.txt
+      - run: pip install -r requirements.lock.txt -r requirements.forecasting.txt -r requirements.intelligence.txt
+      - run: >-
+          python -m pytest -q
+          tests/test_evidence_methods.py tests/test_graph_explanation.py
+          tests/test_horizon_engine.py tests/test_method_equations.py
+          tests/test_professional.py tests/test_prospective_methods.py
+          tests/test_research_methods.py tests/test_horizon_service.py
+          tests/test_resume_bundles.py tests/test_pdf_layout.py
+          tests/test_employment_dates.py
+          --junitxml=validation/reports/publication/ci-cpu.xml
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cpu-test-results
+          path: validation/reports/publication/ci-cpu.xml
+          retention-days: 14

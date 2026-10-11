@@ -1,0 +1,30 @@
+rule_files: [/etc/prometheus/rules.yml]
+evaluation_interval: 15s
+tests:
+  - interval: 15s
+    input_series:
+      - series: 'up{job="proofit"}'
+        values: '0+0x8'
+      - series: 'proofit_service_up{service="talent"}'
+        values: '0+0x8'
+    alert_rule_test:
+      - eval_time: 2m
+        alertname: ProofitExporterDown
+        exp_alerts:
+          - exp_labels: {job: proofit, severity: critical}
+            exp_annotations: {summary: "Proofit collector unavailable", action: "Check exporter process, private bearer secret and host routing; do not expose metrics publicly."}
+      - eval_time: 2m
+        alertname: ProofitServiceDown
+        exp_alerts:
+          - exp_labels: {service: talent, severity: critical}
+            exp_annotations: {summary: "Readiness failed for talent", action: "Check service logs, listener, trusted Host and database. Health does not validate full business scenarios."}
+  - interval: 15s
+    input_series:
+      - series: 'proofit_database_enabled'
+        values: '0+0x8'
+      - series: 'proofit_database_up'
+        values: '0+0x8'
+    alert_rule_test:
+      - eval_time: 2m
+        alertname: ProofitDatabaseDown
+        exp_alerts: []

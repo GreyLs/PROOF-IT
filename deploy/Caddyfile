@@ -1,0 +1,24 @@
+{
+    admin off
+    servers {
+        max_header_size 16KB
+        timeouts {
+            read_header 10s
+            read_body 45s
+            write 340s
+            idle 60s
+        }
+    }
+}
+{$PUBLIC_HOST} {
+    request_body {
+        max_size 20MB
+    }
+    reverse_proxy api:8080 {
+        header_up X-Forwarded-For {remote_host}
+        transport http {
+            dial_timeout 5s
+            response_header_timeout 335s
+        }
+    }
+}

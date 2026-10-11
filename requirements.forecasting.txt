@@ -1,0 +1,2 @@
+# Isolated runtime dependency for the local time-to-outcome forecasting service.
+catboost==1.2.8

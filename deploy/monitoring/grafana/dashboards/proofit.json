@@ -1,0 +1,600 @@
+{
+  "uid": "proofit-operations",
+  "title": "Proofit · Operational Control",
+  "schemaVersion": 41,
+  "version": 1,
+  "tags": [
+    "proofit",
+    "operations",
+    "privacy"
+  ],
+  "timezone": "browser",
+  "editable": false,
+  "refresh": "15s",
+  "time": {
+    "from": "now-30m",
+    "to": "now"
+  },
+  "panels": [
+    {
+      "id": 1,
+      "title": "Доступность доменов",
+      "description": "1 = readiness OK; не подтверждает полный пользовательский сценарий.",
+      "type": "stat",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "proofit-prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 0,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "proofit_service_up",
+          "legendFormat": "{{service}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none",
+          "min": 0,
+          "mappings": [
+            {
+              "type": "value",
+              "options": {
+                "0": {
+                  "text": "DOWN",
+                  "color": "red"
+                },
+                "1": {
+                  "text": "OK",
+                  "color": "green"
+                }
+              }
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "red",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        }
+      }
+    },
+    {
+      "id": 2,
+      "title": "P95 readiness-проб",
+      "description": "Только синтетические health-пробы, не задержка пользовательского API.",
+      "type": "timeseries",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "proofit-prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 0,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "proofit:probe_latency_p95_seconds:5m",
+          "legendFormat": "{{service}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s",
+          "min": 0
+        },
+        "overrides": []
+      },
+      "options": {}
+    },
+    {
+      "id": 3,
+      "title": "Успешные вычисления / с",
+      "description": "Нативный счётчик CPU-сервиса, без cache hits.",
+      "type": "timeseries",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "proofit-prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 8,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "rate(proofit_compute_operations_total[5m])",
+          "legendFormat": "Успешные вычисления / с"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "ops",
+          "min": 0
+        },
+        "overrides": []
+      },
+      "options": {}
+    },
+    {
+      "id": 4,
+      "title": "Ошибки вычислений",
+      "description": "Ошибки / (операции + ошибки + cache hits); не все HTTP-отказы периметра.",
+      "type": "timeseries",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "proofit-prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 8,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "proofit:compute_error_ratio:5m",
+          "legendFormat": "Ошибки вычислений"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percentunit",
+          "min": 0,
+          "max": 1
+        },
+        "overrides": []
+      },
+      "options": {}
+    },
+    {
+      "id": 5,
+      "title": "Попадания в кэш / с",
+      "description": "Нативные cache hits; не считать как новые вычисления.",
+      "type": "timeseries",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "proofit-prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 16,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "rate(proofit_compute_cache_hits_total[5m])",
+          "legendFormat": "Попадания в кэш / с"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "ops",
+          "min": 0
+        },
+        "overrides": []
+      },
+      "options": {}
+    },
+    {
+      "id": 6,
+      "title": "CPU компьютера",
+      "description": "Вся машина, включая посторонние процессы.",
+      "type": "timeseries",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "proofit-prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 16,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "proofit_host_cpu_percent / 100",
+          "legendFormat": "CPU компьютера"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percentunit",
+          "min": 0,
+          "max": 1
+        },
+        "overrides": []
+      },
+      "options": {}
+    },
+    {
+      "id": 7,
+      "title": "Доступная оперативная память",
+      "description": "Available RAM, не только свободные страницы.",
+      "type": "timeseries",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "proofit-prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 24,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "proofit_host_memory_available_bytes",
+          "legendFormat": "Доступная оперативная память"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "bytes",
+          "min": 0
+        },
+        "overrides": []
+      },
+      "options": {}
+    },
+    {
+      "id": 8,
+      "title": "Свободное место на диске",
+      "description": "Раздел, на котором расположен Proofit.",
+      "type": "timeseries",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "proofit-prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 24,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "proofit_host_disk_free_bytes",
+          "legendFormat": "Свободное место на диске"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "bytes",
+          "min": 0
+        },
+        "overrides": []
+      },
+      "options": {}
+    },
+    {
+      "id": 9,
+      "title": "Память процессов Proofit",
+      "description": "RSS отдельных native-процессов по проверенным PID-файлам.",
+      "type": "timeseries",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "proofit-prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 32,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "proofit_process_resident_memory_bytes",
+          "legendFormat": "{{service}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "bytes",
+          "min": 0
+        },
+        "overrides": []
+      },
+      "options": {}
+    },
+    {
+      "id": 10,
+      "title": "CPU процессов Proofit",
+      "description": "Использование CPU в эквиваленте ядер, а не процент всей машины.",
+      "type": "timeseries",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "proofit-prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 32,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "rate(proofit_process_cpu_seconds_total[5m])",
+          "legendFormat": "{{service}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none",
+          "min": 0
+        },
+        "overrides": []
+      },
+      "options": {}
+    },
+    {
+      "id": 11,
+      "title": "Загрузка соединений PostgreSQL",
+      "description": "Весь кластер / max_connections; статистика opt-in.",
+      "type": "timeseries",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "proofit-prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 40,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "proofit_postgres_cluster_connections / proofit_postgres_max_connections",
+          "legendFormat": "Загрузка соединений PostgreSQL"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percentunit",
+          "min": 0,
+          "max": 1
+        },
+        "overrides": []
+      },
+      "options": {}
+    },
+    {
+      "id": 12,
+      "title": "PostgreSQL: cache hit ratio",
+      "description": "Буферный кэш выбранной БД; не оценка качества SQL или ОС cache.",
+      "type": "timeseries",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "proofit-prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 40,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "rate(proofit_postgres_cache_hits_total[5m]) / clamp_min(rate(proofit_postgres_cache_hits_total[5m]) + rate(proofit_postgres_blocks_read_total[5m]), 0.001)",
+          "legendFormat": "PostgreSQL: cache hit ratio"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percentunit",
+          "min": 0,
+          "max": 1
+        },
+        "overrides": []
+      },
+      "options": {}
+    },
+    {
+      "id": 13,
+      "title": "PostgreSQL: rollback / с",
+      "description": "Rollback не обязательно является ошибкой приложения.",
+      "type": "timeseries",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "proofit-prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 48,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "rate(proofit_postgres_rollbacks_total[5m])",
+          "legendFormat": "PostgreSQL: rollback / с"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "ops",
+          "min": 0
+        },
+        "overrides": []
+      },
+      "options": {}
+    },
+    {
+      "id": 14,
+      "title": "Свежесть наблюдений",
+      "description": "Позволяет обнаружить живой exporter с остановленным сбором.",
+      "type": "stat",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "proofit-prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 48,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "time() - proofit_collection_last_success_timestamp_seconds",
+          "legendFormat": "Свежесть наблюдений"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s",
+          "min": 0
+        },
+        "overrides": []
+      },
+      "options": {
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        }
+      }
+    },
+    {
+      "id": 15,
+      "title": "Сборщики: готовность",
+      "description": "DB=0 при отключённом DB collector; проверяйте database_enabled.",
+      "type": "stat",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "proofit-prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 56,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "label_replace(proofit_database_up,\"collector\",\"postgres\",\"\",\"\") or label_replace(proofit_cpu_metrics_up,\"collector\",\"cpu\",\"\",\"\")",
+          "legendFormat": "{{collector}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none",
+          "min": 0,
+          "mappings": [
+            {
+              "type": "value",
+              "options": {
+                "0": {
+                  "text": "DOWN",
+                  "color": "red"
+                },
+                "1": {
+                  "text": "OK",
+                  "color": "green"
+                }
+              }
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "red",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        }
+      }
+    },
+    {
+      "id": 16,
+      "title": "Активные предупреждения",
+      "description": "Маршрутизация в Alertmanager; внешние уведомления подключаются оператором.",
+      "type": "table",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "proofit-prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 56,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "ALERTS{alertstate=\"firing\"}",
+          "legendFormat": "Активные предупреждения"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none",
+          "min": 0
+        },
+        "overrides": []
+      },
+      "options": {}
+    }
+  ]
+}

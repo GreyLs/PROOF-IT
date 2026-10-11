@@ -1,0 +1,103 @@
+{{- range .Values.domains }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: proofit-{{ . }}
+spec:
+  replicas: {{ $.Values.api.replicas }}
+  selector: {matchLabels: {app: proofit-{{ . }}}}
+  template:
+    metadata: {labels: {app: proofit-{{ . }}, tier: api}}
+    spec:
+      terminationGracePeriodSeconds: 360
+      securityContext: {runAsNonRoot: true, runAsUser: 10001, fsGroup: 10001}
+      containers:
+        - name: api
+          image: {{ $.Values.image.api | quote }}
+          envFrom: [{secretRef: {name: {{ $.Values.runtimeSecret }}}}]
+          env:
+            - {name: FSP_SERVICE, value: {{ . | quote }}}
+            - {name: BIND_ADDR, value: "0.0.0.0:8080"}
+            - {name: BASE_URL, value: {{ $.Values.publicOrigin | quote }}}
+            - {name: FSP_ENV, value: "production"}
+            - {name: FSP_DEMO_MODE, value: "false"}
+            - {name: TRUSTED_PROXY_IPS, value: {{ $.Values.trustedProxyCidrs | quote }}}
+            - {name: DATABASE_MAX_CONNECTIONS, value: {{ $.Values.api.dbConnectionsPerReplica | quote }}}
+            - {name: INTELLIGENCE_URL, value: "http://proofit-intelligence-engine:8092"}
+            - {name: FSP_FORECAST_URL, value: {{ $.Values.forecastUrl | quote }}}
+            - {name: WORKBENCH_URL, value: {{ $.Values.workbenchUrl | quote }}}
+            - {name: OLLAMA_URL, value: {{ $.Values.ollamaUrl | quote }}}
+            - {name: STORAGE_DIR, value: "/app/runtime/storage"}
+          ports: [{containerPort: 8080}]
+          resources: {requests: {cpu: 250m, memory: 128Mi}, limits: {cpu: "2", memory: 512Mi}}
+          readinessProbe: {httpGet: {path: /api/health, port: 8080}, periodSeconds: 5}
+          livenessProbe: {httpGet: {path: /api/health/live, port: 8080}, periodSeconds: 20}
+          securityContext: {allowPrivilegeEscalation: false, capabilities: {drop: [ALL]}}
+          volumeMounts: [{name: documents, mountPath: /app/runtime/storage}]
+      volumes: [{name: documents, persistentVolumeClaim: {claimName: {{ $.Values.documentsClaim }}}}]
+---
+apiVersion: v1
+kind: Service
+metadata: {name: proofit-{{ . }}}
+spec:
+  selector: {app: proofit-{{ . }}}
+  ports: [{port: 8080, targetPort: 8080}]
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: {name: proofit-{{ . }}}
+spec:
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: proofit-{{ . }}}
+  minReplicas: {{ $.Values.api.replicas }}
+  maxReplicas: {{ $.Values.api.maxReplicas }}
+  metrics:
+    - type: Resource
+      resource: {name: cpu, target: {type: Utilization, averageUtilization: {{ $.Values.api.cpuTargetPercent }}}}
+  behavior:
+    scaleDown: {stabilizationWindowSeconds: 300}
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata: {name: proofit-{{ . }}}
+spec: {minAvailable: 1, selector: {matchLabels: {app: proofit-{{ . }}}}}
+---
+{{- end }}
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: proofit-intelligence-engine}
+spec:
+  replicas: {{ .Values.intelligence.replicas }}
+  selector: {matchLabels: {app: proofit-intelligence-engine}}
+  template:
+    metadata: {labels: {app: proofit-intelligence-engine, tier: compute}}
+    spec:
+      securityContext: {runAsNonRoot: true, runAsUser: 10005}
+      containers:
+        - name: intelligence
+          image: {{ .Values.image.intelligence | quote }}
+          env:
+            - {name: INTELLIGENCE_TOKEN, valueFrom: {secretKeyRef: {name: {{ .Values.runtimeSecret }}, key: INTELLIGENCE_TOKEN}}}
+            - {name: REDIS_URL, value: {{ .Values.redisUrl | quote }}}
+            - {name: INTELLIGENCE_SLOTS, value: {{ .Values.intelligence.slotsPerReplica | quote }}}
+            - {name: FSP_OIDC_ISSUER, valueFrom: {secretKeyRef: {name: {{ .Values.runtimeSecret }}, key: FSP_OIDC_ISSUER, optional: true}}}
+            - {name: FSP_OIDC_CLIENT_ID, valueFrom: {secretKeyRef: {name: {{ .Values.runtimeSecret }}, key: FSP_OIDC_CLIENT_ID, optional: true}}}
+            - {name: FSP_OIDC_CLIENT_SECRET, valueFrom: {secretKeyRef: {name: {{ .Values.runtimeSecret }}, key: FSP_OIDC_CLIENT_SECRET, optional: true}}}
+          ports: [{containerPort: 8092}]
+          resources: {requests: {cpu: 250m, memory: 256Mi}, limits: {cpu: "2", memory: 1Gi}}
+          readinessProbe: {httpGet: {path: /health, port: 8092}, periodSeconds: 5}
+          livenessProbe: {httpGet: {path: /health, port: 8092}, periodSeconds: 20}
+          securityContext: {readOnlyRootFilesystem: true, allowPrivilegeEscalation: false, capabilities: {drop: [ALL]}}
+---
+apiVersion: v1
+kind: Service
+metadata: {name: proofit-intelligence-engine}
+spec: {selector: {app: proofit-intelligence-engine}, ports: [{port: 8092, targetPort: 8092}]}
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: {name: proofit-intelligence-engine}
+spec:
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: proofit-intelligence-engine}
+  minReplicas: {{ .Values.intelligence.replicas }}
+  maxReplicas: {{ .Values.intelligence.maxReplicas }}
+  metrics: [{type: Resource, resource: {name: cpu, target: {type: Utilization, averageUtilization: 65}}}]

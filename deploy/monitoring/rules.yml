@@ -1,0 +1,56 @@
+groups:
+  - name: proofit.operational
+    rules:
+      - record: proofit:compute_error_ratio:5m
+        expr: rate(proofit_compute_errors_total[5m]) / clamp_min(rate(proofit_compute_operations_total[5m]) + rate(proofit_compute_errors_total[5m]) + rate(proofit_compute_cache_hits_total[5m]), 0.001)
+      - record: proofit:probe_latency_p95_seconds:5m
+        expr: histogram_quantile(0.95, sum by (le,service) (rate(proofit_health_probe_duration_seconds_bucket[5m])))
+      - alert: ProofitExporterDown
+        expr: up{job="proofit"} == 0
+        for: 1m
+        labels: {severity: critical}
+        annotations: {summary: "Proofit collector unavailable", action: "Check exporter process, private bearer secret and host routing; do not expose metrics publicly."}
+      - alert: ProofitCollectionStale
+        expr: time() - proofit_collection_last_success_timestamp_seconds > 45
+        for: 1m
+        labels: {severity: critical}
+        annotations: {summary: "Collection timestamp is stale", action: "Check collector loop; a successful scrape alone does not prove fresh observations."}
+      - alert: ProofitServiceDown
+        expr: proofit_service_up == 0
+        for: 1m
+        labels: {severity: critical}
+        annotations: {summary: 'Readiness failed for {{ $labels.service }}', action: "Check service logs, listener, trusted Host and database. Health does not validate full business scenarios."}
+      - alert: ProofitCPUStatsUnavailable
+        expr: proofit_cpu_metrics_up == 0
+        for: 2m
+        labels: {severity: warning}
+        annotations: {summary: "CPU native counters unavailable", action: "Check fixed CPU metrics endpoint and exposition schema."}
+      - alert: ProofitComputeErrors
+        expr: proofit:compute_error_ratio:5m > 0.05 and (increase(proofit_compute_operations_total[5m]) + increase(proofit_compute_errors_total[5m]) + increase(proofit_compute_cache_hits_total[5m])) >= 20
+        for: 3m
+        labels: {severity: warning}
+        annotations: {summary: "CPU processing error ratio above 5%", action: "Inspect operation errors; low-volume samples do not activate this rule."}
+      - alert: ProofitMemoryPressure
+        expr: proofit_host_memory_available_bytes / proofit_host_memory_total_bytes < 0.10
+        for: 5m
+        labels: {severity: warning}
+        annotations: {summary: "Less than 10% host memory available", action: "Inspect per-service RSS and competing workloads before changing limits."}
+      - alert: ProofitDiskPressure
+        expr: proofit_host_disk_free_bytes / proofit_host_disk_total_bytes < 0.10
+        for: 5m
+        labels: {severity: critical}
+        annotations: {summary: "Less than 10% free disk space", action: "Check storage and retention; never delete user documents without the retention procedure."}
+      - alert: ProofitDatabaseDown
+        expr: proofit_database_enabled == 1 and proofit_database_up == 0
+        for: 1m
+        labels: {severity: critical}
+        annotations: {summary: "Opt-in PostgreSQL collector failed", action: "Check dedicated monitor role, connectivity and read-only timeout."}
+      - alert: ProofitDatabaseConnections
+        expr: proofit_postgres_cluster_connections / proofit_postgres_max_connections > 0.80
+        for: 3m
+        labels: {severity: warning}
+        annotations: {summary: "PostgreSQL connection utilization above 80%", action: "Inspect domain pool budgets; cluster usage includes all databases."}
+      - alert: ProofitDatabaseDeadlock
+        expr: increase(proofit_postgres_deadlocks_total[5m]) > 0
+        labels: {severity: warning}
+        annotations: {summary: "PostgreSQL reported a deadlock", action: "Inspect transaction ordering and lock waits; do not infer corruption."}

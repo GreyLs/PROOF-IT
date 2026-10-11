@@ -1,0 +1,67 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: proofit-gateway}
+spec:
+  replicas: 2
+  selector: {matchLabels: {app: proofit-gateway}}
+  template:
+    metadata: {labels: {app: proofit-gateway, tier: edge}}
+    spec:
+      securityContext: {runAsNonRoot: true, runAsUser: 10001}
+      containers:
+        - name: gateway
+          image: {{ .Values.image.api | quote }}
+          env:
+            - {name: FSP_SERVICE, value: gateway}
+            - {name: BIND_ADDR, value: "0.0.0.0:8080"}
+            {{- range .Values.domains }}
+            - {name: FSP_{{ . | upper }}_URL, value: "http://proofit-{{ . }}:8080"}
+            {{- end }}
+          ports: [{containerPort: 8080}]
+          resources: {requests: {cpu: 250m, memory: 128Mi}, limits: {cpu: "2", memory: 512Mi}}
+          readinessProbe: {httpGet: {path: /, port: 8080}, periodSeconds: 5}
+          livenessProbe: {httpGet: {path: /, port: 8080}, periodSeconds: 20}
+          securityContext: {allowPrivilegeEscalation: false, capabilities: {drop: [ALL]}}
+---
+apiVersion: v1
+kind: Service
+metadata: {name: proofit-gateway}
+spec: {selector: {app: proofit-gateway}, ports: [{port: 80, targetPort: 8080}]}
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: {name: proofit-gateway}
+spec:
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: proofit-gateway}
+  minReplicas: 2
+  maxReplicas: 64
+  metrics: [{type: Resource, resource: {name: cpu, target: {type: Utilization, averageUtilization: 65}}}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: {name: proofit-intelligence-isolation}
+spec:
+  podSelector: {matchLabels: {app: proofit-intelligence-engine}}
+  policyTypes: [Ingress, Egress]
+  ingress:
+    - from: [{podSelector: {matchLabels: {app: proofit-intelligence}}}]
+      ports: [{port: 8092, protocol: TCP}]
+  egress:
+    {{- range .Values.oidcEgressCidrs }}
+    - to: [{ipBlock: {cidr: {{ . | quote }}}}]
+      ports: [{port: 443, protocol: TCP}]
+    {{- end }}
+    - to: [{podSelector: {matchLabels: {app: proofit-redis}}}]
+      ports: [{port: 6379, protocol: TCP}]
+    - to: [{namespaceSelector: {matchLabels: {kubernetes.io/metadata.name: kube-system}}}]
+      ports: [{port: 53, protocol: UDP}, {port: 53, protocol: TCP}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: {name: proofit-domain-ingress}
+spec:
+  podSelector: {matchLabels: {tier: api}}
+  policyTypes: [Ingress]
+  ingress:
+    - from: [{podSelector: {matchLabels: {app: proofit-gateway}}}]
+      ports: [{port: 8080, protocol: TCP}]

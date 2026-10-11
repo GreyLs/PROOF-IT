@@ -1,0 +1,8 @@
+httpx==0.28.1
+pillow==12.3.0
+pydantic==2.13.5
+pypdfium2==5.14.0
+pytesseract==0.3.13
+reportlab==5.0.1
+starlette==1.7.0
+uvicorn==0.54.0

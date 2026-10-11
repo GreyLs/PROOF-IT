@@ -1,0 +1,11 @@
+# Preserve exact bytes: source, catalog and model manifests depend on SHA-256.
+* -text
+*.png binary
+*.jpg binary
+*.pdf binary
+*.mp4 binary
+*.ttf binary
+*.woff2 binary
+*.npz binary
+*.cbm binary
+*.gz binary

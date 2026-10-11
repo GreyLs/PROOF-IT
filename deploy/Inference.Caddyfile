@@ -1,0 +1,19 @@
+{
+    admin off
+    auto_https off
+}
+:11434 {
+    @chat {
+        method POST
+        path /api/chat
+    }
+    handle @chat {
+        request_body {
+            max_size 256KB
+        }
+        reverse_proxy ollama:11434
+    }
+    handle {
+        respond "Not permitted" 403
+    }
+}

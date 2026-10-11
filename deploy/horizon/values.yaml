@@ -1,0 +1,35 @@
+# Replicas are deployment defaults; capacity is established by measured tests.
+region: ru-central
+trustedProxyCidrs: "10.42.0.0/16"
+publicOrigin: https://proofit.example.org
+runtimeSecret: proofit-runtime
+documentsClaim: proofit-documents-rwx
+image:
+  api: registry.example.org/proofit/api:1.0.0
+  intelligence: registry.example.org/proofit/intelligence:1.0.0
+  workbench: registry.example.org/proofit/workbench:1.0.0
+domains: [identity, talent, recruitment, documents, integrations, platform, intelligence]
+api:
+  replicas: 2
+  maxReplicas: 64
+  dbConnectionsPerReplica: 4
+  cpuTargetPercent: 65
+intelligence:
+  replicas: 2
+  maxReplicas: 32
+  slotsPerReplica: 2
+redisUrl: redis://proofit-redis:6379/0
+pgbouncer:
+  host: proofit-pgbouncer
+  mode: session
+# State services/LLM nodes are separately operated; no production secrets here.
+forecastUrl: http://proofit-forecast:8090
+workbenchUrl: http://proofit-workbench:8091
+ollamaUrl: http://proofit-qwen:11434
+reviewUrl: http://proofit-review:11434
+executorDockerHost: tcp://proofit-executor:2376
+# Provider IP ranges must be supplied explicitly when production OIDC is enabled.
+oidcEgressCidrs: []
+cdn:
+  origin: https://static.proofit.example.org
+  immutableAssetsCacheSeconds: 31536000
