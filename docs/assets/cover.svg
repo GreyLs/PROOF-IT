@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="620" viewBox="0 0 1600 620" role="img" aria-labelledby="title desc">
   <title id="title">PROOF-IT — навыки, доказательства, возможности</title>
-  <desc id="desc">Обратный IT-наём. Путь от резюме через проверяемые доказательства к предложению работодателя.</desc>
+  <desc id="desc">Обратный IT-найм. Путь от резюме через проверяемые доказательства к предложению работодателя.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0a0821"/><stop offset="1" stop-color="#1c1250"/></linearGradient>
     <linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#7365ff"/><stop offset="1" stop-color="#b1a4ff"/></linearGradient>
@@ -12,7 +12,7 @@
   <ellipse cx="1220" cy="330" rx="480" ry="400" fill="url(#glow)"/>
   <g font-family="Segoe UI, Arial, sans-serif">
     <rect x="76" y="62" width="272" height="42" rx="21" fill="#402fff"/>
-    <text x="212" y="89" text-anchor="middle" fill="#fff" font-size="17" font-weight="600" letter-spacing="2">ОБРАТНЫЙ IT-НАЁМ</text>
+    <text x="212" y="89" text-anchor="middle" fill="#fff" font-size="17" font-weight="600" letter-spacing="2">ОБРАТНЫЙ IT-НАЙМ</text>
     <text x="70" y="247" fill="#fff" font-size="116" font-weight="700" letter-spacing="-5">PROOF-IT</text>
     <text x="78" y="328" fill="#e9e5ff" font-size="42" font-weight="600">Навыки. Доказательства.</text>
     <text x="78" y="384" fill="#b6aaff" font-size="42" font-weight="600">Возможности.</text>

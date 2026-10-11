@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11T17:56:17.015335+03:00",
+  "generated_at": "2026-10-11T18:07:26.435695+03:00",
   "scope": "Exact bytes in the final publication Git tree; manifest excludes itself",
   "sha256": {
     ".dockerignore": "ef012125f62d63424e85e765188025a3f029046df70c5e1365e2ca6fe22d90ad",
@@ -12,7 +12,7 @@
     "Cargo.toml": "ee4dcc7286df055881f8d6f8a81f41b50d3e937a42e2ee6845fb72dd264d2d5d",
     "Dockerfile": "514eda3beb5859bcc18f1db0b56df19fb38c542114ac64cdd0a0c602e32c0453",
     "LICENSE": "839b9570becbf1bba472186dfabe693607825a4710ae21c2f7fb5c001fd0b740",
-    "README.md": "2ca77b0f5bf0991b242c3bc119ae713223be10fd32de6ef4f1235855dd74e0c5",
+    "README.md": "e4de8147f5798ae2212816eafbc1fae7d46fe3fc0e235d84bb48726c2a0b3747",
     "SECURITY.md": "a81439713c235f5cd09871899c04e8427a2c204fec42e1b9a5101d792a6be253",
     "build.rs": "eda2c7a31e3416f38ed33c2f3a0040cf8e130be398d73f432a1c4b7e770daaff",
     "compose.production.yml": "f992ae9a7e99479b915c5cb6569fbce9f88a76767fab4249e7f76fffb19f00b8",
@@ -93,7 +93,7 @@
     "docs/REPOSITORY_MAP.md": "81a6dc9657f7bf7d2efef89737a459906d8fe11b9851db1b1e5bf465fcb6f62c",
     "docs/REVIEW_GUIDE.md": "287a1c3f014202d39f2f64dee972eb25695eb60b4f259b9e85eebcb71958f13f",
     "docs/SCREENSHOTS.md": "6f923ec073a38464c13b2b921dcede964d7f641f9387d5674404523b6246ed4a",
-    "docs/assets/cover.svg": "da12e913090a0bc92c65753e8de012c221fb0d3560a1afa42199f370f0a9a1f5",
+    "docs/assets/cover.svg": "833c2fbfe35e821f98a6640fee87349b7aa67def0e69aad6ad152aff5218ae0d",
     "docs/assets/screenshots/01-login.png": "f723176b58889bc1eec754f9921ed67e6590aa08540c9f83c1c5b5956eb5ea89",
     "docs/assets/screenshots/02-resume.png": "0f26202db33e639721f8b4a4e7bc922efc942ec78209cb2441d28e42b0f8f356",
     "docs/assets/screenshots/03-assessment.png": "ce5b73ccc4fac577a6078bdaed7e0e04d37b582ed4092e281d53e5de1d3aee35",
