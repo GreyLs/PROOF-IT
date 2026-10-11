@@ -1,0 +1,9 @@
+{
+  "provider": "MOEX ISS",
+  "approved_by_operator": false,
+  "third_party_product_use": false,
+  "contract_reference": "",
+  "valid_from": "2026-10-10",
+  "valid_until": "2026-10-10",
+  "permitted_indexes": ["IMOEX"]
+}

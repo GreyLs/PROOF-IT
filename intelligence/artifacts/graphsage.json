@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "version": "typed-graphsage-1.0.0",
+  "training_domain": "controlled structural teacher; no real hiring-outcome calibration",
+  "train_graphs": 160,
+  "holdout_graphs": 80,
+  "holdout_nodes": 1600,
+  "split": "disjoint graph-generating seeds; test never optimized",
+  "sha256": "33a2ed89c3c35eb5085f52cbeeacde989d28c8487ac90b2c26612141e5df6cc8",
+  "mae": 0.0029416941326956035,
+  "rmse": 0.0033507984845797265,
+  "constant_prior_mae": 0.15422893973230864,
+  "p95_inference_ms": 0.08261498587671665,
+  "elapsed_seconds": 1.9406413999968208,
+  "llm_used": false,
+  "autonomous_certification": false,
+  "parameter_count": 1105
+}

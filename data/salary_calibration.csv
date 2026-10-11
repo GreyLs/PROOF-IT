@@ -1,0 +1,45 @@
+specialization,role_label,grade,scenario_salary_from_rub,scenario_salary_to_rub,candidate_expectation_from_rub,candidate_expectation_to_rub,source_url,method
+ml_data_science,ML / Data Science,junior,110000,170000,105000,165000,https://habr.com/en/companies/habr_career/articles/1040188/,controlled market-calibrated validation scenario; not a real job advert
+ml_data_science,ML / Data Science,middle,220000,360000,210000,370000,https://habr.com/en/companies/habr_career/articles/1040188/,controlled market-calibrated validation scenario; not a real job advert
+ml_data_science,ML / Data Science,senior,380000,520000,360000,540000,https://habr.com/en/companies/habr_career/articles/1040188/,controlled market-calibrated validation scenario; not a real job advert
+mlops,MLOps-инженерия,junior,150000,220000,145000,225000,https://habr.com/ru/amp/publications/1035304/,controlled market-calibrated validation scenario; not a real job advert
+mlops,MLOps-инженерия,middle,280000,420000,270000,430000,https://habr.com/ru/amp/publications/1035304/,controlled market-calibrated validation scenario; not a real job advert
+mlops,MLOps-инженерия,senior,450000,600000,430000,620000,https://habr.com/ru/amp/publications/1035304/,controlled market-calibrated validation scenario; not a real job advert
+software_architecture,Архитектура ПО и систем,middle,320000,440000,300000,450000,https://habr.com/ru/companies/habr_career/articles/1075936/,controlled market-calibrated validation scenario; not a real job advert
+software_architecture,Архитектура ПО и систем,senior,420000,540000,400000,560000,https://habr.com/ru/companies/habr_career/articles/1075936/,controlled market-calibrated validation scenario; not a real job advert
+data_engineering,Data Engineering,junior,120000,180000,110000,185000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+data_engineering,Data Engineering,middle,220000,340000,210000,350000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+data_engineering,Data Engineering,senior,350000,480000,330000,500000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+system_analysis,Системный анализ,junior,90000,150000,85000,155000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+system_analysis,Системный анализ,middle,170000,280000,160000,290000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+system_analysis,Системный анализ,senior,280000,400000,260000,420000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+frontend_development,Frontend-разработка,junior,80000,140000,75000,145000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+frontend_development,Frontend-разработка,middle,160000,260000,150000,270000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+frontend_development,Frontend-разработка,senior,250000,380000,240000,400000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+mobile_development,Мобильная разработка,junior,100000,160000,95000,165000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+mobile_development,Мобильная разработка,middle,190000,300000,180000,310000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+mobile_development,Мобильная разработка,senior,300000,450000,280000,470000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+cybersecurity,Информационная безопасность,junior,80000,120000,80000,125000,https://habr.com/ru/companies/habr_career/articles/1083850/,controlled market-calibrated validation scenario; not a real job advert
+cybersecurity,Информационная безопасность,middle,140000,210000,130000,220000,https://habr.com/ru/companies/habr_career/articles/1083850/,controlled market-calibrated validation scenario; not a real job advert
+cybersecurity,Информационная безопасность,senior,220000,320000,205000,340000,https://habr.com/ru/companies/habr_career/articles/1083850/,controlled market-calibrated validation scenario; not a real job advert
+backend_python,Backend-разработка (Python),junior,110000,170000,105000,175000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+backend_python,Backend-разработка (Python),middle,190000,300000,180000,310000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+backend_python,Backend-разработка (Python),senior,300000,440000,280000,460000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+backend_java,Backend-разработка (Java),junior,120000,180000,115000,185000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+backend_java,Backend-разработка (Java),middle,210000,330000,200000,340000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+backend_java,Backend-разработка (Java),senior,330000,470000,310000,490000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+backend_csharp,Backend-разработка (.NET/C#),junior,110000,170000,105000,175000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+backend_csharp,Backend-разработка (.NET/C#),middle,190000,300000,180000,310000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+backend_csharp,Backend-разработка (.NET/C#),senior,300000,430000,280000,450000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+backend_cpp,Разработка на C++,junior,130000,200000,125000,205000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+backend_cpp,Разработка на C++,middle,230000,350000,220000,360000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+backend_cpp,Разработка на C++,senior,350000,500000,330000,520000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+qa_engineering,Тестирование ПО (QA),junior,70000,120000,70000,125000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+qa_engineering,Тестирование ПО (QA),middle,130000,210000,120000,220000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+qa_engineering,Тестирование ПО (QA),senior,220000,330000,205000,350000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+devops,DevOps-инженерия,junior,140000,220000,135000,225000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+devops,DevOps-инженерия,middle,250000,380000,240000,390000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+devops,DevOps-инженерия,senior,380000,520000,360000,540000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+data_analytics,Аналитика данных,junior,80000,140000,75000,145000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+data_analytics,Аналитика данных,middle,160000,260000,150000,270000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert
+data_analytics,Аналитика данных,senior,260000,380000,245000,400000,https://career.habr.com/salaries,controlled market-calibrated validation scenario; not a real job advert

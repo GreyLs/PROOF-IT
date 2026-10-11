@@ -1,0 +1,39 @@
+{
+  "title": "Abstract Purple and Blue Digital Wave Motion — original color and sparkle motion",
+  "creator": "Nicola Narracci",
+  "provider": "Pexels",
+  "source_page": "https://www.pexels.com/video/abstract-purple-and-blue-digital-wave-motion-29306492/",
+  "source_download": "https://videos.pexels.com/video-files/29306492/12637575_1920_1080_30fps.mp4",
+  "source_sha256": "50703aac8b8beed39e79e2bcde03e0eb8e206a51eb53aa15b65436d1fab16349",
+  "license_name": "Pexels License",
+  "license_url": "https://www.pexels.com/license/",
+  "license_verified_on": "2026-10-10",
+  "permitted_use": "Free use and modification in a website; attribution is optional. No endorsement is implied, and the footage is not redistributed as stock inventory or sold as an unmodified standalone asset.",
+  "license_restrictions": [
+    "Do not sell unmodified standalone copies or redistribute them on stock platforms.",
+    "Do not imply an endorsement by the creator or use the footage as a trademark.",
+    "Follow the Pexels License and applicable terms."
+  ],
+  "asset": "auth-network.mp4",
+  "ui_compositing": {
+    "brand_primary_unchanged": "#402FFF",
+    "authentication_palette": ["#351052", "#D9B9F2", "#E8BEFF", "#B66AFF", "#7152E8"],
+    "brand_evidence": "web/public/brand/logo_01.svg; web/src/styles.css --purple",
+    "color_treatment": "Original purple/blue wave and light particles retained, with 0.85 video opacity and a neutral translucent shade. Product design tokens are unchanged. The FSP mark alone is recolored in silver/lilac/violet gradients.",
+    "technology_layer": "Static login-only SVG composition: three thin elliptical orbits, translucent code/shield/growth tiles, and the exact first three paths of web/public/brand/logo_01.svg. No Canvas loop, AI inference, telemetry or simulated scores. Decorative, aria-hidden and non-interactive.",
+    "scope": "Authentication page only; silent autoplay and loop, no playback-control button."
+  },
+  "content_type": "video/mp4",
+  "codec": "H.264",
+  "pixel_format": "yuv420p",
+  "width": 1280,
+  "height": 720,
+  "duration_seconds": 10,
+  "frames_per_second": 30,
+  "frames": 300,
+  "audio": false,
+  "fast_start": true,
+  "size_bytes": 4610005,
+  "sha256": "b628aa3b316abe39f140cc426bf5190dabbea512fe5c9c9a3118c7d682bcb04d",
+  "processing": "Original colors, particles and full 10-second motion retained without chroma suppression, denoising or smoothing. Scaled to 1280x720; encoded as H.264 CRF 23, medium preset, yuv420p, 30 fps, MP4 faststart, no audio. The browser loops the original full sequence."
+}

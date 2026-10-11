@@ -1,0 +1,435 @@
+[
+  {
+    "id": "backend_python",
+    "label": "Python / Backend",
+    "family": "backend",
+    "skills": [
+      "Python",
+      "FastAPI",
+      "Django",
+      "PostgreSQL",
+      "Docker",
+      "Git",
+      "REST",
+      "Linux",
+      "pytest",
+      "Kafka"
+    ]
+  },
+  {
+    "id": "backend_java",
+    "label": "Java / Backend",
+    "family": "backend",
+    "skills": [
+      "Java",
+      "Spring Boot",
+      "PostgreSQL",
+      "Docker",
+      "Git",
+      "REST",
+      "Kafka",
+      "JUnit",
+      "Hibernate",
+      "Linux"
+    ]
+  },
+  {
+    "id": "qa_engineering",
+    "label": "Тестирование / QA",
+    "family": "quality",
+    "skills": [
+      "тест-дизайн",
+      "REST API",
+      "Postman",
+      "SQL",
+      "Python",
+      "pytest",
+      "Selenium",
+      "Docker",
+      "Git",
+      "CI/CD"
+    ]
+  },
+  {
+    "id": "devops",
+    "label": "DevOps",
+    "family": "infrastructure",
+    "skills": [
+      "Linux",
+      "Docker",
+      "Kubernetes",
+      "GitLab CI",
+      "Terraform",
+      "Prometheus",
+      "PostgreSQL",
+      "Python",
+      "Nginx",
+      "Git"
+    ]
+  },
+  {
+    "id": "backend_csharp",
+    "label": ".NET / C#",
+    "family": "backend",
+    "skills": [
+      "C#",
+      ".NET",
+      "ASP.NET Core",
+      "MS SQL",
+      "Docker",
+      "Git",
+      "REST",
+      "Entity Framework",
+      "xUnit",
+      "Linux"
+    ]
+  },
+  {
+    "id": "backend_cpp",
+    "label": "C++ разработка",
+    "family": "backend",
+    "skills": [
+      "C++",
+      "STL",
+      "Linux",
+      "Git",
+      "CMake",
+      "gdb",
+      "алгоритмы",
+      "многопоточность",
+      "TCP/IP",
+      "Docker"
+    ]
+  },
+  {
+    "id": "system_administration",
+    "label": "Системное администрирование",
+    "family": "infrastructure",
+    "skills": [
+      "Linux",
+      "Windows Server",
+      "Active Directory",
+      "TCP/IP",
+      "Bash",
+      "PowerShell",
+      "Docker",
+      "мониторинг",
+      "резервное копирование",
+      "Git"
+    ]
+  },
+  {
+    "id": "one_c",
+    "label": "Разработка 1С",
+    "family": "enterprise",
+    "skills": [
+      "1С:Предприятие",
+      "BSL",
+      "SQL",
+      "ERP",
+      "интеграции",
+      "HTTP-сервисы",
+      "СКД",
+      "Git",
+      "обмен данными",
+      "отладка"
+    ]
+  },
+  {
+    "id": "cybersecurity",
+    "label": "Информационная безопасность",
+    "family": "security",
+    "skills": [
+      "SIEM",
+      "Linux",
+      "TCP/IP",
+      "анализ инцидентов",
+      "Python",
+      "IDS/IPS",
+      "контроль доступа",
+      "моделирование угроз",
+      "Git",
+      "журналирование"
+    ]
+  },
+  {
+    "id": "data_analytics",
+    "label": "Аналитика данных",
+    "family": "data",
+    "skills": [
+      "SQL",
+      "Python",
+      "Pandas",
+      "статистика",
+      "BI",
+      "A/B-тесты",
+      "визуализация",
+      "PostgreSQL",
+      "Git",
+      "метрики"
+    ]
+  },
+  {
+    "id": "ml_data_science",
+    "label": "ML / Data Science",
+    "family": "data",
+    "skills": [
+      "Python",
+      "SQL",
+      "Pandas",
+      "scikit-learn",
+      "PyTorch",
+      "статистика",
+      "MLflow",
+      "Docker",
+      "Git",
+      "A/B-тесты"
+    ]
+  },
+  {
+    "id": "mlops",
+    "label": "MLOps",
+    "family": "infrastructure",
+    "skills": [
+      "Python",
+      "Docker",
+      "Kubernetes",
+      "MLflow",
+      "DVC",
+      "Airflow",
+      "CI/CD",
+      "Prometheus",
+      "GPU",
+      "Git"
+    ]
+  },
+  {
+    "id": "software_architecture",
+    "label": "Архитектура ПО",
+    "family": "architecture",
+    "skills": [
+      "системный дизайн",
+      "микросервисы",
+      "API",
+      "SQL",
+      "Kafka",
+      "Kubernetes",
+      "безопасность",
+      "нагрузка",
+      "ADR",
+      "моделирование данных"
+    ]
+  },
+  {
+    "id": "data_engineering",
+    "label": "Data Engineering",
+    "family": "data",
+    "skills": [
+      "Python",
+      "SQL",
+      "Airflow",
+      "Kafka",
+      "Spark",
+      "PostgreSQL",
+      "ClickHouse",
+      "ETL",
+      "Docker",
+      "Git"
+    ]
+  },
+  {
+    "id": "system_analysis",
+    "label": "Системный анализ",
+    "family": "analysis",
+    "skills": [
+      "BPMN",
+      "UML",
+      "SQL",
+      "REST API",
+      "OpenAPI",
+      "PostgreSQL",
+      "интеграции",
+      "Kafka",
+      "user story",
+      "моделирование данных"
+    ]
+  },
+  {
+    "id": "frontend_development",
+    "label": "Frontend",
+    "family": "frontend",
+    "skills": [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "HTML",
+      "CSS",
+      "REST API",
+      "Git",
+      "тестирование",
+      "Webpack",
+      "accessibility"
+    ]
+  },
+  {
+    "id": "mobile_development",
+    "label": "Мобильная разработка",
+    "family": "mobile",
+    "skills": [
+      "Kotlin",
+      "Swift",
+      "Android",
+      "iOS",
+      "REST API",
+      "Git",
+      "SQLite",
+      "тестирование",
+      "CI/CD",
+      "архитектура приложения"
+    ]
+  },
+  {
+    "id": "lead_engineering",
+    "label": "Тимлид / руководитель группы разработки",
+    "family": "lead_engineering",
+    "skills": [
+      "Python",
+      "PostgreSQL",
+      "Architecture",
+      "Code review",
+      "Delivery",
+      "Mentoring"
+    ],
+    "leadership_level": "team_lead",
+    "allowed_grades": [
+      "middle",
+      "senior"
+    ]
+  },
+  {
+    "id": "lead_data",
+    "label": "Тимлид / руководитель группы данных",
+    "family": "lead_data",
+    "skills": [
+      "SQL",
+      "Python",
+      "Airflow",
+      "Data quality",
+      "Delivery",
+      "Mentoring"
+    ],
+    "leadership_level": "team_lead",
+    "allowed_grades": [
+      "middle",
+      "senior"
+    ]
+  },
+  {
+    "id": "head_platform",
+    "label": "Руководитель направления платформы",
+    "family": "head_platform",
+    "skills": [
+      "Platform engineering",
+      "SLO",
+      "Kubernetes",
+      "FinOps",
+      "Roadmap",
+      "People management"
+    ],
+    "leadership_level": "direction_head",
+    "allowed_grades": [
+      "middle",
+      "senior"
+    ]
+  },
+  {
+    "id": "head_data",
+    "label": "Руководитель направления Data / AI",
+    "family": "head_data",
+    "skills": [
+      "Data strategy",
+      "ML lifecycle",
+      "Data governance",
+      "Experiment design",
+      "Roadmap",
+      "People management"
+    ],
+    "leadership_level": "direction_head",
+    "allowed_grades": [
+      "middle",
+      "senior"
+    ]
+  },
+  {
+    "id": "director_engineering",
+    "label": "Руководитель отдела разработки",
+    "family": "director_engineering",
+    "skills": [
+      "Engineering management",
+      "Architecture",
+      "Hiring",
+      "Budgeting",
+      "Delivery",
+      "Risk management"
+    ],
+    "leadership_level": "department_head",
+    "allowed_grades": [
+      "middle",
+      "senior"
+    ]
+  },
+  {
+    "id": "director_security",
+    "label": "Руководитель отдела ИБ",
+    "family": "director_security",
+    "skills": [
+      "AppSec",
+      "Threat modeling",
+      "Incident response",
+      "Security governance",
+      "Budgeting",
+      "People management"
+    ],
+    "leadership_level": "department_head",
+    "allowed_grades": [
+      "middle",
+      "senior"
+    ]
+  },
+  {
+    "id": "executive_cto",
+    "label": "CTO / технический директор ИТ-компании",
+    "family": "executive_cto",
+    "skills": [
+      "Technology strategy",
+      "Architecture",
+      "P&L",
+      "Portfolio management",
+      "Org design",
+      "Risk management"
+    ],
+    "leadership_level": "c_level",
+    "allowed_grades": [
+      "middle",
+      "senior"
+    ]
+  },
+  {
+    "id": "executive_ciso",
+    "label": "CISO / директор по информационной безопасности",
+    "family": "executive_ciso",
+    "skills": [
+      "Security strategy",
+      "Enterprise risk",
+      "Business continuity",
+      "Board reporting",
+      "Budgeting",
+      "Org design"
+    ],
+    "leadership_level": "c_level",
+    "allowed_grades": [
+      "middle",
+      "senior"
+    ]
+  }
+]

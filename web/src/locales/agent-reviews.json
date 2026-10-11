@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "languages": {
+    "uz": {
+      "source_sha256": "6014edbb440831b1e8afd1708bf43a7099d4f7d2d62fea1cd8c379ecee56779b",
+      "catalog_sha256": "9655d8d23366a4473ffe44b7ff83563c24d4a08e38e65fd316feffa0153e0f63",
+      "scope": "full_static_catalog",
+      "reviewer_kind": "agent",
+      "independent_human_review": false,
+      "reviewed_at": "2026-10-11T08:38:19.306426+00:00"
+    },
+    "az": {
+      "source_sha256": "6014edbb440831b1e8afd1708bf43a7099d4f7d2d62fea1cd8c379ecee56779b",
+      "catalog_sha256": "5a90336d3e70603bb94104cf19aae3a67cd6d532a8254c847bd703fdffcd22bf",
+      "scope": "full_static_catalog",
+      "reviewer_kind": "agent",
+      "independent_human_review": false,
+      "reviewed_at": "2026-10-11T08:38:19.318452+00:00"
+    },
+    "be": {
+      "source_sha256": "6014edbb440831b1e8afd1708bf43a7099d4f7d2d62fea1cd8c379ecee56779b",
+      "catalog_sha256": "88ee2d121389d110ddfbe5b903e34880912da6ff783b6a628a5bdcf773c05230",
+      "scope": "full_static_catalog",
+      "reviewer_kind": "agent",
+      "independent_human_review": false,
+      "reviewed_at": "2026-10-11T08:38:19.327243+00:00"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "forecast-model-contract-1",
+  "tasks": {
+    "vacancy_fill": {
+      "model": "vacancy_fill.cbm",
+      "features": [
+        "relevant_candidates",
+        "salary_competitiveness",
+        "company_rating",
+        "stack_complexity",
+        "skill_coverage",
+        "seniority_pressure",
+        "remote_flexibility"
+      ],
+      "sha256": "582eea4868231687566dd3d2051f625ef40cdfecae6e5256f6ca8c0080361cce",
+      "training_scope": "synthetic-scenario-simulator",
+      "model_policy": "frozen; outcomes do not automatically retrain"
+    },
+    "candidate_job_search": {
+      "model": "candidate_job_search.cbm",
+      "features": [
+        "relevant_vacancies",
+        "salary_alignment",
+        "skill_match",
+        "profile_completeness",
+        "qualification_signal",
+        "experience_years",
+        "application_activity",
+        "remote_flexibility"
+      ],
+      "sha256": "e567ad02123e81b2b8f1024b4b29eb03f79462a3256335af61ce3c44e3ee85d3",
+      "training_scope": "synthetic-scenario-simulator",
+      "model_policy": "frozen; outcomes do not automatically retrain"
+    }
+  }
+}
