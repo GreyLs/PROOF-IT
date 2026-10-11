@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "command": "docker build --target rust --tag proofit-publication-build:local .",
+  "scope": "Linux release compilation and export of the Rust builder stage; runtime application image and production deployment not tested in this run",
+  "image_id": "sha256:0da51f3b6c3f745f978b01deda8eff6ac2efc107c3a72dabab35c4ef0e08989c",
+  "image_created": "2026-10-11T14:06:10.108928383Z",
+  "release_compile_seconds": 387.4
+}

@@ -19,6 +19,7 @@
 | Проверить API | [OpenAPI 3.1](data/contracts/openapi.json), `/api/openapi.json` |
 | Проверить результаты и ограничения | [Валидация](docs/07_Validation.pdf), [протоколы](validation/reports/current/) |
 | Изучить подробное описание возможностей | [Обзор проекта](docs/PROJECT_OVERVIEW.md) |
+| Сопоставить с четырьмя решениями спецтрека | [Экспертное сравнение](docs/COMPARISON.md) |
 
 ## Возможности
 

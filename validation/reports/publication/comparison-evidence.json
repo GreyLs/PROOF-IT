@@ -1,0 +1,106 @@
+{
+  "inspected_at": "2026-10-11T17:03:32.233943+03:00",
+  "method": "Read-only public repository and document inspection; peer tests and apps not executed",
+  "repositories": [
+    {
+      "repository": "ars123-create/fsp-career",
+      "url": "https://github.com/ars123-create/fsp-career",
+      "head_sha": "506a69316f458c454f797b21ec5dc3499edc0476",
+      "last_commit_at": "2026-10-10T19:48:44Z"
+    },
+    {
+      "repository": "IvanDer77/Shaurma",
+      "url": "https://github.com/IvanDer77/Shaurma",
+      "head_sha": "b6ee8e34d1c05318df34ff10bc38de56ee322158",
+      "last_commit_at": "2026-10-10T10:02:44Z"
+    },
+    {
+      "repository": "archebaldo777/sporthackathon",
+      "url": "https://github.com/archebaldo777/sporthackathon",
+      "head_sha": "85bbc7840f2b0f0056c3cb29407179f626213a27",
+      "last_commit_at": "2026-10-10T17:02:29Z"
+    },
+    {
+      "repository": "Izymka/fsp-job-board",
+      "url": "https://github.com/Izymka/fsp-job-board",
+      "head_sha": "04d644dbae659ea2831404918d4ac8f7bc5df731",
+      "last_commit_at": "2026-10-11T12:17:06Z"
+    }
+  ],
+  "materials": [
+    {
+      "repository": "ars123-create/fsp-career",
+      "path": "docs/MATCHING_0_5.md",
+      "available": true,
+      "sha256": "1c517f6d82cdc691ff81a3c1fe82abdd78feb7f4298e9923770cff45b98c9a0c",
+      "lines": 23,
+      "url": "https://github.com/ars123-create/fsp-career/blob/506a69316f458c454f797b21ec5dc3499edc0476/docs/MATCHING_0_5.md"
+    },
+    {
+      "repository": "ars123-create/fsp-career",
+      "path": "docs/RELEASE_0_5_1.md",
+      "available": true,
+      "sha256": "06d69e2ccc708d23fdfeaaf8ec2df77e061aa5a1124bcab084c3bb2beb42e9d5",
+      "lines": 53,
+      "url": "https://github.com/ars123-create/fsp-career/blob/506a69316f458c454f797b21ec5dc3499edc0476/docs/RELEASE_0_5_1.md"
+    },
+    {
+      "repository": "IvanDer77/Shaurma",
+      "path": "docs/validation/report.md",
+      "available": true,
+      "sha256": "38144b8daa7c4181a7ef132739679103b7a9ffadf057760b6969d159ecb7f0a8",
+      "lines": 57,
+      "url": "https://github.com/IvanDer77/Shaurma/blob/b6ee8e34d1c05318df34ff10bc38de56ee322158/docs/validation/report.md"
+    },
+    {
+      "repository": "IvanDer77/Shaurma",
+      "path": "engine/app/matching.py",
+      "available": true,
+      "sha256": "bd0e7ff7833904ec68ac0433886b4aae19dd6b96ed8d5c19f31e4b791e0fc00b",
+      "lines": 174,
+      "url": "https://github.com/IvanDer77/Shaurma/blob/b6ee8e34d1c05318df34ff10bc38de56ee322158/engine/app/matching.py"
+    },
+    {
+      "repository": "archebaldo777/sporthackathon",
+      "path": "docs/04-validation.md",
+      "available": true,
+      "sha256": "778a348df22af46a18191c9c2788250aecfa76e86f43af368c15f898e3c6a0a4",
+      "lines": 255,
+      "url": "https://github.com/archebaldo777/sporthackathon/blob/85bbc7840f2b0f0056c3cb29407179f626213a27/docs/04-validation.md"
+    },
+    {
+      "repository": "archebaldo777/sporthackathon",
+      "path": "docs/09-security.md",
+      "available": true,
+      "sha256": "452530e0c0bb454261caf4df12645b4daa5ab23a2cf7aa8bd711192302bd635c",
+      "lines": 60,
+      "url": "https://github.com/archebaldo777/sporthackathon/blob/85bbc7840f2b0f0056c3cb29407179f626213a27/docs/09-security.md"
+    },
+    {
+      "repository": "Izymka/fsp-job-board",
+      "path": "ml/bench/blind/PROMPT_harness.md",
+      "available": true,
+      "sha256": "b22ac52c1c4e9596039f43a2405811faaa73a0ee885303c24822c9d77871a77d",
+      "lines": 37,
+      "url": "https://github.com/Izymka/fsp-job-board/blob/04d644dbae659ea2831404918d4ac8f7bc5df731/ml/bench/blind/PROMPT_harness.md"
+    },
+    {
+      "repository": "Izymka/fsp-job-board",
+      "path": "ml/bench/data/meta.json",
+      "available": true,
+      "sha256": "e2a0824c19b83fa47b074b3081c17334021a6ea7d9b2e691231d423c456c0f3e",
+      "lines": 23,
+      "digest_scope": "Locally saved UTF-8 response with normalized output encoding",
+      "url": "https://github.com/Izymka/fsp-job-board/blob/04d644dbae659ea2831404918d4ac8f7bc5df731/ml/bench/data/meta.json"
+    },
+    {
+      "repository": "Izymka/fsp-job-board",
+      "path": "ml/bench/results/summary.json",
+      "available": true,
+      "sha256": "566aa228990f0e084b5b5bc3c9282b80130358c743c5da015663b15bfab7d793",
+      "lines": 677,
+      "digest_scope": "Locally saved UTF-8 response with normalized output encoding",
+      "url": "https://github.com/Izymka/fsp-job-board/blob/04d644dbae659ea2831404918d4ac8f7bc5df731/ml/bench/results/summary.json"
+    }
+  ]
+}

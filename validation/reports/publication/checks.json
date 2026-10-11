@@ -41,5 +41,9 @@
     "real language model inference",
     "external provider checks",
     "production deployment"
-  ]
+  ],
+  "docker_rust_stage": {
+    "passed": true,
+    "protocol": "docker-build.json"
+  }
 }
