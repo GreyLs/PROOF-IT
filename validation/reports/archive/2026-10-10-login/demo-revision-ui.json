@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "generated_at": "2026-10-10T16:28:41+0300",
+  "scope": "removed guest UI, ordinary password login for both roles, seeded data and logout only",
+  "checks": [
+    "password_only_login_page_390px",
+    "password_only_login_page_768px",
+    "password_only_login_page_1440px",
+    "candidate_form_login_correct_cabinet_logout_revoked",
+    "employer_form_login_correct_cabinet_logout_revoked"
+  ],
+  "browser_errors": [],
+  "llm_scoring": false
+}

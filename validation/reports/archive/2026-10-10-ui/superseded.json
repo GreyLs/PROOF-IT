@@ -1,0 +1,125 @@
+{
+  "reason": "All application UI evidence refreshed with the current running build; only the login heading was confirmed stale. Historical numerical/load results were not rerun.",
+  "superseded_images": [
+    {
+      "file": "login-390.png",
+      "sha256": "4df67cad711309f76342b1602c33f3640d0bde491f72fed461c1059170e14011"
+    },
+    {
+      "file": "login-768.png",
+      "sha256": "095e9d906863a949fd593be084ee589379f041ae5863c57b40ffd1188d0f48db"
+    },
+    {
+      "file": "login-1440.png",
+      "sha256": "e98b06165d671e9185e45346a776260fbe1aeda91d8a80c5deebd70a924b7bad"
+    },
+    {
+      "file": "candidate-evidence-390.png",
+      "sha256": "6cdc408272820d366baddb1996928341528310a8f094200c0312baa0f8b670b9"
+    },
+    {
+      "file": "candidate-evidence-1440.png",
+      "sha256": "17004f10a40ed30fc5d876af5ead4f7267deb99af5aaa6c8a540b2a04adb42b3"
+    },
+    {
+      "file": "employer-evidence-390.png",
+      "sha256": "af02c6211191f39133f424fe88d21cc210b7356d798be1fab7eeceb02a21c3af"
+    },
+    {
+      "file": "employer-evidence-1440.png",
+      "sha256": "bc62a891de120401506d05b930e13d36c3d731aba1b4c7b89e17b5dd428db91f"
+    },
+    {
+      "file": "category-pending-ui.png",
+      "sha256": "1b145f472fd51949ecaf11b89f6d6d6afae17864a0da9fb96f183fcbb5c942cd"
+    },
+    {
+      "file": "category-valid-ui.png",
+      "sha256": "52b60d8347c274f4ae5b26d8ab571175ff0e60161a74b482c2a9364cc9cfd738"
+    },
+    {
+      "file": "category-revoked-ui.png",
+      "sha256": "1b145f472fd51949ecaf11b89f6d6d6afae17864a0da9fb96f183fcbb5c942cd"
+    },
+    {
+      "file": "decision-twin-candidate-390.png",
+      "sha256": "a9fdd05cfae5d72281d74d456db353ae0ad4e2f50f14965b8e1d241d979f85cb"
+    },
+    {
+      "file": "decision-twin-candidate-1024.png",
+      "sha256": "40d4736b5482910a4b248d672c16bf4c689829566a061c23c5fc20fe2105c338"
+    },
+    {
+      "file": "decision-twin-candidate-1280.png",
+      "sha256": "12ba6c769c884c3fe6d5d909827f286b7f9085124ee14392e8dc6f35a0541c44"
+    },
+    {
+      "file": "decision-twin-candidate-1440.png",
+      "sha256": "1694472a64ea418d6ad3e2f26c9254c61fc1413b3e1e32dec63b5b019d56414e"
+    },
+    {
+      "file": "decision-twin-employer-390.png",
+      "sha256": "573f59ada72d661deeed8eb668422cd770c58bf4f0e4477c81ae44cdffaf3b48"
+    },
+    {
+      "file": "decision-twin-employer-1024.png",
+      "sha256": "92560d254d54bfe13a544fc4b36580c63e484cbacc5430d838762aca8cd839b5"
+    },
+    {
+      "file": "decision-twin-employer-1280.png",
+      "sha256": "3c4054734b689533aa13f0002bebecc1a92ac8e19cfae58769ed13a2bf14da42"
+    },
+    {
+      "file": "decision-twin-employer-1440.png",
+      "sha256": "580c7fd0cabb7add095563d642b19361979bf1fd02a87139deb76a0ed7b74692"
+    },
+    {
+      "file": "decision-graph-390.png",
+      "sha256": "60525800a40c5db8cf7811b62fcc66f5ed09fc6ac7c2be4f9f305d2189a77597"
+    },
+    {
+      "file": "decision-graph-1024.png",
+      "sha256": "b41cb9c0d4f4918da77aaf7f21e3426e2ac090a8435314c43f91a6b851cf9f29"
+    },
+    {
+      "file": "decision-graph-1280.png",
+      "sha256": "b54f9597531bceba2d57e9aed3291307251e70360934320b585825ad1b41ea9e"
+    },
+    {
+      "file": "decision-graph-1440.png",
+      "sha256": "51e0584bdf513fd882637976f591dbec049c3e17389b66f85468b684b796d89e"
+    },
+    {
+      "file": "research-candidate-390.png",
+      "sha256": "cbe89e3a0c18303be00e7838451fd66206e4c55cb6548d548a47e9a493ea9672"
+    },
+    {
+      "file": "research-candidate-1440.png",
+      "sha256": "135b8dc5a4d14fc129ab349670d33b2136d40577a80db8ab23b2e9aee68a6d55"
+    },
+    {
+      "file": "research-employer-390.png",
+      "sha256": "9438beaa7d91ed3590850811c1788ffa09aaa2819d86a2be259e2814748b0568"
+    },
+    {
+      "file": "research-employer-1440.png",
+      "sha256": "13a5af3db96cc7ba25fb33afc95bd55a2a7d026f6c4a17fd1f2b3f7448a3de68"
+    },
+    {
+      "file": "finalization-candidate-ru.png",
+      "sha256": "d7344c9a437ea6cd7f0b8673f1e55ef55f74499d5ca401c07088e1434a98064c"
+    },
+    {
+      "file": "finalization-candidate-be.png",
+      "sha256": "e78d9fe36e52d7a343bab0f5f72794b943fcbf37be342dbe1d64d331ec0a48a2"
+    },
+    {
+      "file": "finalization-employer-ru.png",
+      "sha256": "221e5b186b9a8a278011d716dee95808fe09d13335d23326cdc912edaae15cb6"
+    },
+    {
+      "file": "finalization-employer-be.png",
+      "sha256": "48b9daadcc87b1ae5b6cae0aed6220283ed42530a98779d1a5e2a1f3af22ecd4"
+    }
+  ]
+}

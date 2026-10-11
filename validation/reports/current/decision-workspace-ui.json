@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "generated_at": "2026-10-10T22:22:28+0300",
+  "generated_at": "2026-10-11T17:49:32+0300",
   "checks": [
     {
       "role": "candidate",
@@ -117,5 +117,6 @@
   ],
   "browser_errors": [],
   "llm_calls": 0,
-  "scope": "auth fixtures + real scenario jobs, graph provenance, hide/restore/public filtering, saved employer context and responsive navigation; no load or general ranking rerun"
+  "scope": "auth fixtures + real scenario jobs, graph provenance, hide/restore/public filtering, saved employer context and responsive navigation; no load or general ranking rerun",
+  "screenshot_refresh_at": "2026-10-11T14:49:32.403109+00:00"
 }

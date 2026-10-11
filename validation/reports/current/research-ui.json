@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "generated_at": "2026-10-10T18:34:36+0300",
+  "generated_at": "2026-10-11T17:49:47+0300",
   "checks": [
     {
       "role": "candidate",
@@ -29,5 +29,6 @@
   ],
   "browser_errors": [],
   "scope": "real Rust UI with isolated synthetic artifact fixture; public GitHub transport measured separately",
-  "llm_calls": 0
+  "llm_calls": 0,
+  "screenshot_refresh_at": "2026-10-11T14:49:47.971807+00:00"
 }

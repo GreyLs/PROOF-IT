@@ -1,0 +1,262 @@
+{
+  "generated_at": "2026-10-11T14:53:35.631093+00:00",
+  "scope": "Eight new README browser captures and 37 refreshed application UI images; numerical, load, PDF rendering and Grafana checks not rerun",
+  "passed": true,
+  "new_readme_screenshots": 8,
+  "refreshed_application_images": 37,
+  "confirmed_stale_login_images": 7,
+  "synthetic_demo_data_only": true,
+  "screenshots_reused_for_readme": false,
+  "readme_preview": {
+    "github_gfm_rendered": true,
+    "images_loaded": 9,
+    "mermaid_diagrams": 2,
+    "browser_errors": [],
+    "passed": true
+  },
+  "browser_reports": [
+    {
+      "file": "validation/reports/current/auth-revision.json",
+      "passed": true,
+      "checks": 6,
+      "browser_errors": 0,
+      "generated_at": "2026-10-11T17:37:26+0300"
+    },
+    {
+      "file": "validation/reports/current/demo-revision-ui.json",
+      "passed": true,
+      "checks": 5,
+      "browser_errors": 0,
+      "generated_at": "2026-10-11T17:37:40+0300"
+    },
+    {
+      "file": "validation/reports/current/browser.json",
+      "passed": true,
+      "checks": 8,
+      "browser_errors": 0,
+      "generated_at": "2026-10-11T14:42:48.363053+00:00"
+    },
+    {
+      "file": "validation/reports/current/category-revision-ui.json",
+      "passed": true,
+      "checks": 36,
+      "browser_errors": 0,
+      "generated_at": "2026-10-11T14:44:23.032455+00:00"
+    },
+    {
+      "file": "validation/reports/current/decision-workspace-ui.json",
+      "passed": true,
+      "checks": 12,
+      "browser_errors": 0,
+      "generated_at": "2026-10-11T14:49:32.403109+00:00"
+    },
+    {
+      "file": "validation/reports/current/research-ui.json",
+      "passed": true,
+      "checks": 4,
+      "browser_errors": 0,
+      "generated_at": "2026-10-11T14:49:47.971807+00:00"
+    },
+    {
+      "file": "validation/reports/current/finalization-ui.json",
+      "passed": true,
+      "checks": 12,
+      "browser_errors": 0,
+      "generated_at": "2026-10-11T14:50:21.065799+00:00"
+    }
+  ],
+  "scoped_browser_checks": 83,
+  "browser_errors": 0,
+  "images": [
+    {
+      "file": "validation/reports/current/auth-revision-390.png",
+      "previous_sha256": "f6e48b2550ded0b5bba7be2dce7bb7551670fad296dc18747eeb193192ea96fb",
+      "sha256": "f5b80cd0e6e7374c3f3031e79bc975ea8f38a7ab2b3bc3ac8fc367dce9d5f1b2"
+    },
+    {
+      "file": "validation/reports/current/auth-revision-768.png",
+      "previous_sha256": "b9465ac631425dde73c5ae8ff97f23101586a87be250fe8636f9abae3fa88533",
+      "sha256": "f5847b918621a8dba0909d746d6266d07d0ca81948bdca69fdd3cb0ffce11963"
+    },
+    {
+      "file": "validation/reports/current/auth-revision-1440.png",
+      "previous_sha256": "477bdb89b0b2b8a31df77bbebae37948d81e52bceb4a93dc93df3e0b8ae1f5d5",
+      "sha256": "a6f25e38cfddb39f703611f004df6eb5ee288d991a256a3bb04448f5ed42b3d8"
+    },
+    {
+      "file": "validation/reports/current/auth-access-390.png",
+      "previous_sha256": "c338621ba4779961d8dc6337aa73cdcc0d538ae2824e1296a43cc02d3cf759e7",
+      "sha256": "55114f4898c72708ea4484973835c85c1f0526e9e5f1ddc72a97db7f58dd8a24"
+    },
+    {
+      "file": "validation/reports/current/auth-access-768.png",
+      "previous_sha256": "e238d4191647d9a36a3c50330d24875b37029feb623816cb80b3487c9c058861",
+      "sha256": "3dd7e2e3e105709911011e98d2fde1ec83c30cb8b4f100c035bf0dfb0ee2e36f"
+    },
+    {
+      "file": "validation/reports/current/auth-access-1440.png",
+      "previous_sha256": "367175592e2b71746cf0d5fb6bbed95af90e4590dfc3c13bfd6168b713cc95cc",
+      "sha256": "09434b80bd6e81f4054d2cf37c496c2001112ae1b12dac68af9a3321bf48f605"
+    },
+    {
+      "file": "validation/reports/current/demo-revision-logout.png",
+      "previous_sha256": "34fe422feee47a70ac950c0d165ba5debd87f5db90cf8d62eaa4b47f45890f06",
+      "sha256": "7a30f2a3a6142ccb6221ac2d26b5a2f894060feca6dd07213a22ad86e62aa6ca"
+    },
+    {
+      "file": "validation/reports/current/login-390.png",
+      "previous_sha256": "4df67cad711309f76342b1602c33f3640d0bde491f72fed461c1059170e14011",
+      "sha256": "55114f4898c72708ea4484973835c85c1f0526e9e5f1ddc72a97db7f58dd8a24"
+    },
+    {
+      "file": "validation/reports/current/login-768.png",
+      "previous_sha256": "095e9d906863a949fd593be084ee589379f041ae5863c57b40ffd1188d0f48db",
+      "sha256": "84b1bbcd1907e514975d8f0637630940c7ec60254082ddd2a8b46f9d887f1b55"
+    },
+    {
+      "file": "validation/reports/current/login-1440.png",
+      "previous_sha256": "e98b06165d671e9185e45346a776260fbe1aeda91d8a80c5deebd70a924b7bad",
+      "sha256": "e98b06165d671e9185e45346a776260fbe1aeda91d8a80c5deebd70a924b7bad"
+    },
+    {
+      "file": "validation/reports/current/candidate-evidence-390.png",
+      "previous_sha256": "6cdc408272820d366baddb1996928341528310a8f094200c0312baa0f8b670b9",
+      "sha256": "6cdc408272820d366baddb1996928341528310a8f094200c0312baa0f8b670b9"
+    },
+    {
+      "file": "validation/reports/current/candidate-evidence-1440.png",
+      "previous_sha256": "17004f10a40ed30fc5d876af5ead4f7267deb99af5aaa6c8a540b2a04adb42b3",
+      "sha256": "17004f10a40ed30fc5d876af5ead4f7267deb99af5aaa6c8a540b2a04adb42b3"
+    },
+    {
+      "file": "validation/reports/current/employer-evidence-390.png",
+      "previous_sha256": "af02c6211191f39133f424fe88d21cc210b7356d798be1fab7eeceb02a21c3af",
+      "sha256": "af02c6211191f39133f424fe88d21cc210b7356d798be1fab7eeceb02a21c3af"
+    },
+    {
+      "file": "validation/reports/current/employer-evidence-1440.png",
+      "previous_sha256": "bc62a891de120401506d05b930e13d36c3d731aba1b4c7b89e17b5dd428db91f",
+      "sha256": "bc62a891de120401506d05b930e13d36c3d731aba1b4c7b89e17b5dd428db91f"
+    },
+    {
+      "file": "validation/reports/current/category-pending-ui.png",
+      "previous_sha256": "1b145f472fd51949ecaf11b89f6d6d6afae17864a0da9fb96f183fcbb5c942cd",
+      "sha256": "1868833cef9c6324265b6cb0981eb35c82d0bbb9ea235b030195f8337b473528"
+    },
+    {
+      "file": "validation/reports/current/category-valid-ui.png",
+      "previous_sha256": "52b60d8347c274f4ae5b26d8ab571175ff0e60161a74b482c2a9364cc9cfd738",
+      "sha256": "24808860fac2361978007d7f6d20c3b6979406134281c032ec85dbc4ce859060"
+    },
+    {
+      "file": "validation/reports/current/category-revoked-ui.png",
+      "previous_sha256": "1b145f472fd51949ecaf11b89f6d6d6afae17864a0da9fb96f183fcbb5c942cd",
+      "sha256": "1b145f472fd51949ecaf11b89f6d6d6afae17864a0da9fb96f183fcbb5c942cd"
+    },
+    {
+      "file": "validation/reports/current/decision-twin-candidate-390.png",
+      "previous_sha256": "a9fdd05cfae5d72281d74d456db353ae0ad4e2f50f14965b8e1d241d979f85cb",
+      "sha256": "3860118e445d409660ca01bbf3f6654cad5b8694de1f2c9219fde5b1294d453e"
+    },
+    {
+      "file": "validation/reports/current/decision-twin-candidate-1024.png",
+      "previous_sha256": "40d4736b5482910a4b248d672c16bf4c689829566a061c23c5fc20fe2105c338",
+      "sha256": "81d6983e8ee3ff2a1c52f950251278f1c75a144c15028951e25a9f441bfcd67c"
+    },
+    {
+      "file": "validation/reports/current/decision-twin-candidate-1280.png",
+      "previous_sha256": "12ba6c769c884c3fe6d5d909827f286b7f9085124ee14392e8dc6f35a0541c44",
+      "sha256": "f0999a36ec58816c293f3e70998c198b9e9812a60c2dd68769910a9d4ccbdeec"
+    },
+    {
+      "file": "validation/reports/current/decision-twin-candidate-1440.png",
+      "previous_sha256": "1694472a64ea418d6ad3e2f26c9254c61fc1413b3e1e32dec63b5b019d56414e",
+      "sha256": "a0aa14cb66adadbaf4b7fb41f46e04bf59abbf8486c406d07c7e5daf6272a433"
+    },
+    {
+      "file": "validation/reports/current/decision-twin-employer-390.png",
+      "previous_sha256": "573f59ada72d661deeed8eb668422cd770c58bf4f0e4477c81ae44cdffaf3b48",
+      "sha256": "e8cfcd432867c56a238930bd8749c3b745395cb65874061933010d892e86042c"
+    },
+    {
+      "file": "validation/reports/current/decision-twin-employer-1024.png",
+      "previous_sha256": "92560d254d54bfe13a544fc4b36580c63e484cbacc5430d838762aca8cd839b5",
+      "sha256": "137082ea49f7061f4930064b616898d7a9e46a5588939e2e7fd50e8552a3ac15"
+    },
+    {
+      "file": "validation/reports/current/decision-twin-employer-1280.png",
+      "previous_sha256": "3c4054734b689533aa13f0002bebecc1a92ac8e19cfae58769ed13a2bf14da42",
+      "sha256": "73f9eac370bc348afd4a8b8224314e3eada32f290f228b5fe755a8fdda0b30a6"
+    },
+    {
+      "file": "validation/reports/current/decision-twin-employer-1440.png",
+      "previous_sha256": "580c7fd0cabb7add095563d642b19361979bf1fd02a87139deb76a0ed7b74692",
+      "sha256": "b13984ff6913be66ed2d33de32999f20b438c45dfe37a1ce276d0649c8549918"
+    },
+    {
+      "file": "validation/reports/current/decision-graph-390.png",
+      "previous_sha256": "60525800a40c5db8cf7811b62fcc66f5ed09fc6ac7c2be4f9f305d2189a77597",
+      "sha256": "b0a63e03c9702d07270d19884a4449094d1481439e3dc69165e3ef9038749c83"
+    },
+    {
+      "file": "validation/reports/current/decision-graph-1024.png",
+      "previous_sha256": "b41cb9c0d4f4918da77aaf7f21e3426e2ac090a8435314c43f91a6b851cf9f29",
+      "sha256": "d4dd0d889e1f9dd82dcf09a5f83318b3c3b912be30333cda68aa411053bfebaf"
+    },
+    {
+      "file": "validation/reports/current/decision-graph-1280.png",
+      "previous_sha256": "b54f9597531bceba2d57e9aed3291307251e70360934320b585825ad1b41ea9e",
+      "sha256": "7eaf6558fe5375c58f0f2b43d191a8a20c6d64d06cff9bf35e35b7771e6e7eb6"
+    },
+    {
+      "file": "validation/reports/current/decision-graph-1440.png",
+      "previous_sha256": "51e0584bdf513fd882637976f591dbec049c3e17389b66f85468b684b796d89e",
+      "sha256": "140056dd0ab195e5934ae9b6d8f08f7fd466eb77cf8b3ec8d09704836e9bbc96"
+    },
+    {
+      "file": "validation/reports/current/research-candidate-390.png",
+      "previous_sha256": "cbe89e3a0c18303be00e7838451fd66206e4c55cb6548d548a47e9a493ea9672",
+      "sha256": "bf53e0bbb231470002953755d4ad48ac802f24f0bdba7d1f74a9c428d3899683"
+    },
+    {
+      "file": "validation/reports/current/research-candidate-1440.png",
+      "previous_sha256": "135b8dc5a4d14fc129ab349670d33b2136d40577a80db8ab23b2e9aee68a6d55",
+      "sha256": "5b973441748c9e6f457cf1abeb30715f9506f856a109a27942d5a0e54433fbf0"
+    },
+    {
+      "file": "validation/reports/current/research-employer-390.png",
+      "previous_sha256": "9438beaa7d91ed3590850811c1788ffa09aaa2819d86a2be259e2814748b0568",
+      "sha256": "6eb047a95d05e373687e7c8781037085764e8e8c477024069601b8755c1f6be3"
+    },
+    {
+      "file": "validation/reports/current/research-employer-1440.png",
+      "previous_sha256": "13a5af3db96cc7ba25fb33afc95bd55a2a7d026f6c4a17fd1f2b3f7448a3de68",
+      "sha256": "d74543048596110f474ebd8a7e39554b1c7ecfa8993a5c12268fb69a808916ec"
+    },
+    {
+      "file": "validation/reports/current/finalization-candidate-ru.png",
+      "previous_sha256": "d7344c9a437ea6cd7f0b8673f1e55ef55f74499d5ca401c07088e1434a98064c",
+      "sha256": "8c92b97e205d50be502bd11e06e3823ce7c69a849866ea6d5fd6c9cd2cc032dd"
+    },
+    {
+      "file": "validation/reports/current/finalization-candidate-be.png",
+      "previous_sha256": "e78d9fe36e52d7a343bab0f5f72794b943fcbf37be342dbe1d64d331ec0a48a2",
+      "sha256": "e78d9fe36e52d7a343bab0f5f72794b943fcbf37be342dbe1d64d331ec0a48a2"
+    },
+    {
+      "file": "validation/reports/current/finalization-employer-ru.png",
+      "previous_sha256": "221e5b186b9a8a278011d716dee95808fe09d13335d23326cdc912edaae15cb6",
+      "sha256": "fc266d42b66f818c7e9c4b772eb5101eb2862e46c04dc62b1611bd92d8a672e7"
+    },
+    {
+      "file": "validation/reports/current/finalization-employer-be.png",
+      "previous_sha256": "48b9daadcc87b1ae5b6cae0aed6220283ed42530a98779d1a5e2a1f3af22ecd4",
+      "sha256": "4aa22d7668c3999dd9135d070436d4bcf667958dd250fb643b555547eb778c68"
+    }
+  ],
+  "historical_non_application_images": {
+    "pdf_page_renders": 10,
+    "grafana_snapshot": 1
+  },
+  "source_copies_synchronized": true
+}

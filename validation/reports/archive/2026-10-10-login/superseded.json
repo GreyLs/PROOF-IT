@@ -1,0 +1,33 @@
+{
+  "reason": "Historical login screenshots show the superseded heading; original reports retained, image history available through Git. Replacement runs capture the current interface.",
+  "superseded_images": [
+    {
+      "file": "auth-revision-390.png",
+      "sha256": "f6e48b2550ded0b5bba7be2dce7bb7551670fad296dc18747eeb193192ea96fb"
+    },
+    {
+      "file": "auth-revision-768.png",
+      "sha256": "b9465ac631425dde73c5ae8ff97f23101586a87be250fe8636f9abae3fa88533"
+    },
+    {
+      "file": "auth-revision-1440.png",
+      "sha256": "477bdb89b0b2b8a31df77bbebae37948d81e52bceb4a93dc93df3e0b8ae1f5d5"
+    },
+    {
+      "file": "auth-access-390.png",
+      "sha256": "c338621ba4779961d8dc6337aa73cdcc0d538ae2824e1296a43cc02d3cf759e7"
+    },
+    {
+      "file": "auth-access-768.png",
+      "sha256": "e238d4191647d9a36a3c50330d24875b37029feb623816cb80b3487c9c058861"
+    },
+    {
+      "file": "auth-access-1440.png",
+      "sha256": "367175592e2b71746cf0d5fb6bbed95af90e4590dfc3c13bfd6168b713cc95cc"
+    },
+    {
+      "file": "demo-revision-logout.png",
+      "sha256": "34fe422feee47a70ac950c0d165ba5debd87f5db90cf8d62eaa4b47f45890f06"
+    }
+  ]
+}

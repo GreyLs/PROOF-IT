@@ -1,0 +1,71 @@
+{
+  "checks": [
+    {
+      "page": "login",
+      "width": 390,
+      "overflow": false,
+      "video": {
+        "muted": true,
+        "loop": true,
+        "inline": true,
+        "ready": 4,
+        "inside": true
+      }
+    },
+    {
+      "page": "login",
+      "width": 768,
+      "overflow": false,
+      "video": {
+        "muted": true,
+        "loop": true,
+        "inline": true,
+        "ready": 4,
+        "inside": true
+      }
+    },
+    {
+      "page": "login",
+      "width": 1440,
+      "overflow": false,
+      "video": {
+        "muted": true,
+        "loop": true,
+        "inline": true,
+        "ready": 4,
+        "inside": true
+      }
+    },
+    {
+      "page": "candidate-evidence",
+      "width": 390,
+      "overflow": false,
+      "auth_video_absent": true
+    },
+    {
+      "page": "candidate-evidence",
+      "width": 1440,
+      "overflow": false,
+      "auth_video_absent": true
+    },
+    {
+      "page": "employer-evidence",
+      "width": 390,
+      "overflow": false,
+      "auth_video_absent": true
+    },
+    {
+      "page": "employer-evidence",
+      "width": 1440,
+      "overflow": false,
+      "auth_video_absent": true
+    },
+    {
+      "page": "reduced-motion",
+      "paused": false
+    }
+  ],
+  "browser_errors": [],
+  "llm_calls": 0,
+  "passed": true
+}

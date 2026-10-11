@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "generated_at": "2026-10-10T22:00:45+0300",
+  "generated_at": "2026-10-11T17:50:21+0300",
   "checks": [
     {
       "language": "ru",
@@ -77,5 +77,6 @@
   ],
   "browser_errors": [],
   "llm_calls": 0,
-  "scope": "six-language role workspaces and one live synthetic forecast-freeze workflow; not human semantic QA or a real pilot"
+  "scope": "six-language role workspaces and one live synthetic forecast-freeze workflow; not human semantic QA or a real pilot",
+  "screenshot_refresh_at": "2026-10-11T14:50:21.065799+00:00"
 }

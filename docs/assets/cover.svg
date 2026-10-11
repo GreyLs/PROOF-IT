@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="620" viewBox="0 0 1600 620" role="img" aria-labelledby="title desc">
+  <title id="title">PROOF-IT — навыки, доказательства, возможности</title>
+  <desc id="desc">Обратный IT-наём. Путь от резюме через проверяемые доказательства к предложению работодателя.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0a0821"/><stop offset="1" stop-color="#1c1250"/></linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#7365ff"/><stop offset="1" stop-color="#b1a4ff"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#402fff" stop-opacity=".32"/><stop offset="1" stop-color="#402fff" stop-opacity="0"/></radialGradient>
+    <pattern id="dots" width="34" height="34" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.1" fill="#c1b7ff" opacity=".16"/></pattern>
+  </defs>
+  <rect width="1600" height="620" rx="28" fill="url(#bg)"/>
+  <rect x="795" width="805" height="620" fill="url(#dots)"/>
+  <ellipse cx="1220" cy="330" rx="480" ry="400" fill="url(#glow)"/>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="76" y="62" width="272" height="42" rx="21" fill="#402fff"/>
+    <text x="212" y="89" text-anchor="middle" fill="#fff" font-size="17" font-weight="600" letter-spacing="2">ОБРАТНЫЙ IT-НАЁМ</text>
+    <text x="70" y="247" fill="#fff" font-size="116" font-weight="700" letter-spacing="-5">PROOF-IT</text>
+    <text x="78" y="328" fill="#e9e5ff" font-size="42" font-weight="600">Навыки. Доказательства.</text>
+    <text x="78" y="384" fill="#b6aaff" font-size="42" font-weight="600">Возможности.</text>
+    <text x="80" y="451" fill="#aaa3c7" font-size="22">Кандидат показывает, что умеет.</text>
+    <text x="80" y="486" fill="#aaa3c7" font-size="22">Работодатель приходит с предложением.</text>
+    <path d="M80 545H760" stroke="#3b315e"/>
+    <text x="80" y="578" fill="#9188b5" font-size="15" letter-spacing="2">ПРОВЕРКА НАВЫКОВ · ГРАФ ИСТОЧНИКОВ · ЦИФРОВОЙ ДВОЙНИК</text>
+  </g>
+  <g fill="none" stroke="#7569be" stroke-opacity=".38" stroke-width="1.5">
+    <ellipse cx="1220" cy="310" rx="258" ry="209"/>
+    <ellipse cx="1220" cy="310" rx="307" ry="133" transform="rotate(-35 1220 310)"/>
+    <path d="M964 187L1220 310L1421 433M1084 468L1220 310L1372 127M961 372L1220 310L1472 243"/>
+  </g>
+  <g fill="#9888ff"><circle cx="1084" cy="468" r="6"/><circle cx="1372" cy="127" r="6"/><circle cx="961" cy="372" r="5"/><circle cx="1472" cy="243" r="5"/><circle cx="1258" cy="518" r="4"/></g>
+  <g stroke="url(#line)" stroke-width="3" fill="none"><path d="M1007 185Q1140 184 1180 275"/><path d="M1260 345Q1300 431 1410 433"/></g>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="877" y="136" width="182" height="101" rx="20" fill="#1a1536" stroke="#51427b"/>
+    <path d="M916 163H937M916 175H950M916 187H943" fill="none" stroke="#baacff" stroke-width="3" stroke-linecap="round"/>
+    <text x="906" y="217" fill="#dfd6ff" font-size="16" font-weight="600" letter-spacing="2">РЕЗЮМЕ</text>
+    <circle cx="1220" cy="310" r="79" fill="#402fff"/>
+    <circle cx="1220" cy="310" r="91" fill="none" stroke="#9284ff" stroke-opacity=".45"/>
+    <path d="M1220 260L1251 273V301Q1251 325 1220 338Q1189 325 1189 301V273Z" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M1204 296L1215 307L1237 283" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1220" y="367" text-anchor="middle" fill="#fff" font-size="14" font-weight="600" letter-spacing="2">ДОКАЗАТЕЛЬСТВА</text>
+    <rect x="1340" y="383" width="185" height="103" rx="20" fill="#1a1536" stroke="#665296"/>
+    <path d="M1374 412H1413M1401 400L1413 412L1401 424" fill="none" stroke="#c7baff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1370" y="463" fill="#dfd6ff" font-size="16" font-weight="600" letter-spacing="2">ПРЕДЛОЖЕНИЕ</text>
+    <text x="1165" y="568" fill="#9488bb" font-size="16" letter-spacing="2">ЗНАТЬ, ПОЧЕМУ ПОДХОДИТ</text>
+  </g>
+</svg>

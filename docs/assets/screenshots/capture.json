@@ -1,0 +1,149 @@
+{
+  "generated_at": "2026-10-11T14:39:40.088683+00:00",
+  "browser": "Chromium 153.0.8010.12",
+  "method": "New browser captures of real live routes; no screenshots reused, no mocked network or edited DOM",
+  "origin": "Private demonstration installation; address intentionally omitted",
+  "web_source_sha256": "1436b6a286c9144862a049b3370016d6773020efadcff8ffc51f310258256e5d",
+  "qualification_fixture": {
+    "scope": "synthetic API exercise of role-knowledge issuance, not human certification",
+    "questions": 32,
+    "score": 100,
+    "controlled_server_timing": true,
+    "server_side_test_keys": true
+  },
+  "synthetic_users": true,
+  "screenshots": [
+    {
+      "file": "docs/assets/screenshots/01-login.png",
+      "sha256": "f723176b58889bc1eec754f9921ed67e6590aa08540c9f83c1c5b5956eb5ea89",
+      "role": "anonymous",
+      "route": "/proofit",
+      "state": "Current login heading and real animated background",
+      "viewport": {
+        "width": 1440,
+        "height": 1050
+      },
+      "full_page": false,
+      "synthetic_fixture": false,
+      "browser_errors": 0,
+      "visible_error_boxes": 0,
+      "horizontal_overflow": false
+    },
+    {
+      "file": "docs/assets/screenshots/02-resume.png",
+      "sha256": "0f26202db33e639721f8b4a4e7bc922efc942ec78209cb2441d28e42b0f8f356",
+      "role": "candidate",
+      "route": "/proofit#resumes",
+      "state": "Published-intent resume before knowledge validation; pending admission",
+      "viewport": {
+        "width": 1440,
+        "height": 1050
+      },
+      "full_page": false,
+      "synthetic_fixture": true,
+      "browser_errors": 0,
+      "visible_error_boxes": 0,
+      "horizontal_overflow": false
+    },
+    {
+      "file": "docs/assets/screenshots/03-assessment.png",
+      "sha256": "ce5b73ccc4fac577a6078bdaed7e0e04d37b582ed4092e281d53e5de1d3aee35",
+      "role": "candidate",
+      "route": "/proofit#resumes",
+      "state": "One real adaptive knowledge question; no answer key exposed",
+      "viewport": {
+        "width": 1440,
+        "height": 1050
+      },
+      "full_page": false,
+      "synthetic_fixture": true,
+      "browser_errors": 0,
+      "visible_error_boxes": 0,
+      "horizontal_overflow": false
+    },
+    {
+      "file": "docs/assets/screenshots/04-proof-graph.png",
+      "sha256": "aa4c52404a19e38dc3733288ef43b0e30b0e1e823a6b71d54d61c6259aaefe9e",
+      "role": "candidate",
+      "route": "/proofit#proof-graph",
+      "state": "Python path linked to the certificate from the synthetic API exercise",
+      "viewport": {
+        "width": 1440,
+        "height": 1050
+      },
+      "full_page": true,
+      "synthetic_fixture": true,
+      "browser_errors": 0,
+      "visible_error_boxes": 0,
+      "horizontal_overflow": false
+    },
+    {
+      "file": "docs/assets/screenshots/05-digital-twin.png",
+      "sha256": "232c6e7ca8752a2ce91f18e7d90d731c775fb0f291df076991392591be756ba5",
+      "role": "candidate",
+      "route": "/proofit#horizon",
+      "state": "Actual CPU scenario job: response in 1 day and 2 interview stages versus baseline; distributions are not calibrated hiring probabilities",
+      "viewport": {
+        "width": 1440,
+        "height": 1050
+      },
+      "full_page": false,
+      "synthetic_fixture": true,
+      "browser_errors": 0,
+      "visible_error_boxes": 0,
+      "horizontal_overflow": false
+    },
+    {
+      "file": "docs/assets/screenshots/06-employer-search.png",
+      "sha256": "deb1fea71b5b796d56073adcdd215f623855e9f677cf056730e58360f9cc3893",
+      "role": "employer",
+      "route": "/proofit#search",
+      "state": "Own vacancy and synthetic candidate only; actual eligibility and matching filters",
+      "viewport": {
+        "width": 1440,
+        "height": 1050
+      },
+      "full_page": false,
+      "synthetic_fixture": true,
+      "browser_errors": 0,
+      "visible_error_boxes": 0,
+      "horizontal_overflow": false
+    },
+    {
+      "file": "docs/assets/screenshots/07-employer-offer.png",
+      "sha256": "6eb4a4f52f4f5b7bee421a7515c012895daa4cda40b579033e51eb544185eec0",
+      "role": "employer",
+      "route": "/proofit#search",
+      "state": "Salary range and conditions before sending an internal synthetic invitation",
+      "viewport": {
+        "width": 1440,
+        "height": 1050
+      },
+      "full_page": false,
+      "synthetic_fixture": true,
+      "browser_errors": 0,
+      "visible_error_boxes": 0,
+      "horizontal_overflow": false
+    },
+    {
+      "file": "docs/assets/screenshots/08-candidate-offer-mobile.png",
+      "sha256": "57505adc69125f6aec456ab0e060cad0f13dba9ead501d763f29a8ac1c339631",
+      "role": "candidate",
+      "route": "/proofit#invitations",
+      "state": "Received synthetic invitation on mobile; candidate retains the accept/decline decision",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "full_page": true,
+      "synthetic_fixture": true,
+      "browser_errors": 0,
+      "visible_error_boxes": 0,
+      "horizontal_overflow": false
+    }
+  ],
+  "browser_errors": [],
+  "failed_requests": [],
+  "passed": true,
+  "cleanup": "Exact-ID fixture identities, data and sessions removed after capture"
+}

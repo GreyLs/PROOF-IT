@@ -18,7 +18,7 @@ def main():
         cert='GUI_CERT'+uuid.uuid4().hex
         f.db.execute("UPDATE candidates SET consent_publication=true WHERE id=%s",(cu['subject_id'],))
         f.db.execute("UPDATE resume_profiles SET status='published',visibility='employer_searchable' WHERE id=%s",(resume['id'],))
-        f.db.execute("INSERT INTO qualification_certificates(id,candidate_id,resume_id,specialization,grade,skills,assessment_version,attempt,scope) VALUES(%s,%s,%s,'backend_python','middle',%s,'ui-fixture',%s,'role-knowledge')",(cert,cu['subject_id'],resume['id'],Jsonb(['Python']),Jsonb({'scope':'synthetic UI provenance fixture, not a professional certification'})))
+        f.db.execute("INSERT INTO qualification_certificates(id,candidate_id,resume_id,specialization,grade,skills,assessment_version,attempt,scope) VALUES(%s,%s,%s,'backend_python','middle',%s,'ui-fixture',%s,'role-knowledge')",(cert,cu['subject_id'],resume['id'],Jsonb(['Python']),Jsonb({'scope':'synthetic UI provenance fixture, not a professional certification','score':90})))
         e.put('/intelligence/evidence-lab/company-twin',json={'collaboration':'independent','pace':'dynamic','growth':'leadership','response_days':4,'interview_stages':2}).raise_for_status()
         with sync_playwright() as p:
             browser=p.chromium.launch(headless=True)
@@ -60,11 +60,16 @@ def main():
                             source=page.locator('.proof-evidence').filter(has_text='Квалификация: backend_python')
                             source.get_by_label('Показывать',exact=True).click()
                             expect(page.get_by_text('Скрыто · не участвует в графе',exact=True)).to_be_visible(timeout=30000)
-                            public=e.get('/intelligence/graph/candidate/'+cu['subject_id']);public.raise_for_status()
-                            assert not any(item['id']=='cert:'+cert for item in public.json().get('evidence_inventory',[]))
+                            # Hiding the sole certificate removes discovery eligibility.
+                            # The public graph therefore closes rather than exposing
+                            # a profile with an unconfirmed category.
+                            public=e.get('/intelligence/graph/candidate/'+cu['subject_id'])
+                            assert public.status_code==404
                             source=page.locator('.proof-evidence').filter(has_text='Квалификация: backend_python')
                             source.get_by_label('Показывать',exact=True).click()
                             expect(page.get_by_text('Скрыто · не участвует в графе',exact=True)).to_have_count(0)
+                            public=e.get('/intelligence/graph/candidate/'+cu['subject_id']);public.raise_for_status()
+                            assert any(item['id']=='cert:'+cert for item in public.json().get('evidence_inventory',[]))
                     else:
                         page.locator('.section-tabs').get_by_role('button',name='Команда и доказательства',exact=True).click()
                         expect(page.locator('.twin-purpose')).to_be_visible(timeout=30000)

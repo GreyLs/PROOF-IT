@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "generated_at": "2026-10-10T18:34:28+0300",
+  "scope": "authentication video and branded SVG composition only; other benchmarks not rerun",
+  "checks": [
+    {
+      "width": 390,
+      "continuous_silent_video": true,
+      "pause_button_absent": true,
+      "brand_mark_paths": 3,
+      "brand_token_unchanged": "#402fff",
+      "decorative_only": true,
+      "composition": "three-orbits-code-shield-growth",
+      "pause_recovery": true,
+      "below_text": true,
+      "inside_story": true,
+      "login_button_clickable": true,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "continuous_silent_video": true,
+      "pause_button_absent": true,
+      "brand_mark_paths": 3,
+      "brand_token_unchanged": "#402fff",
+      "decorative_only": true,
+      "composition": "three-orbits-code-shield-growth",
+      "pause_recovery": true,
+      "below_text": true,
+      "inside_story": true,
+      "login_button_clickable": true,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "continuous_silent_video": true,
+      "pause_button_absent": true,
+      "brand_mark_paths": 3,
+      "brand_token_unchanged": "#402fff",
+      "decorative_only": true,
+      "composition": "three-orbits-code-shield-growth",
+      "pause_recovery": true,
+      "below_text": true,
+      "inside_story": true,
+      "login_button_clickable": true,
+      "overflow": false
+    },
+    {
+      "reduced_motion_preference": true,
+      "silent_video_continues": true,
+      "svg_animation_absent": true
+    },
+    {
+      "role": "candidate",
+      "login_only_decoration": true,
+      "normal_login_and_logout": true
+    },
+    {
+      "role": "employer",
+      "login_only_decoration": true,
+      "normal_login_and_logout": true
+    }
+  ],
+  "browser_errors": [],
+  "llm_scoring": false,
+  "media_sha256": "b628aa3b316abe39f140cc426bf5190dabbea512fe5c9c9a3118c7d682bcb04d"
+}

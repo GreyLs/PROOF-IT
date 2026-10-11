@@ -38,7 +38,8 @@ def main():
                 assert user['role'] == role and user['synthetic']
                 assert page.locator('.demo-scenario-bar, [data-demo-role]').count() == 0
                 if role == 'candidate':
-                    page.locator('.sidebar nav').get_by_text('Резюме и тесты', exact=True).click()
+                    page.locator('.sidebar [data-nav-group=assessment]').click()
+                    page.locator('.section-tabs').get_by_role('button', name='Резюме и знания', exact=True).click()
                     page.wait_for_selector('.resume-card')
                     assert page.locator('.resume-card').count() >= 2
                 else:
